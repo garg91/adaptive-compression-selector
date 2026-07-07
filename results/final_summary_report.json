@@ -1,0 +1,272 @@
+{
+  "strategies": [
+    {
+      "name": "selector_best_size",
+      "ratio": 0.26589706625584697,
+      "compressed_mb": 352.6759614944458,
+      "compression_time_seconds": 314.05990797514096,
+      "decompression_time_seconds": 12.121135433204472,
+      "choices": {
+        "bz2_9": 4,
+        "lzma_6": 3,
+        "lzma_9": 12
+      }
+    },
+    {
+      "name": "oracle_best_size",
+      "ratio": 0.26589706625584697,
+      "compressed_mb": 352.6759614944458,
+      "compression_time_seconds": 314.05990797514096,
+      "decompression_time_seconds": 12.121135433204472,
+      "choices": {}
+    },
+    {
+      "name": "pareto_lambda_0.0",
+      "lambda": 0.0,
+      "ratio": 0.26589706625584697,
+      "compressed_mb": 352.6759614944458,
+      "compression_time_seconds": 314.05990797514096,
+      "decompression_time_seconds": 12.121135433204472,
+      "choices": {
+        "lzma_9": 12,
+        "bz2_9": 4,
+        "lzma_6": 3
+      }
+    },
+    {
+      "name": "pareto_lambda_0.05",
+      "lambda": 0.05,
+      "ratio": 0.2668970862897537,
+      "compressed_mb": 354.00235080718994,
+      "compression_time_seconds": 273.72183711035177,
+      "decompression_time_seconds": 9.901257448131219,
+      "choices": {
+        "lzma_6": 3,
+        "lzma_9": 9,
+        "bz2_9": 5,
+        "zstd_10": 1,
+        "zstd_3": 1
+      }
+    },
+    {
+      "name": "always_lzma_9",
+      "ratio": 0.2669290126997605,
+      "compressed_mb": 354.0446968078613,
+      "compression_time_seconds": 334.39873803942464,
+      "decompression_time_seconds": 11.285338962683454,
+      "choices": {}
+    },
+    {
+      "name": "pareto_lambda_0.1",
+      "lambda": 0.1,
+      "ratio": 0.26736524611225926,
+      "compressed_mb": 354.62330055236816,
+      "compression_time_seconds": 266.11213962058537,
+      "decompression_time_seconds": 9.830551621504128,
+      "choices": {
+        "lzma_6": 4,
+        "lzma_9": 7,
+        "bz2_9": 5,
+        "zstd_10": 1,
+        "zstd_3": 1,
+        "zstd_19": 1
+      }
+    },
+    {
+      "name": "selector_balanced_size",
+      "ratio": 0.2682967318213994,
+      "compressed_mb": 355.8587884902954,
+      "compression_time_seconds": 261.37885502236895,
+      "decompression_time_seconds": 9.845785920042545,
+      "choices": {
+        "zstd_3": 1,
+        "bz2_9": 5,
+        "zstd_10": 1,
+        "lzma_9": 8,
+        "lzma_6": 4
+      }
+    },
+    {
+      "name": "always_lzma_6",
+      "ratio": 0.27622331603676586,
+      "compressed_mb": 366.372314453125,
+      "compression_time_seconds": 255.3906767386943,
+      "decompression_time_seconds": 10.907540471758693,
+      "choices": {}
+    },
+    {
+      "name": "always_zstd_19",
+      "ratio": 0.28876673107046763,
+      "compressed_mb": 383.0094327926636,
+      "compression_time_seconds": 253.99073221045546,
+      "decompression_time_seconds": 1.16306291683577,
+      "choices": {}
+    },
+    {
+      "name": "pareto_lambda_1.0",
+      "lambda": 1.0,
+      "ratio": 0.311419748125884,
+      "compressed_mb": 413.05555057525635,
+      "compression_time_seconds": 13.93584835366346,
+      "decompression_time_seconds": 1.5688280649483204,
+      "choices": {
+        "zstd_10": 16,
+        "bz2_9": 2,
+        "zstd_3": 1
+      }
+    },
+    {
+      "name": "always_zstd_10",
+      "ratio": 0.31271164498969267,
+      "compressed_mb": 414.76907444000244,
+      "compression_time_seconds": 13.325616637710482,
+      "decompression_time_seconds": 1.0523492039646953,
+      "choices": {}
+    },
+    {
+      "name": "selector_balanced_fast",
+      "ratio": 0.3127772040316043,
+      "compressed_mb": 414.85602951049805,
+      "compression_time_seconds": 13.274284252664074,
+      "decompression_time_seconds": 1.0602385979145765,
+      "choices": {
+        "zstd_3": 2,
+        "zstd_10": 17
+      }
+    },
+    {
+      "name": "always_bz2_9",
+      "ratio": 0.32959777655113387,
+      "compressed_mb": 437.16621017456055,
+      "compression_time_seconds": 51.37823542370461,
+      "decompression_time_seconds": 25.240111231338233,
+      "choices": {}
+    },
+    {
+      "name": "selector_fast",
+      "ratio": 0.3393301395979923,
+      "compressed_mb": 450.0748538970947,
+      "compression_time_seconds": 3.188635007943958,
+      "decompression_time_seconds": 1.228563966229558,
+      "choices": {
+        "bz2_9": 1,
+        "zstd_3": 18
+      }
+    },
+    {
+      "name": "always_zstd_3",
+      "ratio": 0.3393352740820104,
+      "compressed_mb": 450.0816640853882,
+      "compression_time_seconds": 2.791439250810072,
+      "decompression_time_seconds": 1.0795393262524158,
+      "choices": {}
+    },
+    {
+      "name": "pareto_lambda_5.0",
+      "lambda": 5.0,
+      "ratio": 0.3393352740820104,
+      "compressed_mb": 450.0816640853882,
+      "compression_time_seconds": 2.791439250810072,
+      "decompression_time_seconds": 1.0795393262524158,
+      "choices": {
+        "zstd_3": 19
+      }
+    },
+    {
+      "name": "always_zlib_9",
+      "ratio": 0.35979726278823504,
+      "compressed_mb": 477.22168350219727,
+      "compression_time_seconds": 86.62634619488381,
+      "decompression_time_seconds": 3.0234091880265623,
+      "choices": {}
+    },
+    {
+      "name": "always_gzip_9",
+      "ratio": 0.3597974267235881,
+      "compressed_mb": 477.2219009399414,
+      "compression_time_seconds": 86.96865747799166,
+      "decompression_time_seconds": 3.1790144070982933,
+      "choices": {}
+    },
+    {
+      "name": "always_store",
+      "ratio": 1.0,
+      "compressed_mb": 1326.3627405166626,
+      "compression_time_seconds": 1.0719755664467812e-05,
+      "decompression_time_seconds": 6.509944796562195e-06,
+      "choices": {}
+    }
+  ],
+  "comparisons": {
+    "balanced_size_vs_lzma_9": {
+      "strategy": "selector_balanced_size",
+      "baseline": "always_lzma_9",
+      "compressed_mb_change": 1.814091682434082,
+      "compressed_size_change_percent": 0.5123905819774452,
+      "compression_time_saved_seconds": 73.01988301705569,
+      "compression_time_change_percent": -21.836171824442367,
+      "decompression_time_change_seconds": -1.4395530426409096
+    },
+    "balanced_size_vs_lzma_6": {
+      "strategy": "selector_balanced_size",
+      "baseline": "always_lzma_6",
+      "compressed_mb_change": -10.51352596282959,
+      "compressed_size_change_percent": -2.8696289397638775,
+      "compression_time_saved_seconds": -5.988178283674642,
+      "compression_time_change_percent": 2.3447129551254178,
+      "decompression_time_change_seconds": -1.0617545517161489
+    },
+    "balanced_fast_vs_zstd_10": {
+      "strategy": "selector_balanced_fast",
+      "baseline": "always_zstd_10",
+      "compressed_mb_change": 0.08695507049560547,
+      "compressed_size_change_percent": 0.020964694779379886,
+      "compression_time_saved_seconds": 0.05133238504640758,
+      "compression_time_change_percent": -0.3852158323476066,
+      "decompression_time_change_seconds": 0.007889393949881196
+    },
+    "fast_vs_zstd_3": {
+      "strategy": "selector_fast",
+      "baseline": "always_zstd_3",
+      "compressed_mb_change": -0.006810188293457031,
+      "compressed_size_change_percent": -0.0015131005852673488,
+      "compression_time_saved_seconds": -0.3971957571338862,
+      "compression_time_change_percent": 14.229066852112956,
+      "decompression_time_change_seconds": 0.14902463997714221
+    },
+    "best_size_vs_oracle": {
+      "strategy": "selector_best_size",
+      "baseline": "oracle_best_size",
+      "compressed_mb_change": 0.0,
+      "compressed_size_change_percent": 0.0,
+      "compression_time_saved_seconds": 0.0,
+      "compression_time_change_percent": 0.0,
+      "decompression_time_change_seconds": 0.0
+    }
+  },
+  "category_stats": {
+    "ml_data": {
+      "files": 4,
+      "original_bytes": 214413394
+    },
+    "logs_json": {
+      "files": 3,
+      "original_bytes": 94934391
+    },
+    "docker_layers": {
+      "files": 7,
+      "original_bytes": 799977472
+    },
+    "source_packages": {
+      "files": 5,
+      "original_bytes": 281466880
+    }
+  },
+  "takeaways": [
+    "1. Best-size selector matched the oracle exactly: True.",
+    "2. Balanced-size mode stayed very close to fixed lzma_9 size (+0.51%) while reducing compression time (-21.84%).",
+    "3. Balanced-fast mode behaved like a smart zstd_10 profile (+0.02% size, -0.39% time).",
+    "4. Fast mode behaved like a smart zstd_3 profile (-0.00% size, +14.23% time).",
+    "5. gzip_9 and zlib_9 should remain as baselines only; earlier Pareto analysis showed they were dominated across this corpus."
+  ]
+}

@@ -1,0 +1,1997 @@
+[
+  {
+    "file": "data/docker_layers/alpine_latest.tar",
+    "category": "docker_layers",
+    "extension": ".tar",
+    "original_size_bytes": 8708608,
+    "entropy": 6.407658884815145,
+    "text_ratio": 0.3690048972235287,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 8708608,
+        "compressed_mb": 8.30517578125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 4.600733518600464e-07,
+        "decompression_time_seconds": 3.098975867033005e-07,
+        "size_penalty_vs_best_percent": 190.55230443805343,
+        "speedup_vs_best": 3373925.656882591
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 3767197,
+        "compressed_mb": 3.592679023742676,
+        "compression_ratio": 0.4325831407269681,
+        "compression_time_seconds": 0.022372459061443806,
+        "decompression_time_seconds": 0.005429564043879509,
+        "size_penalty_vs_best_percent": 25.688028399271335,
+        "speedup_vs_best": 69.38232769252
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 3532708,
+        "compressed_mb": 3.3690528869628906,
+        "compression_ratio": 0.4056570234875654,
+        "compression_time_seconds": 0.10448432411067188,
+        "decompression_time_seconds": 0.005308533785864711,
+        "size_penalty_vs_best_percent": 17.864582985793692,
+        "speedup_vs_best": 14.85632700503862
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 3181008,
+        "compressed_mb": 3.0336456298828125,
+        "compression_ratio": 0.3652716943970839,
+        "compression_time_seconds": 1.278886460000649,
+        "decompression_time_seconds": 0.008162290789186954,
+        "size_penalty_vs_best_percent": 6.130532553065133,
+        "speedup_vs_best": 1.2137537885011267
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 2997448,
+        "compressed_mb": 2.8585891723632812,
+        "compression_ratio": 0.344193698924099,
+        "compression_time_seconds": 1.5424063571263105,
+        "decompression_time_seconds": 0.09167878283187747,
+        "size_penalty_vs_best_percent": 0.006272395454515124,
+        "speedup_vs_best": 1.0063841339325248
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 2997260,
+        "compressed_mb": 2.858409881591797,
+        "compression_ratio": 0.3441721110882474,
+        "compression_time_seconds": 1.5522532858885825,
+        "decompression_time_seconds": 0.09544328995980322,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 3690380,
+        "compressed_mb": 3.519420623779297,
+        "compression_time_seconds": 0.3034602110274136,
+        "dominator_compressed_size_bytes": 3532708,
+        "dominator_compression_time_seconds": 0.10448432411067188,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3694006,
+        "compressed_mb": 3.522878646850586,
+        "compression_time_seconds": 0.6580662010237575,
+        "dominator_compressed_size_bytes": 3690380,
+        "dominator_compression_time_seconds": 0.3034602110274136,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 3694018,
+        "compressed_mb": 3.522890090942383,
+        "compression_time_seconds": 0.6590196979232132,
+        "dominator_compressed_size_bytes": 3694006,
+        "dominator_compression_time_seconds": 0.6580662010237575,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/docker_layers/debian_stable_slim.tar",
+    "category": "docker_layers",
+    "extension": ".tar",
+    "original_size_bytes": 81059840,
+    "entropy": 5.975951856441492,
+    "text_ratio": 0.3614115942000379,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 81059840,
+        "compressed_mb": 77.3046875,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 4.300381988286972e-07,
+        "decompression_time_seconds": 3.6996789276599884e-07,
+        "size_penalty_vs_best_percent": 355.57571597917274,
+        "speedup_vs_best": 47245869.13048186
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 25385419,
+        "compressed_mb": 24.20942211151123,
+        "compression_ratio": 0.313168876227735,
+        "compression_time_seconds": 0.19144802913069725,
+        "decompression_time_seconds": 0.0707897269167006,
+        "size_penalty_vs_best_percent": 42.67213500984329,
+        "speedup_vs_best": 106.12555561540124
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 22735410,
+        "compressed_mb": 21.68217658996582,
+        "compression_ratio": 0.28047686745989137,
+        "compression_time_seconds": 0.9108476990368217,
+        "decompression_time_seconds": 0.06938864383846521,
+        "size_penalty_vs_best_percent": 27.778449708635545,
+        "speedup_vs_best": 22.30617531828163
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 20171491,
+        "compressed_mb": 19.237032890319824,
+        "compression_ratio": 0.2488469135887759,
+        "compression_time_seconds": 13.588401521090418,
+        "decompression_time_seconds": 0.08025772497057915,
+        "size_penalty_vs_best_percent": 13.36861082741391,
+        "speedup_vs_best": 1.4952110762575084
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 18655728,
+        "compressed_mb": 17.791488647460938,
+        "compression_ratio": 0.23014760453511876,
+        "compression_time_seconds": 14.815487944055349,
+        "decompression_time_seconds": 0.6228670049458742,
+        "size_penalty_vs_best_percent": 4.849659716978227,
+        "speedup_vs_best": 1.371370861337111
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 17792836,
+        "compressed_mb": 16.968570709228516,
+        "compression_ratio": 0.2195024811299899,
+        "compression_time_seconds": 20.317528462968767,
+        "decompression_time_seconds": 0.6507510917726904,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 25760779,
+        "compressed_mb": 24.56739330291748,
+        "compression_time_seconds": 2.681645152857527,
+        "dominator_compressed_size_bytes": 25385419,
+        "dominator_compression_time_seconds": 0.19144802913069725,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 29803541,
+        "compressed_mb": 28.422871589660645,
+        "compression_time_seconds": 7.57374216709286,
+        "dominator_compressed_size_bytes": 25760779,
+        "dominator_compression_time_seconds": 2.681645152857527,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 29803553,
+        "compressed_mb": 28.42288303375244,
+        "compression_time_seconds": 7.575592964887619,
+        "dominator_compressed_size_bytes": 29803541,
+        "dominator_compression_time_seconds": 7.57374216709286,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/docker_layers/nginx_latest.tar",
+    "category": "docker_layers",
+    "extension": ".tar",
+    "original_size_bytes": 164949504,
+    "entropy": 6.223311020189395,
+    "text_ratio": 0.3669653774769762,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 164949504,
+        "compressed_mb": 157.30810546875,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 5.199108272790909e-07,
+        "decompression_time_seconds": 2.898741513490677e-07,
+        "size_penalty_vs_best_percent": 330.70274606138844,
+        "speedup_vs_best": 87849184.39364085
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 56750866,
+        "compressed_mb": 54.121843338012695,
+        "compression_ratio": 0.3440499342150189,
+        "compression_time_seconds": 0.4160130110103637,
+        "decompression_time_seconds": 0.14779375097714365,
+        "size_penalty_vs_best_percent": 48.1832514486487,
+        "speedup_vs_best": 109.78921554151437
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 49259481,
+        "compressed_mb": 46.97750186920166,
+        "compression_ratio": 0.2986337018630865,
+        "compression_time_seconds": 1.9778703511692584,
+        "decompression_time_seconds": 0.147492793854326,
+        "size_penalty_vs_best_percent": 28.62235545890935,
+        "speedup_vs_best": 23.092384243937044
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 43896311,
+        "compressed_mb": 41.86278438568115,
+        "compression_ratio": 0.26611969078730907,
+        "compression_time_seconds": 28.922342444071546,
+        "decompression_time_seconds": 0.17529415688477457,
+        "size_penalty_vs_best_percent": 14.618481603101591,
+        "speedup_vs_best": 1.5791854419196028
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 40437720,
+        "compressed_mb": 38.564414978027344,
+        "compression_ratio": 0.24515211637132295,
+        "compression_time_seconds": 30.953297284897417,
+        "decompression_time_seconds": 1.3715143389999866,
+        "size_penalty_vs_best_percent": 5.587689723889857,
+        "speedup_vs_best": 1.4755695237733566
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 38297760,
+        "compressed_mb": 36.523590087890625,
+        "compression_ratio": 0.2321786914860926,
+        "compression_time_seconds": 45.67374213389121,
+        "decompression_time_seconds": 1.3771715899929404,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 56586416,
+        "compressed_mb": 53.96501159667969,
+        "compression_time_seconds": 5.7774971190374345,
+        "dominator_compressed_size_bytes": 49259481,
+        "dominator_compression_time_seconds": 1.9778703511692584,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 62081073,
+        "compressed_mb": 59.205124855041504,
+        "compression_time_seconds": 14.222303764894605,
+        "dominator_compressed_size_bytes": 56586416,
+        "dominator_compression_time_seconds": 5.7774971190374345,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 62081085,
+        "compressed_mb": 59.2051362991333,
+        "compression_time_seconds": 14.2849089440424,
+        "dominator_compressed_size_bytes": 62081073,
+        "dominator_compression_time_seconds": 14.222303764894605,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/docker_layers/node_22_alpine.tar",
+    "category": "docker_layers",
+    "extension": ".tar",
+    "original_size_bytes": 165312512,
+    "entropy": 6.553696665711605,
+    "text_ratio": 0.5203636612817304,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 165312512,
+        "compressed_mb": 157.654296875,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 7.201451808214188e-07,
+        "decompression_time_seconds": 3.2014213502407074e-07,
+        "size_penalty_vs_best_percent": 350.255250619306,
+        "speedup_vs_best": 53874955.158098936
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 51854098,
+        "compressed_mb": 49.451921463012695,
+        "compression_ratio": 0.3136731598392262,
+        "compression_time_seconds": 0.41007629106752574,
+        "decompression_time_seconds": 0.14648699201643467,
+        "size_penalty_vs_best_percent": 41.23298719596044,
+        "speedup_vs_best": 94.61114960602855
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 46058707,
+        "compressed_mb": 43.92500591278076,
+        "compression_ratio": 0.2786159767507495,
+        "compression_time_seconds": 1.9894130460452288,
+        "decompression_time_seconds": 0.14340980909764767,
+        "size_penalty_vs_best_percent": 25.448306438451468,
+        "speedup_vs_best": 19.50212873148763
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 40834271,
+        "compressed_mb": 38.94259548187256,
+        "compression_ratio": 0.2470125854720543,
+        "compression_time_seconds": 31.043863344937563,
+        "decompression_time_seconds": 0.16610980709083378,
+        "size_penalty_vs_best_percent": 11.218713577842559,
+        "speedup_vs_best": 1.249773228704857
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 37317772,
+        "compressed_mb": 35.5890007019043,
+        "compression_ratio": 0.22574075941692787,
+        "compression_time_seconds": 31.82778493105434,
+        "decompression_time_seconds": 1.2457264510449022,
+        "size_penalty_vs_best_percent": 1.6409622062613265,
+        "speedup_vs_best": 1.2189911867294296
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 36715288,
+        "compressed_mb": 35.014427185058594,
+        "compression_ratio": 0.22209624399150138,
+        "compression_time_seconds": 38.797789324074984,
+        "decompression_time_seconds": 1.2802307568490505,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 48915903,
+        "compressed_mb": 46.649840354919434,
+        "compression_time_seconds": 7.101183499908075,
+        "dominator_compressed_size_bytes": 46058707,
+        "dominator_compression_time_seconds": 1.9894130460452288,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 55509139,
+        "compressed_mb": 52.93764019012451,
+        "compression_time_seconds": 11.125158770941198,
+        "dominator_compressed_size_bytes": 48915903,
+        "dominator_compression_time_seconds": 7.101183499908075,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 55509151,
+        "compressed_mb": 52.93765163421631,
+        "compression_time_seconds": 11.174215702107176,
+        "dominator_compressed_size_bytes": 55509139,
+        "dominator_compression_time_seconds": 11.125158770941198,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/docker_layers/python_3_12_slim.tar",
+    "category": "docker_layers",
+    "extension": ".tar",
+    "original_size_bytes": 123302400,
+    "entropy": 6.084261731782319,
+    "text_ratio": 0.4602874558808263,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 123302400,
+        "compressed_mb": 117.59033203125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 5.098991096019745e-07,
+        "decompression_time_seconds": 2.798624336719513e-07,
+        "size_penalty_vs_best_percent": 355.42559783326533,
+        "speedup_vs_best": 60193819.69680365
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 37638985,
+        "compressed_mb": 35.8953332901001,
+        "compression_ratio": 0.30525752134589434,
+        "compression_time_seconds": 0.28785325889475644,
+        "decompression_time_seconds": 0.10548412590287626,
+        "size_penalty_vs_best_percent": 39.022089152054676,
+        "speedup_vs_best": 106.62646372248898
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 33859104,
+        "compressed_mb": 32.290557861328125,
+        "compression_ratio": 0.2746021488632825,
+        "compression_time_seconds": 1.377239404944703,
+        "decompression_time_seconds": 0.1033750909846276,
+        "size_penalty_vs_best_percent": 25.06084781235974,
+        "speedup_vs_best": 22.28572240726318
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 30253422,
+        "compressed_mb": 28.851911544799805,
+        "compression_ratio": 0.24535955504515727,
+        "compression_time_seconds": 20.0581074480433,
+        "decompression_time_seconds": 0.11421258701011539,
+        "size_penalty_vs_best_percent": 11.743022040544721,
+        "speedup_vs_best": 1.5301929729136088
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 28275152,
+        "compressed_mb": 26.965286254882812,
+        "compression_ratio": 0.22931550399667808,
+        "compression_time_seconds": 22.059164270060137,
+        "decompression_time_seconds": 0.9367261501029134,
+        "size_penalty_vs_best_percent": 4.43615050012366,
+        "speedup_vs_best": 1.3913843104473287
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 27074104,
+        "compressed_mb": 25.81987762451172,
+        "compression_ratio": 0.21957483390428734,
+        "compression_time_seconds": 30.692775066941977,
+        "decompression_time_seconds": 0.9556904300116003,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 37624815,
+        "compressed_mb": 35.88181972503662,
+        "compression_time_seconds": 4.185353233013302,
+        "dominator_compressed_size_bytes": 33859104,
+        "dominator_compression_time_seconds": 1.377239404944703,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 42893259,
+        "compressed_mb": 40.90619945526123,
+        "compression_time_seconds": 10.582360797096044,
+        "dominator_compressed_size_bytes": 37624815,
+        "dominator_compression_time_seconds": 4.185353233013302,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 42893247,
+        "compressed_mb": 40.906188011169434,
+        "compression_time_seconds": 10.586977858096361,
+        "dominator_compressed_size_bytes": 37624815,
+        "dominator_compression_time_seconds": 4.185353233013302,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/docker_layers/redis_latest.tar",
+    "category": "docker_layers",
+    "extension": ".tar",
+    "original_size_bytes": 145113600,
+    "entropy": 6.133534787050313,
+    "text_ratio": 0.3476822296462909,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 145113600,
+        "compressed_mb": 138.39111328125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 7.399357855319977e-07,
+        "decompression_time_seconds": 3.0011869966983795e-07,
+        "size_penalty_vs_best_percent": 342.47854530836184,
+        "speedup_vs_best": 49498094.126809314
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 47858337,
+        "compressed_mb": 45.64126682281494,
+        "compression_ratio": 0.32979911600291084,
+        "compression_time_seconds": 0.3577526949811727,
+        "decompression_time_seconds": 0.12958520301617682,
+        "size_penalty_vs_best_percent": 45.92903309295167,
+        "speedup_vs_best": 102.37633894549664
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 43660894,
+        "compressed_mb": 41.63827323913574,
+        "compression_ratio": 0.3008738946590809,
+        "compression_time_seconds": 1.7331343698315322,
+        "decompression_time_seconds": 0.12760673300363123,
+        "size_penalty_vs_best_percent": 33.130243230011416,
+        "speedup_vs_best": 21.13247062523926
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 37928109,
+        "compressed_mb": 36.17106342315674,
+        "compression_ratio": 0.2613683968973273,
+        "compression_time_seconds": 24.27419545594603,
+        "decompression_time_seconds": 0.15016815182752907,
+        "size_penalty_vs_best_percent": 15.64990804870796,
+        "speedup_vs_best": 1.5088208062972452
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 35011568,
+        "compressed_mb": 33.38963317871094,
+        "compression_ratio": 0.24127006703713505,
+        "compression_time_seconds": 26.234912011073902,
+        "decompression_time_seconds": 1.179649307159707,
+        "size_penalty_vs_best_percent": 6.756828289042464,
+        "speedup_vs_best": 1.3960561843926758
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 32795624,
+        "compressed_mb": 31.276344299316406,
+        "compression_ratio": 0.22599965819881804,
+        "compression_time_seconds": 36.62541116005741,
+        "decompression_time_seconds": 1.153670207131654,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 48514179,
+        "compressed_mb": 46.26672649383545,
+        "compression_time_seconds": 5.280563129810616,
+        "dominator_compressed_size_bytes": 47858337,
+        "dominator_compression_time_seconds": 0.3577526949811727,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 53541961,
+        "compressed_mb": 51.0615930557251,
+        "compression_time_seconds": 13.398133788025007,
+        "dominator_compressed_size_bytes": 48514179,
+        "dominator_compression_time_seconds": 5.280563129810616,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 53541973,
+        "compressed_mb": 51.061604499816895,
+        "compression_time_seconds": 13.459890845930204,
+        "dominator_compressed_size_bytes": 53541961,
+        "dominator_compression_time_seconds": 13.398133788025007,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/docker_layers/ubuntu_latest.tar",
+    "category": "docker_layers",
+    "extension": ".tar",
+    "original_size_bytes": 111531008,
+    "entropy": 5.822312112968615,
+    "text_ratio": 0.33563654333689874,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 111531008,
+        "compressed_mb": 106.3642578125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 5.899928510189056e-07,
+        "decompression_time_seconds": 3.8999132812023163e-07,
+        "size_penalty_vs_best_percent": 335.1962880234346,
+        "speedup_vs_best": 45571310.481846884
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 34865704,
+        "compressed_mb": 33.250526428222656,
+        "compression_ratio": 0.3126099604515365,
+        "compression_time_seconds": 0.2502643510233611,
+        "decompression_time_seconds": 0.09500254294835031,
+        "size_penalty_vs_best_percent": 36.046694387661375,
+        "speedup_vs_best": 107.43338907802662
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 31605325,
+        "compressed_mb": 30.141186714172363,
+        "compression_ratio": 0.2833770228275889,
+        "compression_time_seconds": 1.222172920126468,
+        "decompression_time_seconds": 0.09758436307311058,
+        "size_penalty_vs_best_percent": 23.32462844569878,
+        "speedup_vs_best": 21.999135272176048
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 28500059,
+        "compressed_mb": 27.179774284362793,
+        "compression_ratio": 0.2555348464168817,
+        "compression_time_seconds": 16.571083107963204,
+        "decompression_time_seconds": 0.10931569314561784,
+        "size_penalty_vs_best_percent": 11.207816621265357,
+        "speedup_vs_best": 1.6225099603134694
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 26451616,
+        "compressed_mb": 25.226226806640625,
+        "compression_ratio": 0.23716826803896546,
+        "compression_time_seconds": 19.244605446932837,
+        "decompression_time_seconds": 0.8609542888589203,
+        "size_penalty_vs_best_percent": 3.214749887504747,
+        "speedup_vs_best": 1.3971056704692135
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 25627748,
+        "compressed_mb": 24.44052505493164,
+        "compression_ratio": 0.22978137165226734,
+        "compression_time_seconds": 26.88674739585258,
+        "decompression_time_seconds": 0.8594070319086313,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 34371411,
+        "compressed_mb": 32.77913188934326,
+        "compression_time_seconds": 3.484310109866783,
+        "dominator_compressed_size_bytes": 31605325,
+        "dominator_compression_time_seconds": 1.222172920126468,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 38744548,
+        "compressed_mb": 36.94968032836914,
+        "compression_time_seconds": 9.177085432223976,
+        "dominator_compressed_size_bytes": 34371411,
+        "dominator_compression_time_seconds": 3.484310109866783,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 38744536,
+        "compressed_mb": 36.949668884277344,
+        "compression_time_seconds": 9.198095069965348,
+        "dominator_compressed_size_bytes": 34371411,
+        "dominator_compression_time_seconds": 3.484310109866783,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/logs_json/app.log",
+    "category": "logs_json",
+    "extension": ".log",
+    "original_size_bytes": 35250205,
+    "entropy": 5.201903435641429,
+    "text_ratio": 1.0,
+    "unique_byte_count": 57,
+    "best_size_compressor": "bz2_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 35250205,
+        "compressed_mb": 33.617215156555176,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 5.299225449562073e-07,
+        "decompression_time_seconds": 3.501772880554199e-07,
+        "size_penalty_vs_best_percent": 1131.2993783109534,
+        "speedup_vs_best": 3293711.8277680143
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 5524849,
+        "compressed_mb": 5.268906593322754,
+        "compression_ratio": 0.1567323934711869,
+        "compression_time_seconds": 0.05035700090229511,
+        "decompression_time_seconds": 0.02469261083751917,
+        "size_penalty_vs_best_percent": 92.98449864226018,
+        "speedup_vs_best": 34.660764597751026
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 4301309,
+        "compressed_mb": 4.102047920227051,
+        "compression_ratio": 0.12202224072172063,
+        "compression_time_seconds": 0.37292801192961633,
+        "decompression_time_seconds": 0.022111180005595088,
+        "size_penalty_vs_best_percent": 50.24590914076412,
+        "speedup_vs_best": 4.680292437921245
+      },
+      {
+        "compressor": "bz2_9",
+        "compressed_size_bytes": 2862846,
+        "compressed_mb": 2.730222702026367,
+        "compression_ratio": 0.08121501704741858,
+        "compression_time_seconds": 1.745412154123187,
+        "decompression_time_seconds": 0.5101902820169926,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 4958947,
+        "compressed_mb": 4.729220390319824,
+        "compression_time_seconds": 0.8972662868909538,
+        "dominator_compressed_size_bytes": 4301309,
+        "dominator_compression_time_seconds": 0.37292801192961633,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 4958959,
+        "compressed_mb": 4.729231834411621,
+        "compression_time_seconds": 0.8978767720982432,
+        "dominator_compressed_size_bytes": 4958947,
+        "dominator_compression_time_seconds": 0.8972662868909538,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_6",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3391764,
+        "compressed_mb": 3.234638214111328,
+        "compression_time_seconds": 8.948116765124723,
+        "dominator_compressed_size_bytes": 2862846,
+        "dominator_compression_time_seconds": 1.745412154123187,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3358752,
+        "compressed_mb": 3.203155517578125,
+        "compression_time_seconds": 10.100716701010242,
+        "dominator_compressed_size_bytes": 2862846,
+        "dominator_compression_time_seconds": 1.745412154123187,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zstd_19",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3449459,
+        "compressed_mb": 3.2896604537963867,
+        "compression_time_seconds": 10.219844466075301,
+        "dominator_compressed_size_bytes": 2862846,
+        "dominator_compression_time_seconds": 1.745412154123187,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/logs_json/events.ndjson",
+    "category": "logs_json",
+    "extension": ".ndjson",
+    "original_size_bytes": 44276808,
+    "entropy": 4.700885466920241,
+    "text_ratio": 1.0,
+    "unique_byte_count": 52,
+    "best_size_compressor": "bz2_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 44276808,
+        "compressed_mb": 42.22565460205078,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 6.200280040502548e-07,
+        "decompression_time_seconds": 3.4994445741176605e-07,
+        "size_penalty_vs_best_percent": 1586.5055356259984,
+        "speedup_vs_best": 3938568.143822756
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 5136177,
+        "compressed_mb": 4.898240089416504,
+        "compression_ratio": 0.11600151935071742,
+        "compression_time_seconds": 0.05225301790051162,
+        "decompression_time_seconds": 0.029565390897914767,
+        "size_penalty_vs_best_percent": 95.63720452601132,
+        "speedup_vs_best": 46.73457425329744
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 3839594,
+        "compressed_mb": 3.661722183227539,
+        "compression_ratio": 0.08671794949626901,
+        "compression_time_seconds": 0.38835995295085013,
+        "decompression_time_seconds": 0.02389457798562944,
+        "size_penalty_vs_best_percent": 46.250301863593464,
+        "speedup_vs_best": 6.28803903820484
+      },
+      {
+        "compressor": "bz2_9",
+        "compressed_size_bytes": 2625358,
+        "compressed_mb": 2.5037364959716797,
+        "compression_ratio": 0.0592942020572034,
+        "compression_time_seconds": 2.4420225450303406,
+        "decompression_time_seconds": 0.4853641837835312,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 4157027,
+        "compressed_mb": 3.964449882507324,
+        "compression_time_seconds": 1.0895208739675581,
+        "dominator_compressed_size_bytes": 3839594,
+        "dominator_compression_time_seconds": 0.38835995295085013,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 4157039,
+        "compressed_mb": 3.964461326599121,
+        "compression_time_seconds": 1.089816328138113,
+        "dominator_compressed_size_bytes": 4157027,
+        "dominator_compression_time_seconds": 1.0895208739675581,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_6",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3445060,
+        "compressed_mb": 3.2854652404785156,
+        "compression_time_seconds": 9.596705598989502,
+        "dominator_compressed_size_bytes": 2625358,
+        "dominator_compression_time_seconds": 2.4420225450303406,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3413300,
+        "compressed_mb": 3.255176544189453,
+        "compression_time_seconds": 11.240689330967143,
+        "dominator_compressed_size_bytes": 2625358,
+        "dominator_compression_time_seconds": 2.4420225450303406,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zstd_19",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3420772,
+        "compressed_mb": 3.2623023986816406,
+        "compression_time_seconds": 16.18203875492327,
+        "dominator_compressed_size_bytes": 2625358,
+        "dominator_compression_time_seconds": 2.4420225450303406,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/logs_json/users.json",
+    "category": "logs_json",
+    "extension": ".json",
+    "original_size_bytes": 15407378,
+    "entropy": 4.635727471482456,
+    "text_ratio": 1.0,
+    "unique_byte_count": 42,
+    "best_size_compressor": "bz2_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 15407378,
+        "compressed_mb": 14.693620681762695,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 3.501772880554199e-07,
+        "decompression_time_seconds": 2.9010698199272156e-07,
+        "size_penalty_vs_best_percent": 3337.3284668601655,
+        "speedup_vs_best": 2684521.5751329786
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 839156,
+        "compressed_mb": 0.8002815246582031,
+        "compression_ratio": 0.05446455587706098,
+        "compression_time_seconds": 0.008801919175311923,
+        "decompression_time_seconds": 0.003443616908043623,
+        "size_penalty_vs_best_percent": 87.21256835111782,
+        "speedup_vs_best": 106.8015356858826
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 695561,
+        "compressed_mb": 0.6633386611938477,
+        "compression_ratio": 0.04514467030016399,
+        "compression_time_seconds": 0.08481442206539214,
+        "decompression_time_seconds": 0.0027826321311295033,
+        "size_penalty_vs_best_percent": 55.17706034977032,
+        "speedup_vs_best": 11.083710317350782
+      },
+      {
+        "compressor": "bz2_9",
+        "compressed_size_bytes": 448237,
+        "compressed_mb": 0.4274721145629883,
+        "compression_ratio": 0.0290923608157079,
+        "compression_time_seconds": 0.9400584849063307,
+        "decompression_time_seconds": 0.10685301083140075,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 898238,
+        "compressed_mb": 0.8566265106201172,
+        "compression_time_seconds": 0.2097752559930086,
+        "dominator_compressed_size_bytes": 839156,
+        "dominator_compression_time_seconds": 0.008801919175311923,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 898250,
+        "compressed_mb": 0.8566379547119141,
+        "compression_time_seconds": 0.21078904904425144,
+        "dominator_compressed_size_bytes": 898238,
+        "dominator_compression_time_seconds": 0.2097752559930086,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_6",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 582460,
+        "compressed_mb": 0.5554771423339844,
+        "compression_time_seconds": 1.4966756429057568,
+        "dominator_compressed_size_bytes": 448237,
+        "dominator_compression_time_seconds": 0.9400584849063307,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 587304,
+        "compressed_mb": 0.5600967407226562,
+        "compression_time_seconds": 1.8827574159950018,
+        "dominator_compressed_size_bytes": 448237,
+        "dominator_compression_time_seconds": 0.9400584849063307,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zstd_19",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 672353,
+        "compressed_mb": 0.6412057876586914,
+        "compression_time_seconds": 8.670252762036398,
+        "dominator_compressed_size_bytes": 448237,
+        "dominator_compression_time_seconds": 0.9400584849063307,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/ml_data/labels_int64.npy",
+    "category": "ml_data",
+    "extension": ".npy",
+    "original_size_bytes": 40000128,
+    "entropy": 0.6691661495158235,
+    "text_ratio": 3.099990080031744e-06,
+    "unique_byte_count": 41,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 40000128,
+        "compressed_mb": 38.1470947265625,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 6.700865924358368e-07,
+        "decompression_time_seconds": 3.7997961044311523e-07,
+        "size_penalty_vs_best_percent": 2349.985422633383,
+        "speedup_vs_best": 8439781.281792913
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 2860851,
+        "compressed_mb": 2.7283201217651367,
+        "compression_ratio": 0.07152104613265238,
+        "compression_time_seconds": 0.06149412109516561,
+        "decompression_time_seconds": 0.037326831836253405,
+        "size_penalty_vs_best_percent": 75.225520436488,
+        "speedup_vs_best": 91.96625920172671
+      },
+      {
+        "compressor": "bz2_9",
+        "compressed_size_bytes": 1700091,
+        "compressed_mb": 1.621333122253418,
+        "compression_ratio": 0.04250213899315522,
+        "compression_time_seconds": 0.905753806931898,
+        "decompression_time_seconds": 0.33378348289988935,
+        "size_penalty_vs_best_percent": 4.129620963968179,
+        "speedup_vs_best": 6.243842683010207
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 1650352,
+        "compressed_mb": 1.5738983154296875,
+        "compression_ratio": 0.04125866797226249,
+        "compression_time_seconds": 5.505891225999221,
+        "decompression_time_seconds": 0.05568730900995433,
+        "size_penalty_vs_best_percent": 1.0831350893139329,
+        "speedup_vs_best": 1.0271514724655715
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 1632668,
+        "compressed_mb": 1.5570335388183594,
+        "compression_ratio": 0.04081656938697796,
+        "compression_time_seconds": 5.655384280020371,
+        "decompression_time_seconds": 0.08180289017036557,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zstd_10",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 2883345,
+        "compressed_mb": 2.749772071838379,
+        "compression_time_seconds": 0.4535765419714153,
+        "dominator_compressed_size_bytes": 2860851,
+        "dominator_compression_time_seconds": 0.06149412109516561,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 2483424,
+        "compressed_mb": 2.368377685546875,
+        "compression_time_seconds": 5.238565467996523,
+        "dominator_compressed_size_bytes": 1700091,
+        "dominator_compression_time_seconds": 0.905753806931898,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 2483436,
+        "compressed_mb": 2.368389129638672,
+        "compression_time_seconds": 5.24564196402207,
+        "dominator_compressed_size_bytes": 2483424,
+        "dominator_compression_time_seconds": 5.238565467996523,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zstd_19",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 1985617,
+        "compressed_mb": 1.893631935119629,
+        "compression_time_seconds": 13.924631587928161,
+        "dominator_compressed_size_bytes": 1700091,
+        "dominator_compression_time_seconds": 0.905753806931898,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/ml_data/random_float32.npy",
+    "category": "ml_data",
+    "extension": ".npy",
+    "original_size_bytes": 80000128,
+    "entropy": 7.345811528755389,
+    "text_ratio": 0.4006949463880858,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 80000128,
+        "compressed_mb": 76.2940673828125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 7.299240678548813e-07,
+        "decompression_time_seconds": 5.00120222568512e-07,
+        "size_penalty_vs_best_percent": 9.928392210244748,
+        "speedup_vs_best": 40530648.40414673
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 74027961,
+        "compressed_mb": 70.59856510162354,
+        "compression_ratio": 0.9253480319431489,
+        "compression_time_seconds": 0.1088772329967469,
+        "decompression_time_seconds": 0.07216514786705375,
+        "size_penalty_vs_best_percent": 1.722021386424558,
+        "speedup_vs_best": 271.7215981860475
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 73936782,
+        "compressed_mb": 70.51161003112793,
+        "compression_ratio": 0.924208296266726,
+        "compression_time_seconds": 0.13230689498595893,
+        "decompression_time_seconds": 0.0650882360059768,
+        "size_penalty_vs_best_percent": 1.5967320759707309,
+        "speedup_vs_best": 223.6035828600646
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 73561640,
+        "compressed_mb": 70.15384674072266,
+        "compression_ratio": 0.9195190287695539,
+        "compression_time_seconds": 22.825065918033943,
+        "decompression_time_seconds": 2.3796108739916235,
+        "size_penalty_vs_best_percent": 1.0812484393628539,
+        "speedup_vs_best": 1.2961318868558607
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 72774764,
+        "compressed_mb": 69.40342330932617,
+        "compression_ratio": 0.9096830945070488,
+        "compression_time_seconds": 29.584295755950734,
+        "decompression_time_seconds": 2.486476929858327,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 74094153,
+        "compressed_mb": 70.6616907119751,
+        "compression_time_seconds": 1.6717746539507061,
+        "dominator_compressed_size_bytes": 74027961,
+        "dominator_compression_time_seconds": 0.1088772329967469,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 74094165,
+        "compressed_mb": 70.6617021560669,
+        "compression_time_seconds": 1.76139833801426,
+        "dominator_compressed_size_bytes": 74094153,
+        "dominator_compression_time_seconds": 1.6717746539507061,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "gzip_9",
+        "compressed_size_bytes": 75927233,
+        "compressed_mb": 72.40985202789307,
+        "compression_time_seconds": 4.067572362022474,
+        "dominator_compressed_size_bytes": 74094165,
+        "dominator_compression_time_seconds": 1.76139833801426,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zstd_19",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 73953971,
+        "compressed_mb": 70.52800273895264,
+        "compression_time_seconds": 13.591895628953353,
+        "dominator_compressed_size_bytes": 73936782,
+        "dominator_compression_time_seconds": 0.13230689498595893,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/ml_data/sparse_float32.npy",
+    "category": "ml_data",
+    "extension": ".npy",
+    "original_size_bytes": 80000128,
+    "entropy": 0.05045275077237192,
+    "text_ratio": 0.002501545997526404,
+    "unique_byte_count": 39,
+    "best_size_compressor": "bz2_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 80000128,
+        "compressed_mb": 76.2940673828125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 6.00004568696022e-07,
+        "decompression_time_seconds": 5.199108272790909e-07,
+        "size_penalty_vs_best_percent": 28168959.154929575,
+        "speedup_vs_best": 675738.2646488164
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 7425,
+        "compressed_mb": 0.007081031799316406,
+        "compression_ratio": 9.28123515002376e-05,
+        "compression_time_seconds": 0.008250288898125291,
+        "decompression_time_seconds": 0.026656995061784983,
+        "size_penalty_vs_best_percent": 2514.43661971831,
+        "speedup_vs_best": 49.14325438035762
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 6854,
+        "compressed_mb": 0.0065364837646484375,
+        "compression_ratio": 8.567486292021932e-05,
+        "compression_time_seconds": 0.08449117001146078,
+        "decompression_time_seconds": 0.026020424906164408,
+        "size_penalty_vs_best_percent": 2313.3802816901407,
+        "speedup_vs_best": 4.7986795067107595
+      },
+      {
+        "compressor": "bz2_9",
+        "compressed_size_bytes": 284,
+        "compressed_mb": 0.000270843505859375,
+        "compression_ratio": 3.549994320009088e-06,
+        "compression_time_seconds": 0.4054460460320115,
+        "decompression_time_seconds": 0.1756816350389272,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zstd_10",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 7425,
+        "compressed_mb": 0.007081031799316406,
+        "compression_time_seconds": 0.036153011955320835,
+        "dominator_compressed_size_bytes": 7425,
+        "dominator_compression_time_seconds": 0.008250288898125291,
+        "reason": "same size and faster"
+      },
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 268016,
+        "compressed_mb": 0.2555999755859375,
+        "compression_time_seconds": 0.2500600959174335,
+        "dominator_compressed_size_bytes": 7425,
+        "dominator_compression_time_seconds": 0.008250288898125291,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 268028,
+        "compressed_mb": 0.2556114196777344,
+        "compression_time_seconds": 0.2523777121677995,
+        "dominator_compressed_size_bytes": 268016,
+        "dominator_compression_time_seconds": 0.2500600959174335,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_6",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 11848,
+        "compressed_mb": 0.01129913330078125,
+        "compression_time_seconds": 1.5589776497799903,
+        "dominator_compressed_size_bytes": 284,
+        "dominator_compression_time_seconds": 0.4054460460320115,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 11848,
+        "compressed_mb": 0.01129913330078125,
+        "compression_time_seconds": 1.7401471759658307,
+        "dominator_compressed_size_bytes": 284,
+        "dominator_compression_time_seconds": 0.4054460460320115,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/ml_data/synthetic_tabular.csv",
+    "category": "ml_data",
+    "extension": ".csv",
+    "original_size_bytes": 14413010,
+    "entropy": 4.486891014974485,
+    "text_ratio": 1.0,
+    "unique_byte_count": 41,
+    "best_size_compressor": "lzma_6",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 14413010,
+        "compressed_mb": 13.745317459106445,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 2.698507159948349e-07,
+        "decompression_time_seconds": 4.2980536818504333e-07,
+        "size_penalty_vs_best_percent": 324.402368383238,
+        "speedup_vs_best": 23010807.11216566
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 4799382,
+        "compressed_mb": 4.577047348022461,
+        "compression_ratio": 0.3329895698400265,
+        "compression_time_seconds": 0.048612122889608145,
+        "decompression_time_seconds": 0.014847335871309042,
+        "size_penalty_vs_best_percent": 41.32156208702289,
+        "speedup_vs_best": 127.73527272071364
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 4163628,
+        "compressed_mb": 3.970745086669922,
+        "compression_ratio": 0.2888798384237574,
+        "compression_time_seconds": 0.29411675594747066,
+        "decompression_time_seconds": 0.01303460099734366,
+        "size_penalty_vs_best_percent": 22.601287605209784,
+        "speedup_vs_best": 21.112305400056698
+      },
+      {
+        "compressor": "bz2_9",
+        "compressed_size_bytes": 3550122,
+        "compressed_mb": 3.385660171508789,
+        "compression_ratio": 0.24631371240289154,
+        "compression_time_seconds": 0.48007392999716103,
+        "decompression_time_seconds": 0.22316635609604418,
+        "size_penalty_vs_best_percent": 4.5361229090549315,
+        "speedup_vs_best": 12.934430275923676
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 3396072,
+        "compressed_mb": 3.2387466430664062,
+        "compression_ratio": 0.23562545228234769,
+        "compression_time_seconds": 6.2094827748369426,
+        "decompression_time_seconds": 0.12084709294140339,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 4263741,
+        "compressed_mb": 4.066220283508301,
+        "compression_time_seconds": 0.7352539210114628,
+        "dominator_compressed_size_bytes": 3550122,
+        "dominator_compression_time_seconds": 0.48007392999716103,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 4263753,
+        "compressed_mb": 4.066231727600098,
+        "compression_time_seconds": 0.737711583962664,
+        "dominator_compressed_size_bytes": 4263741,
+        "dominator_compression_time_seconds": 0.7352539210114628,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_9",
+        "dominated_by": "lzma_6",
+        "compressed_size_bytes": 3396816,
+        "compressed_mb": 3.2394561767578125,
+        "compression_time_seconds": 7.016874226974323,
+        "dominator_compressed_size_bytes": 3396072,
+        "dominator_compression_time_seconds": 6.2094827748369426,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "zstd_19",
+        "dominated_by": "bz2_9",
+        "compressed_size_bytes": 3629594,
+        "compressed_mb": 3.4614505767822266,
+        "compression_time_seconds": 8.87356029287912,
+        "dominator_compressed_size_bytes": 3550122,
+        "dominator_compression_time_seconds": 0.48007392999716103,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/source_packages/cpython.tar",
+    "category": "source_packages",
+    "extension": ".tar",
+    "original_size_bytes": 186583040,
+    "entropy": 6.780742039009006,
+    "text_ratio": 0.7535768309917129,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 186583040,
+        "compressed_mb": 177.939453125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 8.798670023679733e-07,
+        "decompression_time_seconds": 3.7997961044311523e-07,
+        "size_penalty_vs_best_percent": 136.83491953532067,
+        "speedup_vs_best": 57182386.70441916
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 88325635,
+        "compressed_mb": 84.23388957977295,
+        "compression_ratio": 0.4733851211771445,
+        "compression_time_seconds": 0.3594014788977802,
+        "decompression_time_seconds": 0.12782989302650094,
+        "size_penalty_vs_best_percent": 12.114127083207036,
+        "speedup_vs_best": 139.99078504675094
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 84568480,
+        "compressed_mb": 80.65078735351562,
+        "compression_ratio": 0.4532484838922123,
+        "compression_time_seconds": 1.5126674338243902,
+        "decompression_time_seconds": 0.1253063550684601,
+        "size_penalty_vs_best_percent": 7.345068212118175,
+        "speedup_vs_best": 33.26104208554311
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 81305883,
+        "compressed_mb": 77.53933238983154,
+        "compression_ratio": 0.43576245193561003,
+        "compression_time_seconds": 32.348302790895104,
+        "decompression_time_seconds": 0.13085175189189613,
+        "size_penalty_vs_best_percent": 3.20376524068423,
+        "speedup_vs_best": 1.5553488386421568
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 80728512,
+        "compressed_mb": 76.98870849609375,
+        "compression_ratio": 0.43266800669557104,
+        "compression_time_seconds": 37.96991308988072,
+        "decompression_time_seconds": 1.2835063328966498,
+        "size_penalty_vs_best_percent": 2.470892551253146,
+        "speedup_vs_best": 1.3250726979217742
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 78781896,
+        "compressed_mb": 75.13227081298828,
+        "compression_ratio": 0.42223503272323143,
+        "compression_time_seconds": 50.31289517786354,
+        "decompression_time_seconds": 1.3389778609853238,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 89400781,
+        "compressed_mb": 85.25922870635986,
+        "compression_time_seconds": 6.919686765177175,
+        "dominator_compressed_size_bytes": 88325635,
+        "dominator_compression_time_seconds": 0.3594014788977802,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 89400793,
+        "compressed_mb": 85.25924015045166,
+        "compression_time_seconds": 6.998889323091134,
+        "dominator_compressed_size_bytes": 89400781,
+        "dominator_compression_time_seconds": 6.919686765177175,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 85153891,
+        "compressed_mb": 81.20907878875732,
+        "compression_time_seconds": 8.04635865194723,
+        "dominator_compressed_size_bytes": 84568480,
+        "dominator_compression_time_seconds": 1.5126674338243902,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/source_packages/express.tar",
+    "category": "source_packages",
+    "extension": ".tar",
+    "original_size_bytes": 1187840,
+    "entropy": 5.624996147372052,
+    "text_ratio": 0.7214515422952587,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_6",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 1187840,
+        "compressed_mb": 1.1328125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 3.2014213502407074e-07,
+        "decompression_time_seconds": 1.7997808754444122e-07,
+        "size_penalty_vs_best_percent": 291.5869980879541,
+        "speedup_vs_best": 381116.74036363635
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 339427,
+        "compressed_mb": 0.3237028121948242,
+        "compression_ratio": 0.2857514480064655,
+        "compression_time_seconds": 0.0018247389234602451,
+        "decompression_time_seconds": 0.00040214904583990574,
+        "size_penalty_vs_best_percent": 11.89655172413793,
+        "speedup_vs_best": 66.86519665074005
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 316171,
+        "compressed_mb": 0.30152416229248047,
+        "compression_ratio": 0.2661730536099138,
+        "compression_time_seconds": 0.012585100950673223,
+        "decompression_time_seconds": 0.00035399990156292915,
+        "size_penalty_vs_best_percent": 4.2299070350102195,
+        "speedup_vs_best": 9.69491841437332
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 303340,
+        "compressed_mb": 0.2892875671386719,
+        "compression_ratio": 0.25537109375,
+        "compression_time_seconds": 0.12201152695342898,
+        "decompression_time_seconds": 0.005631195846945047,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 336255,
+        "compressed_mb": 0.3206777572631836,
+        "compression_time_seconds": 0.03153227595612407,
+        "dominator_compressed_size_bytes": 316171,
+        "dominator_compression_time_seconds": 0.012585100950673223,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 336267,
+        "compressed_mb": 0.32068920135498047,
+        "compression_time_seconds": 0.03182898601517081,
+        "dominator_compressed_size_bytes": 336255,
+        "dominator_compression_time_seconds": 0.03153227595612407,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 317674,
+        "compressed_mb": 0.30295753479003906,
+        "compression_time_seconds": 0.04294398706406355,
+        "dominator_compressed_size_bytes": 316171,
+        "dominator_compression_time_seconds": 0.012585100950673223,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_9",
+        "dominated_by": "lzma_6",
+        "compressed_size_bytes": 303340,
+        "compressed_mb": 0.2892875671386719,
+        "compression_time_seconds": 0.15223115496337414,
+        "dominator_compressed_size_bytes": 303340,
+        "dominator_compression_time_seconds": 0.12201152695342898,
+        "reason": "same size and faster"
+      },
+      {
+        "compressor": "zstd_19",
+        "dominated_by": "lzma_6",
+        "compressed_size_bytes": 304469,
+        "compressed_mb": 0.29036426544189453,
+        "compression_time_seconds": 0.16418509487994015,
+        "dominator_compressed_size_bytes": 303340,
+        "dominator_compression_time_seconds": 0.12201152695342898,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/source_packages/flask.tar",
+    "category": "source_packages",
+    "extension": ".tar",
+    "original_size_bytes": 2918400,
+    "entropy": 6.83159856329705,
+    "text_ratio": 0.6816224643640351,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_6",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 2918400,
+        "compressed_mb": 2.783203125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 8.097849786281586e-07,
+        "decompression_time_seconds": 1.8998980522155762e-07,
+        "size_penalty_vs_best_percent": 106.12906233313461,
+        "speedup_vs_best": 444298.32892466936
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 1499793,
+        "compressed_mb": 1.430314064025879,
+        "compression_ratio": 0.513909333881579,
+        "compression_time_seconds": 0.0056054419837892056,
+        "decompression_time_seconds": 0.0009318080265074968,
+        "size_penalty_vs_best_percent": 5.931649117255681,
+        "speedup_vs_best": 64.18514611930374
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 1464596,
+        "compressed_mb": 1.3967475891113281,
+        "compression_ratio": 0.5018489583333333,
+        "compression_time_seconds": 0.023763966048136353,
+        "decompression_time_seconds": 0.0011095190420746803,
+        "size_penalty_vs_best_percent": 3.4456552141103476,
+        "speedup_vs_best": 15.139985979781583
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 1421913,
+        "compressed_mb": 1.3560419082641602,
+        "compression_ratio": 0.4872234786184211,
+        "compression_time_seconds": 0.301237836945802,
+        "decompression_time_seconds": 0.0009794190991669893,
+        "size_penalty_vs_best_percent": 0.43091879430319846,
+        "speedup_vs_best": 1.194358970442089
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 1415812,
+        "compressed_mb": 1.3502235412597656,
+        "compression_ratio": 0.4851329495614035,
+        "compression_time_seconds": 0.35978611279278994,
+        "decompression_time_seconds": 0.027577470988035202,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 1567062,
+        "compressed_mb": 1.494466781616211,
+        "compression_time_seconds": 0.08122913306578994,
+        "dominator_compressed_size_bytes": 1499793,
+        "dominator_compression_time_seconds": 0.0056054419837892056,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 1567074,
+        "compressed_mb": 1.4944782257080078,
+        "compression_time_seconds": 0.08215125207789242,
+        "dominator_compressed_size_bytes": 1567062,
+        "dominator_compression_time_seconds": 0.08122913306578994,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 1488799,
+        "compressed_mb": 1.4198293685913086,
+        "compression_time_seconds": 0.1160401429515332,
+        "dominator_compressed_size_bytes": 1464596,
+        "dominator_compression_time_seconds": 0.023763966048136353,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "lzma_9",
+        "dominated_by": "lzma_6",
+        "compressed_size_bytes": 1415812,
+        "compressed_mb": 1.3502235412597656,
+        "compression_time_seconds": 0.4296337030827999,
+        "dominator_compressed_size_bytes": 1415812,
+        "dominator_compression_time_seconds": 0.35978611279278994,
+        "reason": "same size and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/source_packages/react.tar",
+    "category": "source_packages",
+    "extension": ".tar",
+    "original_size_bytes": 63232000,
+    "entropy": 6.123138423114755,
+    "text_ratio": 0.7353511829453442,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 63232000,
+        "compressed_mb": 60.302734375,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 5.199108272790909e-07,
+        "decompression_time_seconds": 3.5995617508888245e-07,
+        "size_penalty_vs_best_percent": 298.358585222227,
+        "speedup_vs_best": 19594445.317062248
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 20692962,
+        "compressed_mb": 19.734346389770508,
+        "compression_ratio": 0.3272545862854251,
+        "compression_time_seconds": 0.09661420108750463,
+        "decompression_time_seconds": 0.023368804017081857,
+        "size_penalty_vs_best_percent": 30.36467400014717,
+        "speedup_vs_best": 105.44375630288476
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 19011747,
+        "compressed_mb": 18.131014823913574,
+        "compression_ratio": 0.3006665454200405,
+        "compression_time_seconds": 0.42720052995719016,
+        "decompression_time_seconds": 0.037603931967169046,
+        "size_penalty_vs_best_percent": 19.773099657181795,
+        "speedup_vs_best": 23.84679690329415
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 18197665,
+        "compressed_mb": 17.35464572906494,
+        "compression_ratio": 0.28779201986336034,
+        "compression_time_seconds": 9.12541653891094,
+        "decompression_time_seconds": 0.03852010006085038,
+        "size_penalty_vs_best_percent": 14.64442187101528,
+        "speedup_vs_best": 1.1163725218930705
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 18100308,
+        "compressed_mb": 17.261798858642578,
+        "compression_ratio": 0.2862523405870445,
+        "compression_time_seconds": 9.152034997008741,
+        "decompression_time_seconds": 0.26816071616485715,
+        "size_penalty_vs_best_percent": 14.03107741280614,
+        "speedup_vs_best": 1.1131255811629204
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 15873136,
+        "compressed_mb": 15.137802124023438,
+        "compression_ratio": 0.25103011133603237,
+        "compression_time_seconds": 10.187364274868742,
+        "decompression_time_seconds": 0.2927428591065109,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_3",
+        "compressed_size_bytes": 21975297,
+        "compressed_mb": 20.957276344299316,
+        "compression_time_seconds": 1.715367553057149,
+        "dominator_compressed_size_bytes": 20692962,
+        "dominator_compression_time_seconds": 0.09661420108750463,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 21975309,
+        "compressed_mb": 20.957287788391113,
+        "compression_time_seconds": 1.7165721419733018,
+        "dominator_compressed_size_bytes": 21975297,
+        "dominator_compression_time_seconds": 1.715367553057149,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "bz2_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 19979375,
+        "compressed_mb": 19.05381679534912,
+        "compression_time_seconds": 2.3477149012032896,
+        "dominator_compressed_size_bytes": 19011747,
+        "dominator_compression_time_seconds": 0.42720052995719016,
+        "reason": "smaller and faster"
+      }
+    ]
+  },
+  {
+    "file": "data/source_packages/redis.tar",
+    "category": "source_packages",
+    "extension": ".tar",
+    "original_size_bytes": 27545600,
+    "entropy": 6.103642571244429,
+    "text_ratio": 0.8365704141496283,
+    "unique_byte_count": 256,
+    "best_size_compressor": "lzma_9",
+    "fastest_compressor": "store",
+    "pareto_frontier": [
+      {
+        "compressor": "store",
+        "compressed_size_bytes": 27545600,
+        "compressed_mb": 26.26953125,
+        "compression_ratio": 1.0,
+        "compression_time_seconds": 4.5006163418293e-07,
+        "decompression_time_seconds": 3.2014213502407074e-07,
+        "size_penalty_vs_best_percent": 228.21623455945746,
+        "speedup_vs_best": 12330537.843248837
+      },
+      {
+        "compressor": "zstd_3",
+        "compressed_size_bytes": 9770607,
+        "compressed_mb": 9.317976951599121,
+        "compression_ratio": 0.3547066319121747,
+        "compression_time_seconds": 0.053567590890452266,
+        "decompression_time_seconds": 0.017736837035045028,
+        "size_penalty_vs_best_percent": 16.42047509948149,
+        "speedup_vs_best": 103.59812565467004
+      },
+      {
+        "compressor": "zstd_10",
+        "compressed_size_bytes": 9016630,
+        "compressed_mb": 8.598928451538086,
+        "compression_ratio": 0.32733467414033457,
+        "compression_time_seconds": 0.2719818998593837,
+        "decompression_time_seconds": 0.012804831145331264,
+        "size_penalty_vs_best_percent": 7.436554187087639,
+        "speedup_vs_best": 20.403938699436097
+      },
+      {
+        "compressor": "bz2_9",
+        "compressed_size_bytes": 8884203,
+        "compressed_mb": 8.472636222839355,
+        "compression_ratio": 0.3225271186686803,
+        "compression_time_seconds": 1.024825955973938,
+        "decompression_time_seconds": 0.46207474498078227,
+        "size_penalty_vs_best_percent": 5.858636432745556,
+        "speedup_vs_best": 5.415067777838522
+      },
+      {
+        "compressor": "zstd_19",
+        "compressed_size_bytes": 8501278,
+        "compressed_mb": 8.107450485229492,
+        "compression_ratio": 0.308625624419145,
+        "compression_time_seconds": 4.767995503963903,
+        "decompression_time_seconds": 0.01287960004992783,
+        "size_penalty_vs_best_percent": 1.295940335413123,
+        "speedup_vs_best": 1.1639067208585703
+      },
+      {
+        "compressor": "lzma_6",
+        "compressed_size_bytes": 8435044,
+        "compressed_mb": 8.04428482055664,
+        "compression_ratio": 0.3062211024628253,
+        "compression_time_seconds": 4.968357191188261,
+        "decompression_time_seconds": 0.10702215507626534,
+        "size_penalty_vs_best_percent": 0.5067371929943297,
+        "speedup_vs_best": 1.1169692110562166
+      },
+      {
+        "compressor": "lzma_9",
+        "compressed_size_bytes": 8392516,
+        "compressed_mb": 8.003726959228516,
+        "compression_ratio": 0.30467718982342007,
+        "compression_time_seconds": 5.549502012087032,
+        "decompression_time_seconds": 0.11662562401033938,
+        "size_penalty_vs_best_percent": 0.0,
+        "speedup_vs_best": 1.0
+      }
+    ],
+    "dominated": [
+      {
+        "compressor": "zlib_9",
+        "dominated_by": "zstd_10",
+        "compressed_size_bytes": 9732760,
+        "compressed_mb": 9.281883239746094,
+        "compression_time_seconds": 1.023836291860789,
+        "dominator_compressed_size_bytes": 9016630,
+        "dominator_compression_time_seconds": 0.2719818998593837,
+        "reason": "smaller and faster"
+      },
+      {
+        "compressor": "gzip_9",
+        "dominated_by": "zlib_9",
+        "compressed_size_bytes": 9732772,
+        "compressed_mb": 9.28189468383789,
+        "compression_time_seconds": 1.0305296431761235,
+        "dominator_compressed_size_bytes": 9732760,
+        "dominator_compression_time_seconds": 1.023836291860789,
+        "reason": "smaller and faster"
+      }
+    ]
+  }
+]

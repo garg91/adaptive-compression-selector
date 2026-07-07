@@ -1,0 +1,111 @@
+Adaptive Compression Selector — Final Summary Report
+=============================================================================================================================
+
+Corpus
+-----------------------------------------------------------------------------------------------------------------------------
+Category                  Files     Original MB
+--------------------------------------------------
+docker_layers                 7          762.92
+logs_json                     3           90.54
+ml_data                       4          204.48
+source_packages               5          268.43
+
+Total files:       19
+Total original MB: 1326.36
+
+=============================================================================================================================
+Strategy Comparison
+=============================================================================================================================
+Strategy                        Ratio   Compressed MB    Comp Time s  Decomp Time s Choices                            
+-----------------------------------------------------------------------------------------------------------------------------
+selector_best_size             0.2659          352.68         314.06          12.12 {'bz2_9': 4, 'lzma_6': 3, 'lzma_...
+oracle_best_size               0.2659          352.68         314.06          12.12                                    
+pareto_lambda_0.0              0.2659          352.68         314.06          12.12 {'lzma_9': 12, 'bz2_9': 4, 'lzma...
+pareto_lambda_0.05             0.2669          354.00         273.72           9.90 {'lzma_6': 3, 'lzma_9': 9, 'bz2_...
+always_lzma_9                  0.2669          354.04         334.40          11.29                                    
+pareto_lambda_0.1              0.2674          354.62         266.11           9.83 {'lzma_6': 4, 'lzma_9': 7, 'bz2_...
+selector_balanced_size         0.2683          355.86         261.38           9.85 {'zstd_3': 1, 'bz2_9': 5, 'zstd_...
+always_lzma_6                  0.2762          366.37         255.39          10.91                                    
+always_zstd_19                 0.2888          383.01         253.99           1.16                                    
+pareto_lambda_1.0              0.3114          413.06          13.94           1.57 {'zstd_10': 16, 'bz2_9': 2, 'zst...
+always_zstd_10                 0.3127          414.77          13.33           1.05                                    
+selector_balanced_fast         0.3128          414.86          13.27           1.06 {'zstd_3': 2, 'zstd_10': 17}       
+always_bz2_9                   0.3296          437.17          51.38          25.24                                    
+selector_fast                  0.3393          450.07           3.19           1.23 {'bz2_9': 1, 'zstd_3': 18}         
+always_zstd_3                  0.3393          450.08           2.79           1.08                                    
+pareto_lambda_5.0              0.3393          450.08           2.79           1.08 {'zstd_3': 19}                     
+always_zlib_9                  0.3598          477.22          86.63           3.02                                    
+always_gzip_9                  0.3598          477.22          86.97           3.18                                    
+always_store                   1.0000         1326.36           0.00           0.00                                    
+
+=============================================================================================================================
+Key Comparisons
+=============================================================================================================================
+
+balanced_size_vs_lzma_9
+-----------------------
+strategy:  selector_balanced_size
+baseline:  always_lzma_9
+compressed size change: +1.81 MB (+0.51%)
+compression time saved: +73.02s (-21.84% time change)
+decompression time change: -1.44s
+
+balanced_size_vs_lzma_6
+-----------------------
+strategy:  selector_balanced_size
+baseline:  always_lzma_6
+compressed size change: -10.51 MB (-2.87%)
+compression time saved: -5.99s (+2.34% time change)
+decompression time change: -1.06s
+
+balanced_fast_vs_zstd_10
+------------------------
+strategy:  selector_balanced_fast
+baseline:  always_zstd_10
+compressed size change: +0.09 MB (+0.02%)
+compression time saved: +0.05s (-0.39% time change)
+decompression time change: +0.01s
+
+fast_vs_zstd_3
+--------------
+strategy:  selector_fast
+baseline:  always_zstd_3
+compressed size change: -0.01 MB (-0.00%)
+compression time saved: -0.40s (+14.23% time change)
+decompression time change: +0.15s
+
+best_size_vs_oracle
+-------------------
+strategy:  selector_best_size
+baseline:  oracle_best_size
+compressed size change: +0.00 MB (+0.00%)
+compression time saved: +0.00s (+0.00% time change)
+decompression time change: +0.00s
+
+=============================================================================================================================
+Final Takeaways
+=============================================================================================================================
+1. Best-size selector matched the oracle exactly: True.
+2. Balanced-size mode stayed very close to fixed lzma_9 size (+0.51%) while reducing compression time (-21.84%).
+3. Balanced-fast mode behaved like a smart zstd_10 profile (+0.02% size, -0.39% time).
+4. Fast mode behaved like a smart zstd_3 profile (-0.00% size, +14.23% time).
+5. gzip_9 and zlib_9 should remain as baselines only; earlier Pareto analysis showed they were dominated across this corpus.
+
+=============================================================================================================================
+Recommended Final Modes
+=============================================================================================================================
+
+best_size:
+  Use when compressed size matters most. Matches the best-size oracle.
+
+balanced_size:
+  Use for near-lzma_9 size with meaningful compression-time savings.
+
+balanced_fast:
+  Use for zstd_10-like practical compression with very low runtime.
+
+fast:
+  Use for zstd_3-like throughput-first compression.
+
+baseline-only:
+  gzip_9 and zlib_9 are useful for comparison, but not for selection.

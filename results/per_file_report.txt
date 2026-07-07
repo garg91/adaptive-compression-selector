@@ -1,0 +1,591 @@
+Per-File Adaptive Compression Report
+====================================================================================================
+
+====================================================================================================
+data/docker_layers/alpine_latest.tar
+====================================================================================================
+category:          docker_layers
+extension:         .tar
+original MB:       8.31
+entropy:           6.4077
+text_ratio:        0.3690
+unique bytes:      256
+
+oracle best:       lzma_9 (2.86 MB, ratio 0.3442, 1.55s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       3.59 MB ratio 0.4326 comp    0.02s decomp   0.01s size_vs_oracle +25.69%
+balanced_fast    -> zstd_10      3.37 MB ratio 0.4057 comp    0.10s decomp   0.01s size_vs_oracle +17.86%
+balanced_size    -> lzma_6       2.86 MB ratio 0.3442 comp    1.54s decomp   0.09s size_vs_oracle +0.01%
+best_size        -> lzma_9       2.86 MB ratio 0.3442 comp    1.55s decomp   0.10s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9       2.86 MB ratio 0.3442 comp    1.55s decomp   0.10s
+lzma_6       2.86 MB ratio 0.3442 comp    1.54s decomp   0.09s
+zstd_19      3.03 MB ratio 0.3653 comp    1.28s decomp   0.01s
+zstd_10      3.37 MB ratio 0.4057 comp    0.10s decomp   0.01s
+bz2_9        3.52 MB ratio 0.4238 comp    0.30s decomp   0.19s
+zlib_9       3.52 MB ratio 0.4242 comp    0.66s decomp   0.02s
+gzip_9       3.52 MB ratio 0.4242 comp    0.66s decomp   0.02s
+zstd_3       3.59 MB ratio 0.4326 comp    0.02s decomp   0.01s
+store        8.31 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/docker_layers/debian_stable_slim.tar
+====================================================================================================
+category:          docker_layers
+extension:         .tar
+original MB:       77.30
+entropy:           5.9760
+text_ratio:        0.3614
+unique bytes:      256
+
+oracle best:       lzma_9 (16.97 MB, ratio 0.2195, 20.32s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      24.21 MB ratio 0.3132 comp    0.19s decomp   0.07s size_vs_oracle +42.67%
+balanced_fast    -> zstd_10     21.68 MB ratio 0.2805 comp    0.91s decomp   0.07s size_vs_oracle +27.78%
+balanced_size    -> lzma_9      16.97 MB ratio 0.2195 comp   20.32s decomp   0.65s size_vs_oracle +0.00%
+best_size        -> lzma_9      16.97 MB ratio 0.2195 comp   20.32s decomp   0.65s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      16.97 MB ratio 0.2195 comp   20.32s decomp   0.65s
+lzma_6      17.79 MB ratio 0.2301 comp   14.82s decomp   0.62s
+zstd_19     19.24 MB ratio 0.2488 comp   13.59s decomp   0.08s
+zstd_10     21.68 MB ratio 0.2805 comp    0.91s decomp   0.07s
+zstd_3      24.21 MB ratio 0.3132 comp    0.19s decomp   0.07s
+bz2_9       24.57 MB ratio 0.3178 comp    2.68s decomp   1.51s
+zlib_9      28.42 MB ratio 0.3677 comp    7.57s decomp   0.21s
+gzip_9      28.42 MB ratio 0.3677 comp    7.58s decomp   0.22s
+store       77.30 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/docker_layers/nginx_latest.tar
+====================================================================================================
+category:          docker_layers
+extension:         .tar
+original MB:       157.31
+entropy:           6.2233
+text_ratio:        0.3670
+unique bytes:      256
+
+oracle best:       lzma_9 (36.52 MB, ratio 0.2322, 45.67s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      54.12 MB ratio 0.3440 comp    0.42s decomp   0.15s size_vs_oracle +48.18%
+balanced_fast    -> zstd_10     46.98 MB ratio 0.2986 comp    1.98s decomp   0.15s size_vs_oracle +28.62%
+balanced_size    -> lzma_9      36.52 MB ratio 0.2322 comp   45.67s decomp   1.38s size_vs_oracle +0.00%
+best_size        -> lzma_9      36.52 MB ratio 0.2322 comp   45.67s decomp   1.38s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      36.52 MB ratio 0.2322 comp   45.67s decomp   1.38s
+lzma_6      38.56 MB ratio 0.2452 comp   30.95s decomp   1.37s
+zstd_19     41.86 MB ratio 0.2661 comp   28.92s decomp   0.18s
+zstd_10     46.98 MB ratio 0.2986 comp    1.98s decomp   0.15s
+bz2_9       53.97 MB ratio 0.3431 comp    5.78s decomp   3.24s
+zstd_3      54.12 MB ratio 0.3440 comp    0.42s decomp   0.15s
+zlib_9      59.21 MB ratio 0.3764 comp   14.22s decomp   0.44s
+gzip_9      59.21 MB ratio 0.3764 comp   14.28s decomp   0.45s
+store      157.31 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/docker_layers/node_22_alpine.tar
+====================================================================================================
+category:          docker_layers
+extension:         .tar
+original MB:       157.65
+entropy:           6.5537
+text_ratio:        0.5204
+unique bytes:      256
+
+oracle best:       lzma_9 (35.01 MB, ratio 0.2221, 38.80s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      49.45 MB ratio 0.3137 comp    0.41s decomp   0.15s size_vs_oracle +41.23%
+balanced_fast    -> zstd_10     43.93 MB ratio 0.2786 comp    1.99s decomp   0.14s size_vs_oracle +25.45%
+balanced_size    -> lzma_9      35.01 MB ratio 0.2221 comp   38.80s decomp   1.28s size_vs_oracle +0.00%
+best_size        -> lzma_9      35.01 MB ratio 0.2221 comp   38.80s decomp   1.28s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      35.01 MB ratio 0.2221 comp   38.80s decomp   1.28s
+lzma_6      35.59 MB ratio 0.2257 comp   31.83s decomp   1.25s
+zstd_19     38.94 MB ratio 0.2470 comp   31.04s decomp   0.17s
+zstd_10     43.93 MB ratio 0.2786 comp    1.99s decomp   0.14s
+bz2_9       46.65 MB ratio 0.2959 comp    7.10s decomp   3.10s
+zstd_3      49.45 MB ratio 0.3137 comp    0.41s decomp   0.15s
+zlib_9      52.94 MB ratio 0.3358 comp   11.13s decomp   0.40s
+gzip_9      52.94 MB ratio 0.3358 comp   11.17s decomp   0.42s
+store      157.65 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/docker_layers/python_3_12_slim.tar
+====================================================================================================
+category:          docker_layers
+extension:         .tar
+original MB:       117.59
+entropy:           6.0843
+text_ratio:        0.4603
+unique bytes:      256
+
+oracle best:       lzma_9 (25.82 MB, ratio 0.2196, 30.69s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      35.90 MB ratio 0.3053 comp    0.29s decomp   0.11s size_vs_oracle +39.02%
+balanced_fast    -> zstd_10     32.29 MB ratio 0.2746 comp    1.38s decomp   0.10s size_vs_oracle +25.06%
+balanced_size    -> lzma_9      25.82 MB ratio 0.2196 comp   30.69s decomp   0.96s size_vs_oracle +0.00%
+best_size        -> lzma_9      25.82 MB ratio 0.2196 comp   30.69s decomp   0.96s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      25.82 MB ratio 0.2196 comp   30.69s decomp   0.96s
+lzma_6      26.97 MB ratio 0.2293 comp   22.06s decomp   0.94s
+zstd_19     28.85 MB ratio 0.2454 comp   20.06s decomp   0.11s
+zstd_10     32.29 MB ratio 0.2746 comp    1.38s decomp   0.10s
+bz2_9       35.88 MB ratio 0.3051 comp    4.19s decomp   2.22s
+zstd_3      35.90 MB ratio 0.3053 comp    0.29s decomp   0.11s
+zlib_9      40.91 MB ratio 0.3479 comp   10.59s decomp   0.31s
+gzip_9      40.91 MB ratio 0.3479 comp   10.58s decomp   0.32s
+store      117.59 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/docker_layers/redis_latest.tar
+====================================================================================================
+category:          docker_layers
+extension:         .tar
+original MB:       138.39
+entropy:           6.1335
+text_ratio:        0.3477
+unique bytes:      256
+
+oracle best:       lzma_9 (31.28 MB, ratio 0.2260, 36.63s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      45.64 MB ratio 0.3298 comp    0.36s decomp   0.13s size_vs_oracle +45.93%
+balanced_fast    -> zstd_10     41.64 MB ratio 0.3009 comp    1.73s decomp   0.13s size_vs_oracle +33.13%
+balanced_size    -> lzma_9      31.28 MB ratio 0.2260 comp   36.63s decomp   1.15s size_vs_oracle +0.00%
+best_size        -> lzma_9      31.28 MB ratio 0.2260 comp   36.63s decomp   1.15s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      31.28 MB ratio 0.2260 comp   36.63s decomp   1.15s
+lzma_6      33.39 MB ratio 0.2413 comp   26.23s decomp   1.18s
+zstd_19     36.17 MB ratio 0.2614 comp   24.27s decomp   0.15s
+zstd_10     41.64 MB ratio 0.3009 comp    1.73s decomp   0.13s
+zstd_3      45.64 MB ratio 0.3298 comp    0.36s decomp   0.13s
+bz2_9       46.27 MB ratio 0.3343 comp    5.28s decomp   2.78s
+zlib_9      51.06 MB ratio 0.3690 comp   13.40s decomp   0.38s
+gzip_9      51.06 MB ratio 0.3690 comp   13.46s decomp   0.39s
+store      138.39 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/docker_layers/ubuntu_latest.tar
+====================================================================================================
+category:          docker_layers
+extension:         .tar
+original MB:       106.36
+entropy:           5.8223
+text_ratio:        0.3356
+unique bytes:      256
+
+oracle best:       lzma_9 (24.44 MB, ratio 0.2298, 26.89s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      33.25 MB ratio 0.3126 comp    0.25s decomp   0.10s size_vs_oracle +36.05%
+balanced_fast    -> zstd_10     30.14 MB ratio 0.2834 comp    1.22s decomp   0.10s size_vs_oracle +23.32%
+balanced_size    -> lzma_9      24.44 MB ratio 0.2298 comp   26.89s decomp   0.86s size_vs_oracle +0.00%
+best_size        -> lzma_9      24.44 MB ratio 0.2298 comp   26.89s decomp   0.86s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      24.44 MB ratio 0.2298 comp   26.89s decomp   0.86s
+lzma_6      25.23 MB ratio 0.2372 comp   19.24s decomp   0.86s
+zstd_19     27.18 MB ratio 0.2555 comp   16.57s decomp   0.11s
+zstd_10     30.14 MB ratio 0.2834 comp    1.22s decomp   0.10s
+bz2_9       32.78 MB ratio 0.3082 comp    3.48s decomp   2.00s
+zstd_3      33.25 MB ratio 0.3126 comp    0.25s decomp   0.10s
+zlib_9      36.95 MB ratio 0.3474 comp    9.20s decomp   0.27s
+gzip_9      36.95 MB ratio 0.3474 comp    9.18s decomp   0.29s
+store      106.36 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/logs_json/app.log
+====================================================================================================
+category:          logs_json
+extension:         .log
+original MB:       33.62
+entropy:           5.2019
+text_ratio:        1.0000
+unique bytes:      57
+
+oracle best:       bz2_9 (2.73 MB, ratio 0.0812, 1.75s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       5.27 MB ratio 0.1567 comp    0.05s decomp   0.02s size_vs_oracle +92.98%
+balanced_fast    -> zstd_10      4.10 MB ratio 0.1220 comp    0.37s decomp   0.02s size_vs_oracle +50.25%
+balanced_size    -> bz2_9        2.73 MB ratio 0.0812 comp    1.75s decomp   0.51s size_vs_oracle +0.00%
+best_size        -> bz2_9        2.73 MB ratio 0.0812 comp    1.75s decomp   0.51s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+bz2_9        2.73 MB ratio 0.0812 comp    1.75s decomp   0.51s
+lzma_9       3.20 MB ratio 0.0953 comp   10.10s decomp   0.15s
+lzma_6       3.23 MB ratio 0.0962 comp    8.95s decomp   0.14s
+zstd_19      3.29 MB ratio 0.0979 comp   10.22s decomp   0.02s
+zstd_10      4.10 MB ratio 0.1220 comp    0.37s decomp   0.02s
+zlib_9       4.73 MB ratio 0.1407 comp    0.90s decomp   0.05s
+gzip_9       4.73 MB ratio 0.1407 comp    0.90s decomp   0.05s
+zstd_3       5.27 MB ratio 0.1567 comp    0.05s decomp   0.02s
+store       33.62 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/logs_json/events.ndjson
+====================================================================================================
+category:          logs_json
+extension:         .ndjson
+original MB:       42.23
+entropy:           4.7009
+text_ratio:        1.0000
+unique bytes:      52
+
+oracle best:       bz2_9 (2.50 MB, ratio 0.0593, 2.44s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       4.90 MB ratio 0.1160 comp    0.05s decomp   0.03s size_vs_oracle +95.64%
+balanced_fast    -> zstd_10      3.66 MB ratio 0.0867 comp    0.39s decomp   0.02s size_vs_oracle +46.25%
+balanced_size    -> bz2_9        2.50 MB ratio 0.0593 comp    2.44s decomp   0.49s size_vs_oracle +0.00%
+best_size        -> bz2_9        2.50 MB ratio 0.0593 comp    2.44s decomp   0.49s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+bz2_9        2.50 MB ratio 0.0593 comp    2.44s decomp   0.49s
+lzma_9       3.26 MB ratio 0.0771 comp   11.24s decomp   0.16s
+zstd_19      3.26 MB ratio 0.0773 comp   16.18s decomp   0.03s
+lzma_6       3.29 MB ratio 0.0778 comp    9.60s decomp   0.12s
+zstd_10      3.66 MB ratio 0.0867 comp    0.39s decomp   0.02s
+zlib_9       3.96 MB ratio 0.0939 comp    1.09s decomp   0.05s
+gzip_9       3.96 MB ratio 0.0939 comp    1.09s decomp   0.05s
+zstd_3       4.90 MB ratio 0.1160 comp    0.05s decomp   0.03s
+store       42.23 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/logs_json/users.json
+====================================================================================================
+category:          logs_json
+extension:         .json
+original MB:       14.69
+entropy:           4.6357
+text_ratio:        1.0000
+unique bytes:      42
+
+oracle best:       bz2_9 (0.43 MB, ratio 0.0291, 0.94s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       0.80 MB ratio 0.0545 comp    0.01s decomp   0.00s size_vs_oracle +87.21%
+balanced_fast    -> zstd_10      0.66 MB ratio 0.0451 comp    0.08s decomp   0.00s size_vs_oracle +55.18%
+balanced_size    -> bz2_9        0.43 MB ratio 0.0291 comp    0.94s decomp   0.11s size_vs_oracle +0.00%
+best_size        -> bz2_9        0.43 MB ratio 0.0291 comp    0.94s decomp   0.11s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+bz2_9        0.43 MB ratio 0.0291 comp    0.94s decomp   0.11s
+lzma_6       0.56 MB ratio 0.0378 comp    1.50s decomp   0.02s
+lzma_9       0.56 MB ratio 0.0381 comp    1.88s decomp   0.03s
+zstd_19      0.64 MB ratio 0.0436 comp    8.67s decomp   0.00s
+zstd_10      0.66 MB ratio 0.0451 comp    0.08s decomp   0.00s
+zstd_3       0.80 MB ratio 0.0545 comp    0.01s decomp   0.00s
+zlib_9       0.86 MB ratio 0.0583 comp    0.21s decomp   0.01s
+gzip_9       0.86 MB ratio 0.0583 comp    0.21s decomp   0.02s
+store       14.69 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/ml_data/labels_int64.npy
+====================================================================================================
+category:          ml_data
+extension:         .npy
+original MB:       38.15
+entropy:           0.6692
+text_ratio:        0.0000
+unique bytes:      41
+
+oracle best:       lzma_9 (1.56 MB, ratio 0.0408, 5.66s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       2.73 MB ratio 0.0715 comp    0.06s decomp   0.04s size_vs_oracle +75.23%
+balanced_fast    -> zstd_10      2.75 MB ratio 0.0721 comp    0.45s decomp   0.03s size_vs_oracle +76.60%
+balanced_size    -> bz2_9        1.62 MB ratio 0.0425 comp    0.91s decomp   0.33s size_vs_oracle +4.13%
+best_size        -> lzma_9       1.56 MB ratio 0.0408 comp    5.66s decomp   0.08s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9       1.56 MB ratio 0.0408 comp    5.66s decomp   0.08s
+lzma_6       1.57 MB ratio 0.0413 comp    5.51s decomp   0.06s
+bz2_9        1.62 MB ratio 0.0425 comp    0.91s decomp   0.33s
+zstd_19      1.89 MB ratio 0.0496 comp   13.92s decomp   0.02s
+zlib_9       2.37 MB ratio 0.0621 comp    5.24s decomp   0.04s
+gzip_9       2.37 MB ratio 0.0621 comp    5.25s decomp   0.05s
+zstd_3       2.73 MB ratio 0.0715 comp    0.06s decomp   0.04s
+zstd_10      2.75 MB ratio 0.0721 comp    0.45s decomp   0.03s
+store       38.15 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/ml_data/random_float32.npy
+====================================================================================================
+category:          ml_data
+extension:         .npy
+original MB:       76.29
+entropy:           7.3458
+text_ratio:        0.4007
+unique bytes:      256
+
+oracle best:       lzma_9 (69.40 MB, ratio 0.9097, 29.58s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      70.60 MB ratio 0.9253 comp    0.11s decomp   0.07s size_vs_oracle +1.72%
+balanced_fast    -> zstd_3      70.60 MB ratio 0.9253 comp    0.11s decomp   0.07s size_vs_oracle +1.72%
+balanced_size    -> zstd_10     70.51 MB ratio 0.9242 comp    0.13s decomp   0.07s size_vs_oracle +1.60%
+best_size        -> lzma_9      69.40 MB ratio 0.9097 comp   29.58s decomp   2.49s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      69.40 MB ratio 0.9097 comp   29.58s decomp   2.49s
+lzma_6      70.15 MB ratio 0.9195 comp   22.83s decomp   2.38s
+zstd_10     70.51 MB ratio 0.9242 comp    0.13s decomp   0.07s
+zstd_19     70.53 MB ratio 0.9244 comp   13.59s decomp   0.07s
+zstd_3      70.60 MB ratio 0.9253 comp    0.11s decomp   0.07s
+zlib_9      70.66 MB ratio 0.9262 comp    1.67s decomp   0.23s
+gzip_9      70.66 MB ratio 0.9262 comp    1.76s decomp   0.25s
+bz2_9       72.41 MB ratio 0.9491 comp    4.07s decomp   2.88s
+store       76.29 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/ml_data/sparse_float32.npy
+====================================================================================================
+category:          ml_data
+extension:         .npy
+original MB:       76.29
+entropy:           0.0505
+text_ratio:        0.0025
+unique bytes:      39
+
+oracle best:       bz2_9 (0.00 MB, ratio 0.0000, 0.41s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> bz2_9        0.00 MB ratio 0.0000 comp    0.41s decomp   0.18s size_vs_oracle +0.00%
+balanced_fast    -> zstd_3       0.01 MB ratio 0.0001 comp    0.01s decomp   0.03s size_vs_oracle +2514.44%
+balanced_size    -> zstd_3       0.01 MB ratio 0.0001 comp    0.01s decomp   0.03s size_vs_oracle +2514.44%
+best_size        -> bz2_9        0.00 MB ratio 0.0000 comp    0.41s decomp   0.18s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+bz2_9        0.00 MB ratio 0.0000 comp    0.41s decomp   0.18s
+zstd_19      0.01 MB ratio 0.0001 comp    0.08s decomp   0.03s
+zstd_3       0.01 MB ratio 0.0001 comp    0.01s decomp   0.03s
+zstd_10      0.01 MB ratio 0.0001 comp    0.04s decomp   0.03s
+lzma_6       0.01 MB ratio 0.0001 comp    1.56s decomp   0.07s
+lzma_9       0.01 MB ratio 0.0001 comp    1.74s decomp   0.09s
+zlib_9       0.26 MB ratio 0.0034 comp    0.25s decomp   0.11s
+gzip_9       0.26 MB ratio 0.0034 comp    0.25s decomp   0.10s
+store       76.29 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/ml_data/synthetic_tabular.csv
+====================================================================================================
+category:          ml_data
+extension:         .csv
+original MB:       13.75
+entropy:           4.4869
+text_ratio:        1.0000
+unique bytes:      41
+
+oracle best:       lzma_6 (3.24 MB, ratio 0.2356, 6.21s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       4.58 MB ratio 0.3330 comp    0.05s decomp   0.01s size_vs_oracle +41.32%
+balanced_fast    -> zstd_10      3.97 MB ratio 0.2889 comp    0.29s decomp   0.01s size_vs_oracle +22.60%
+balanced_size    -> bz2_9        3.39 MB ratio 0.2463 comp    0.48s decomp   0.22s size_vs_oracle +4.54%
+best_size        -> lzma_6       3.24 MB ratio 0.2356 comp    6.21s decomp   0.12s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_6       3.24 MB ratio 0.2356 comp    6.21s decomp   0.12s
+lzma_9       3.24 MB ratio 0.2357 comp    7.02s decomp   0.13s
+bz2_9        3.39 MB ratio 0.2463 comp    0.48s decomp   0.22s
+zstd_19      3.46 MB ratio 0.2518 comp    8.87s decomp   0.01s
+zstd_10      3.97 MB ratio 0.2889 comp    0.29s decomp   0.01s
+zlib_9       4.07 MB ratio 0.2958 comp    0.74s decomp   0.03s
+gzip_9       4.07 MB ratio 0.2958 comp    0.74s decomp   0.03s
+zstd_3       4.58 MB ratio 0.3330 comp    0.05s decomp   0.01s
+store       13.75 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/source_packages/cpython.tar
+====================================================================================================
+category:          source_packages
+extension:         .tar
+original MB:       177.94
+entropy:           6.7807
+text_ratio:        0.7536
+unique bytes:      256
+
+oracle best:       lzma_9 (75.13 MB, ratio 0.4222, 50.31s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      84.23 MB ratio 0.4734 comp    0.36s decomp   0.13s size_vs_oracle +12.11%
+balanced_fast    -> zstd_10     80.65 MB ratio 0.4532 comp    1.51s decomp   0.13s size_vs_oracle +7.35%
+balanced_size    -> lzma_6      76.99 MB ratio 0.4327 comp   37.97s decomp   1.28s size_vs_oracle +2.47%
+best_size        -> lzma_9      75.13 MB ratio 0.4222 comp   50.31s decomp   1.34s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      75.13 MB ratio 0.4222 comp   50.31s decomp   1.34s
+lzma_6      76.99 MB ratio 0.4327 comp   37.97s decomp   1.28s
+zstd_19     77.54 MB ratio 0.4358 comp   32.35s decomp   0.13s
+zstd_10     80.65 MB ratio 0.4532 comp    1.51s decomp   0.13s
+bz2_9       81.21 MB ratio 0.4564 comp    8.05s decomp   3.89s
+zstd_3      84.23 MB ratio 0.4734 comp    0.36s decomp   0.13s
+zlib_9      85.26 MB ratio 0.4791 comp    6.92s decomp   0.34s
+gzip_9      85.26 MB ratio 0.4791 comp    7.00s decomp   0.36s
+store      177.94 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/source_packages/express.tar
+====================================================================================================
+category:          source_packages
+extension:         .tar
+original MB:       1.13
+entropy:           5.6250
+text_ratio:        0.7215
+unique bytes:      256
+
+oracle best:       lzma_6 (0.29 MB, ratio 0.2554, 0.12s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       0.32 MB ratio 0.2858 comp    0.00s decomp   0.00s size_vs_oracle +11.90%
+balanced_fast    -> zstd_10      0.30 MB ratio 0.2662 comp    0.01s decomp   0.00s size_vs_oracle +4.23%
+balanced_size    -> lzma_6       0.29 MB ratio 0.2554 comp    0.12s decomp   0.01s size_vs_oracle +0.00%
+best_size        -> lzma_6       0.29 MB ratio 0.2554 comp    0.12s decomp   0.01s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_6       0.29 MB ratio 0.2554 comp    0.12s decomp   0.01s
+lzma_9       0.29 MB ratio 0.2554 comp    0.15s decomp   0.01s
+zstd_19      0.29 MB ratio 0.2563 comp    0.16s decomp   0.00s
+zstd_10      0.30 MB ratio 0.2662 comp    0.01s decomp   0.00s
+bz2_9        0.30 MB ratio 0.2674 comp    0.04s decomp   0.02s
+zlib_9       0.32 MB ratio 0.2831 comp    0.03s decomp   0.00s
+gzip_9       0.32 MB ratio 0.2831 comp    0.03s decomp   0.00s
+zstd_3       0.32 MB ratio 0.2858 comp    0.00s decomp   0.00s
+store        1.13 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/source_packages/flask.tar
+====================================================================================================
+category:          source_packages
+extension:         .tar
+original MB:       2.78
+entropy:           6.8316
+text_ratio:        0.6816
+unique bytes:      256
+
+oracle best:       lzma_6 (1.35 MB, ratio 0.4851, 0.36s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       1.43 MB ratio 0.5139 comp    0.01s decomp   0.00s size_vs_oracle +5.93%
+balanced_fast    -> zstd_10      1.40 MB ratio 0.5018 comp    0.02s decomp   0.00s size_vs_oracle +3.45%
+balanced_size    -> lzma_6       1.35 MB ratio 0.4851 comp    0.36s decomp   0.03s size_vs_oracle +0.00%
+best_size        -> lzma_6       1.35 MB ratio 0.4851 comp    0.36s decomp   0.03s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_6       1.35 MB ratio 0.4851 comp    0.36s decomp   0.03s
+lzma_9       1.35 MB ratio 0.4851 comp    0.43s decomp   0.03s
+zstd_19      1.36 MB ratio 0.4872 comp    0.30s decomp   0.00s
+zstd_10      1.40 MB ratio 0.5018 comp    0.02s decomp   0.00s
+bz2_9        1.42 MB ratio 0.5101 comp    0.12s decomp   0.06s
+zstd_3       1.43 MB ratio 0.5139 comp    0.01s decomp   0.00s
+zlib_9       1.49 MB ratio 0.5370 comp    0.08s decomp   0.00s
+gzip_9       1.49 MB ratio 0.5370 comp    0.08s decomp   0.00s
+store        2.78 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/source_packages/react.tar
+====================================================================================================
+category:          source_packages
+extension:         .tar
+original MB:       60.30
+entropy:           6.1231
+text_ratio:        0.7354
+unique bytes:      256
+
+oracle best:       lzma_9 (15.14 MB, ratio 0.2510, 10.19s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3      19.73 MB ratio 0.3273 comp    0.10s decomp   0.02s size_vs_oracle +30.36%
+balanced_fast    -> zstd_10     18.13 MB ratio 0.3007 comp    0.43s decomp   0.04s size_vs_oracle +19.77%
+balanced_size    -> lzma_9      15.14 MB ratio 0.2510 comp   10.19s decomp   0.29s size_vs_oracle +0.00%
+best_size        -> lzma_9      15.14 MB ratio 0.2510 comp   10.19s decomp   0.29s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9      15.14 MB ratio 0.2510 comp   10.19s decomp   0.29s
+lzma_6      17.26 MB ratio 0.2863 comp    9.15s decomp   0.27s
+zstd_19     17.35 MB ratio 0.2878 comp    9.13s decomp   0.04s
+zstd_10     18.13 MB ratio 0.3007 comp    0.43s decomp   0.04s
+bz2_9       19.05 MB ratio 0.3160 comp    2.35s decomp   1.05s
+zstd_3      19.73 MB ratio 0.3273 comp    0.10s decomp   0.02s
+zlib_9      20.96 MB ratio 0.3475 comp    1.72s decomp   0.10s
+gzip_9      20.96 MB ratio 0.3475 comp    1.72s decomp   0.10s
+store       60.30 MB ratio 1.0000 comp    0.00s decomp   0.00s
+
+====================================================================================================
+data/source_packages/redis.tar
+====================================================================================================
+category:          source_packages
+extension:         .tar
+original MB:       26.27
+entropy:           6.1036
+text_ratio:        0.8366
+unique bytes:      256
+
+oracle best:       lzma_9 (8.00 MB, ratio 0.3047, 5.55s)
+
+Selector decisions:
+----------------------------------------------------------------------------------------------------
+fast             -> zstd_3       9.32 MB ratio 0.3547 comp    0.05s decomp   0.02s size_vs_oracle +16.42%
+balanced_fast    -> zstd_10      8.60 MB ratio 0.3273 comp    0.27s decomp   0.01s size_vs_oracle +7.44%
+balanced_size    -> lzma_9       8.00 MB ratio 0.3047 comp    5.55s decomp   0.12s size_vs_oracle +0.00%
+best_size        -> lzma_9       8.00 MB ratio 0.3047 comp    5.55s decomp   0.12s size_vs_oracle +0.00%
+
+All compressors:
+----------------------------------------------------------------------------------------------------
+lzma_9       8.00 MB ratio 0.3047 comp    5.55s decomp   0.12s
+lzma_6       8.04 MB ratio 0.3062 comp    4.97s decomp   0.11s
+zstd_19      8.11 MB ratio 0.3086 comp    4.77s decomp   0.01s
+bz2_9        8.47 MB ratio 0.3225 comp    1.02s decomp   0.46s
+zstd_10      8.60 MB ratio 0.3273 comp    0.27s decomp   0.01s
+zlib_9       9.28 MB ratio 0.3533 comp    1.02s decomp   0.04s
+gzip_9       9.28 MB ratio 0.3533 comp    1.03s decomp   0.05s
+zstd_3       9.32 MB ratio 0.3547 comp    0.05s decomp   0.02s
+store       26.27 MB ratio 1.0000 comp    0.00s decomp   0.00s

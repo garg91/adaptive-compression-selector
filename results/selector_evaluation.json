@@ -1,0 +1,174 @@
+[
+  {
+    "strategy": "always_store",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 1390792137,
+    "overall_ratio": 1.0,
+    "total_compression_time_seconds": 1.0719755664467812e-05,
+    "total_decompression_time_seconds": 6.509944796562195e-06
+  },
+  {
+    "strategy": "always_gzip_9",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 500403432,
+    "overall_ratio": 0.3597974267235881,
+    "total_compression_time_seconds": 86.96865747799166,
+    "total_decompression_time_seconds": 3.1790144070982933
+  },
+  {
+    "strategy": "always_zlib_9",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 500403204,
+    "overall_ratio": 0.35979726278823504,
+    "total_compression_time_seconds": 86.62634619488381,
+    "total_decompression_time_seconds": 3.0234091880265623
+  },
+  {
+    "strategy": "always_bz2_9",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 458401996,
+    "overall_ratio": 0.32959777655113387,
+    "total_compression_time_seconds": 51.37823542370461,
+    "total_decompression_time_seconds": 25.240111231338233
+  },
+  {
+    "strategy": "always_lzma_6",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 384169216,
+    "overall_ratio": 0.27622331603676586,
+    "total_compression_time_seconds": 255.3906767386943,
+    "total_decompression_time_seconds": 10.907540471758693
+  },
+  {
+    "strategy": "always_lzma_9",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 371242772,
+    "overall_ratio": 0.2669290126997605,
+    "total_compression_time_seconds": 334.39873803942464,
+    "total_decompression_time_seconds": 11.285338962683454
+  },
+  {
+    "strategy": "always_zstd_3",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 471944831,
+    "overall_ratio": 0.3393352740820104,
+    "total_compression_time_seconds": 2.791439250810072,
+    "total_decompression_time_seconds": 1.0795393262524158
+  },
+  {
+    "strategy": "always_zstd_10",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 434916897,
+    "overall_ratio": 0.31271164498969267,
+    "total_compression_time_seconds": 13.325616637710482,
+    "total_decompression_time_seconds": 1.0523492039646953
+  },
+  {
+    "strategy": "always_zstd_19",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 401614499,
+    "overall_ratio": 0.28876673107046763,
+    "total_compression_time_seconds": 253.99073221045546,
+    "total_decompression_time_seconds": 1.16306291683577
+  },
+  {
+    "strategy": "selector_fast",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 471937690,
+    "overall_ratio": 0.3393301395979923,
+    "total_compression_time_seconds": 3.188635007943958,
+    "total_decompression_time_seconds": 1.228563966229558,
+    "choices": {
+      "bz2_9": 1,
+      "zstd_3": 18
+    },
+    "missing_choices": []
+  },
+  {
+    "strategy": "selector_balanced_fast",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 435008076,
+    "overall_ratio": 0.3127772040316043,
+    "total_compression_time_seconds": 13.274284252664074,
+    "total_decompression_time_seconds": 1.0602385979145765,
+    "choices": {
+      "zstd_3": 2,
+      "zstd_10": 17
+    },
+    "missing_choices": []
+  },
+  {
+    "strategy": "selector_balanced_size",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 373144985,
+    "overall_ratio": 0.2682967318213994,
+    "total_compression_time_seconds": 261.37885502236895,
+    "total_decompression_time_seconds": 9.845785920042545,
+    "choices": {
+      "zstd_3": 1,
+      "bz2_9": 5,
+      "zstd_10": 1,
+      "lzma_9": 8,
+      "lzma_6": 4
+    },
+    "missing_choices": []
+  },
+  {
+    "strategy": "selector_balanced",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 373144985,
+    "overall_ratio": 0.2682967318213994,
+    "total_compression_time_seconds": 261.37885502236895,
+    "total_decompression_time_seconds": 9.845785920042545,
+    "choices": {
+      "zstd_3": 1,
+      "bz2_9": 5,
+      "zstd_10": 1,
+      "lzma_9": 8,
+      "lzma_6": 4
+    },
+    "missing_choices": []
+  },
+  {
+    "strategy": "selector_best_size",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 369807549,
+    "overall_ratio": 0.26589706625584697,
+    "total_compression_time_seconds": 314.05990797514096,
+    "total_decompression_time_seconds": 12.121135433204472,
+    "choices": {
+      "bz2_9": 4,
+      "lzma_6": 3,
+      "lzma_9": 12
+    },
+    "missing_choices": []
+  },
+  {
+    "strategy": "oracle_best_size",
+    "files_used": 19,
+    "total_original_bytes": 1390792137,
+    "total_compressed_bytes": 369807549,
+    "overall_ratio": 0.26589706625584697,
+    "total_compression_time_seconds": 314.05990797514096,
+    "total_decompression_time_seconds": 12.121135433204472,
+    "wins": {
+      "bz2_9": 4,
+      "lzma_6": 3,
+      "lzma_9": 12
+    }
+  }
+]

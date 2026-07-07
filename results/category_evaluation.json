@@ -1,0 +1,846 @@
+[
+  {
+    "strategy": "always_lzma_9",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 181300620,
+    "overall_ratio": 0.22663215696154004,
+    "total_compression_time_seconds": 200.5462468296755,
+    "total_decompression_time_seconds": 6.37236439762637,
+    "choices": {},
+    "compressed_mb": 172.9017448425293,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "oracle_best_size",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 181300620,
+    "overall_ratio": 0.22663215696154004,
+    "total_compression_time_seconds": 200.5462468296755,
+    "total_decompression_time_seconds": 6.37236439762637,
+    "choices": {
+      "lzma_9": 7
+    },
+    "compressed_mb": 172.9017448425293,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "selector_best_size",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 181300620,
+    "overall_ratio": 0.22663215696154004,
+    "total_compression_time_seconds": 200.5462468296755,
+    "total_decompression_time_seconds": 6.37236439762637,
+    "choices": {
+      "lzma_9": 7
+    },
+    "compressed_mb": 172.9017448425293,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "selector_balanced",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 181300808,
+    "overall_ratio": 0.22663239196815782,
+    "total_compression_time_seconds": 200.53639990091324,
+    "total_decompression_time_seconds": 6.368599890498444,
+    "choices": {
+      "lzma_9": 6,
+      "lzma_6": 1
+    },
+    "compressed_mb": 172.90192413330078,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "selector_balanced_size",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 181300808,
+    "overall_ratio": 0.22663239196815782,
+    "total_compression_time_seconds": 200.53639990091324,
+    "total_decompression_time_seconds": 6.368599890498444,
+    "choices": {
+      "lzma_9": 6,
+      "lzma_6": 1
+    },
+    "compressed_mb": 172.90192413330078,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_lzma_6",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 189147004,
+    "overall_ratio": 0.23644041316203465,
+    "total_compression_time_seconds": 146.6776582452003,
+    "total_decompression_time_seconds": 6.309116323944181,
+    "choices": {},
+    "compressed_mb": 180.38463973999023,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_zstd_19",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 204764671,
+    "overall_ratio": 0.25596304666939423,
+    "total_compression_time_seconds": 135.7368797820527,
+    "total_decompression_time_seconds": 0.8035204117186368,
+    "choices": {},
+    "compressed_mb": 195.27880764007568,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_zstd_10",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 230711629,
+    "overall_ratio": 0.288397657528036,
+    "total_compression_time_seconds": 9.315162115264684,
+    "total_decompression_time_seconds": 0.694165967637673,
+    "choices": {},
+    "compressed_mb": 220.02375507354736,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "selector_balanced_fast",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 230711629,
+    "overall_ratio": 0.288397657528036,
+    "total_compression_time_seconds": 9.315162115264684,
+    "total_decompression_time_seconds": 0.694165967637673,
+    "choices": {
+      "zstd_10": 7
+    },
+    "compressed_mb": 220.02375507354736,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_bz2_9",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 255463883,
+    "overall_ratio": 0.31933884633191273,
+    "total_compression_time_seconds": 28.81401245552115,
+    "total_decompression_time_seconds": 15.041000208817422,
+    "choices": {},
+    "compressed_mb": 243.62934398651123,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_zstd_3",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 258120606,
+    "overall_ratio": 0.3226598436011958,
+    "total_compression_time_seconds": 1.9357800951693207,
+    "total_decompression_time_seconds": 0.7005719058215618,
+    "choices": {},
+    "compressed_mb": 246.162992477417,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "selector_fast",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 258120606,
+    "overall_ratio": 0.3226598436011958,
+    "total_compression_time_seconds": 1.9357800951693207,
+    "total_decompression_time_seconds": 0.7005719058215618,
+    "choices": {
+      "zstd_3": 7
+    },
+    "compressed_mb": 246.162992477417,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_zlib_9",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 286267503,
+    "overall_ratio": 0.3578444556498711,
+    "total_compression_time_seconds": 66.76247762003914,
+    "total_decompression_time_seconds": 2.026975568383932,
+    "choices": {},
+    "compressed_mb": 273.0059652328491,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_gzip_9",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 286267587,
+    "overall_ratio": 0.357844560652828,
+    "total_compression_time_seconds": 66.91307438421063,
+    "total_decompression_time_seconds": 2.104251203360036,
+    "choices": {},
+    "compressed_mb": 273.0060453414917,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_store",
+    "category": "docker_layers",
+    "files_used": 7,
+    "total_original_bytes": 799977472,
+    "total_compressed_bytes": 799977472,
+    "overall_ratio": 1.0,
+    "total_compression_time_seconds": 3.969995304942131e-06,
+    "total_decompression_time_seconds": 2.2598542273044586e-06,
+    "choices": {},
+    "compressed_mb": 762.91796875,
+    "original_mb": 762.91796875
+  },
+  {
+    "strategy": "always_bz2_9",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 5936441,
+    "overall_ratio": 0.06253203857388204,
+    "total_compression_time_seconds": 5.127493184059858,
+    "total_decompression_time_seconds": 1.1024074766319245,
+    "choices": {},
+    "compressed_mb": 5.661431312561035,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "oracle_best_size",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 5936441,
+    "overall_ratio": 0.06253203857388204,
+    "total_compression_time_seconds": 5.127493184059858,
+    "total_decompression_time_seconds": 1.1024074766319245,
+    "choices": {
+      "bz2_9": 3
+    },
+    "compressed_mb": 5.661431312561035,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "selector_balanced",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 5936441,
+    "overall_ratio": 0.06253203857388204,
+    "total_compression_time_seconds": 5.127493184059858,
+    "total_decompression_time_seconds": 1.1024074766319245,
+    "choices": {
+      "bz2_9": 3
+    },
+    "compressed_mb": 5.661431312561035,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "selector_balanced_size",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 5936441,
+    "overall_ratio": 0.06253203857388204,
+    "total_compression_time_seconds": 5.127493184059858,
+    "total_decompression_time_seconds": 1.1024074766319245,
+    "choices": {
+      "bz2_9": 3
+    },
+    "compressed_mb": 5.661431312561035,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "selector_best_size",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 5936441,
+    "overall_ratio": 0.06253203857388204,
+    "total_compression_time_seconds": 5.127493184059858,
+    "total_decompression_time_seconds": 1.1024074766319245,
+    "choices": {
+      "bz2_9": 3
+    },
+    "compressed_mb": 5.661431312561035,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_lzma_9",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 7359356,
+    "overall_ratio": 0.07752044251276653,
+    "total_compression_time_seconds": 23.224163447972387,
+    "total_decompression_time_seconds": 0.3432519747875631,
+    "choices": {},
+    "compressed_mb": 7.018428802490234,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_lzma_6",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 7419284,
+    "overall_ratio": 0.07815169952478022,
+    "total_compression_time_seconds": 20.04149800701998,
+    "total_decompression_time_seconds": 0.28100894507952034,
+    "choices": {},
+    "compressed_mb": 7.075580596923828,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_zstd_19",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 7542584,
+    "overall_ratio": 0.07945049123452005,
+    "total_compression_time_seconds": 35.07213598303497,
+    "total_decompression_time_seconds": 0.05434447503648698,
+    "choices": {},
+    "compressed_mb": 7.193168640136719,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_zstd_10",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 8836464,
+    "overall_ratio": 0.09307969332209652,
+    "total_compression_time_seconds": 0.8461023869458586,
+    "total_decompression_time_seconds": 0.04878839012235403,
+    "choices": {},
+    "compressed_mb": 8.427108764648438,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "selector_balanced_fast",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 8836464,
+    "overall_ratio": 0.09307969332209652,
+    "total_compression_time_seconds": 0.8461023869458586,
+    "total_decompression_time_seconds": 0.04878839012235403,
+    "choices": {
+      "zstd_10": 3
+    },
+    "compressed_mb": 8.427108764648438,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_zlib_9",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 10014212,
+    "overall_ratio": 0.10548560847670051,
+    "total_compression_time_seconds": 2.1965624168515205,
+    "total_decompression_time_seconds": 0.10934809106402099,
+    "choices": {},
+    "compressed_mb": 9.550296783447266,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_gzip_9",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 10014248,
+    "overall_ratio": 0.10548598768595882,
+    "total_compression_time_seconds": 2.1984821492806077,
+    "total_decompression_time_seconds": 0.1205776168499142,
+    "choices": {},
+    "compressed_mb": 9.550331115722656,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_zstd_3",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 11500182,
+    "overall_ratio": 0.12113820796511983,
+    "total_compression_time_seconds": 0.11141193797811866,
+    "total_decompression_time_seconds": 0.05770161864347756,
+    "choices": {},
+    "compressed_mb": 10.967428207397461,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "selector_fast",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 11500182,
+    "overall_ratio": 0.12113820796511983,
+    "total_compression_time_seconds": 0.11141193797811866,
+    "total_decompression_time_seconds": 0.05770161864347756,
+    "choices": {
+      "zstd_3": 3
+    },
+    "compressed_mb": 10.967428207397461,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "always_store",
+    "category": "logs_json",
+    "files_used": 3,
+    "total_original_bytes": 94934391,
+    "total_compressed_bytes": 94934391,
+    "overall_ratio": 1.0,
+    "total_compression_time_seconds": 1.500127837061882e-06,
+    "total_decompression_time_seconds": 9.902287274599075e-07,
+    "choices": {},
+    "compressed_mb": 90.53649044036865,
+    "original_mb": 90.53649044036865
+  },
+  {
+    "strategy": "oracle_best_size",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 77803788,
+    "overall_ratio": 0.3628681331353768,
+    "total_compression_time_seconds": 41.85460885684006,
+    "total_decompression_time_seconds": 2.864808548009023,
+    "choices": {
+      "bz2_9": 1,
+      "lzma_6": 1,
+      "lzma_9": 2
+    },
+    "compressed_mb": 74.1994743347168,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "selector_best_size",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 77803788,
+    "overall_ratio": 0.3628681331353768,
+    "total_compression_time_seconds": 41.85460885684006,
+    "total_decompression_time_seconds": 2.864808548009023,
+    "choices": {
+      "bz2_9": 1,
+      "lzma_6": 1,
+      "lzma_9": 2
+    },
+    "compressed_mb": 74.1994743347168,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_lzma_9",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 77816096,
+    "overall_ratio": 0.3629255362657055,
+    "total_compression_time_seconds": 43.99670143891126,
+    "total_decompression_time_seconds": 2.7863145030569285,
+    "choices": {},
+    "compressed_mb": 74.21121215820312,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_lzma_6",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 78619912,
+    "overall_ratio": 0.3666744438549394,
+    "total_compression_time_seconds": 36.0994175686501,
+    "total_decompression_time_seconds": 2.6255173317622393,
+    "choices": {},
+    "compressed_mb": 74.97779083251953,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "selector_balanced",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 79194420,
+    "overall_ratio": 0.3693538846738278,
+    "total_compression_time_seconds": 1.5263849208131433,
+    "total_decompression_time_seconds": 0.6486950700636953,
+    "choices": {
+      "zstd_3": 1,
+      "bz2_9": 2,
+      "zstd_10": 1
+    },
+    "compressed_mb": 75.52568435668945,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "selector_balanced_size",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 79194420,
+    "overall_ratio": 0.3693538846738278,
+    "total_compression_time_seconds": 1.5263849208131433,
+    "total_decompression_time_seconds": 0.6486950700636953,
+    "choices": {
+      "zstd_3": 1,
+      "bz2_9": 2,
+      "zstd_10": 1
+    },
+    "compressed_mb": 75.52568435668945,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_zstd_19",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 79576036,
+    "overall_ratio": 0.3711336988583838,
+    "total_compression_time_seconds": 36.474578679772094,
+    "total_decompression_time_seconds": 0.121572159929201,
+    "choices": {},
+    "compressed_mb": 75.88962173461914,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_zstd_10",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 80991180,
+    "overall_ratio": 0.377733771613167,
+    "total_compression_time_seconds": 0.9161532048601657,
+    "total_decompression_time_seconds": 0.13221620908007026,
+    "choices": {},
+    "compressed_mb": 77.23920822143555,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "selector_balanced_fast",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 81082359,
+    "overall_ratio": 0.37815902023359604,
+    "total_compression_time_seconds": 0.8648208198137581,
+    "total_decompression_time_seconds": 0.14010560302995145,
+    "choices": {
+      "zstd_3": 2,
+      "zstd_10": 2
+    },
+    "compressed_mb": 77.32616329193115,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_zlib_9",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 81109334,
+    "overall_ratio": 0.37828482860543683,
+    "total_compression_time_seconds": 7.895654138876125,
+    "total_decompression_time_seconds": 0.40260000666603446,
+    "choices": {},
+    "compressed_mb": 77.35188865661621,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_gzip_9",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 81109382,
+    "overall_ratio": 0.37828505247204847,
+    "total_compression_time_seconds": 7.997129598166794,
+    "total_decompression_time_seconds": 0.43319947575218976,
+    "choices": {},
+    "compressed_mb": 77.3519344329834,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_bz2_9",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 81177730,
+    "overall_ratio": 0.37860381987143954,
+    "total_compression_time_seconds": 5.858846144983545,
+    "total_decompression_time_seconds": 3.6079807900823653,
+    "choices": {},
+    "compressed_mb": 77.41711616516113,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "selector_fast",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 81688478,
+    "overall_ratio": 0.3809858912078972,
+    "total_compression_time_seconds": 0.6244295230135322,
+    "total_decompression_time_seconds": 0.3000209506135434,
+    "choices": {
+      "bz2_9": 1,
+      "zstd_3": 3
+    },
+    "compressed_mb": 77.90420341491699,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_zstd_3",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 81695619,
+    "overall_ratio": 0.3810191960302629,
+    "total_compression_time_seconds": 0.22723376587964594,
+    "total_decompression_time_seconds": 0.15099631063640118,
+    "choices": {},
+    "compressed_mb": 77.91101360321045,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_store",
+    "category": "ml_data",
+    "files_used": 4,
+    "total_original_bytes": 214413394,
+    "total_compressed_bytes": 214413394,
+    "overall_ratio": 1.0,
+    "total_compression_time_seconds": 2.269865944981575e-06,
+    "total_decompression_time_seconds": 1.8298160284757614e-06,
+    "choices": {},
+    "compressed_mb": 204.48054695129395,
+    "original_mb": 204.48054695129395
+  },
+  {
+    "strategy": "always_lzma_9",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 104766700,
+    "overall_ratio": 0.37221679509859207,
+    "total_compression_time_seconds": 66.63162632286549,
+    "total_decompression_time_seconds": 1.7834080872125924,
+    "choices": {},
+    "compressed_mb": 99.91331100463867,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "oracle_best_size",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 104766700,
+    "overall_ratio": 0.37221679509859207,
+    "total_compression_time_seconds": 66.53155910456553,
+    "total_decompression_time_seconds": 1.7815550109371543,
+    "choices": {
+      "lzma_9": 3,
+      "lzma_6": 2
+    },
+    "compressed_mb": 99.91331100463867,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "selector_best_size",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 104766700,
+    "overall_ratio": 0.37221679509859207,
+    "total_compression_time_seconds": 66.53155910456553,
+    "total_decompression_time_seconds": 1.7815550109371543,
+    "choices": {
+      "lzma_9": 3,
+      "lzma_6": 2
+    },
+    "compressed_mb": 99.91331100463867,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "selector_balanced",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 106713316,
+    "overall_ratio": 0.3791327633290283,
+    "total_compression_time_seconds": 54.18857701658271,
+    "total_decompression_time_seconds": 1.7260834828484803,
+    "choices": {
+      "lzma_9": 2,
+      "lzma_6": 3
+    },
+    "compressed_mb": 101.76974868774414,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "selector_balanced_size",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 106713316,
+    "overall_ratio": 0.3791327633290283,
+    "total_compression_time_seconds": 54.18857701658271,
+    "total_decompression_time_seconds": 1.7260834828484803,
+    "choices": {
+      "lzma_9": 2,
+      "lzma_6": 3
+    },
+    "compressed_mb": 101.76974868774414,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_lzma_6",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 108983016,
+    "overall_ratio": 0.38719658952413866,
+    "total_compression_time_seconds": 52.57210291782394,
+    "total_decompression_time_seconds": 1.6918978709727526,
+    "choices": {},
+    "compressed_mb": 103.9343032836914,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_zstd_19",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 109731208,
+    "overall_ratio": 0.38985477794048096,
+    "total_compression_time_seconds": 46.70713776559569,
+    "total_decompression_time_seconds": 0.18362587015144527,
+    "choices": {},
+    "compressed_mb": 104.64783477783203,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_zstd_10",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 114377624,
+    "overall_ratio": 0.4063626384745516,
+    "total_compression_time_seconds": 2.2481989306397736,
+    "total_decompression_time_seconds": 0.17717863712459803,
+    "choices": {},
+    "compressed_mb": 109.0790023803711,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "selector_balanced_fast",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 114377624,
+    "overall_ratio": 0.4063626384745516,
+    "total_compression_time_seconds": 2.2481989306397736,
+    "total_decompression_time_seconds": 0.17717863712459803,
+    "choices": {
+      "zstd_10": 5
+    },
+    "compressed_mb": 109.0790023803711,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_bz2_9",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 115823942,
+    "overall_ratio": 0.4115011400275585,
+    "total_compression_time_seconds": 11.577883639140055,
+    "total_decompression_time_seconds": 5.488722755806521,
+    "choices": {},
+    "compressed_mb": 110.45831871032715,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_zstd_3",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 120628424,
+    "overall_ratio": 0.4285705799559792,
+    "total_compression_time_seconds": 0.5170134517829865,
+    "total_decompression_time_seconds": 0.17026949115097523,
+    "choices": {},
+    "compressed_mb": 115.04022979736328,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "selector_fast",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 120628424,
+    "overall_ratio": 0.4285705799559792,
+    "total_compression_time_seconds": 0.5170134517829865,
+    "total_decompression_time_seconds": 0.17026949115097523,
+    "choices": {
+      "zstd_3": 5
+    },
+    "compressed_mb": 115.04022979736328,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_zlib_9",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 123012155,
+    "overall_ratio": 0.43703953729831374,
+    "total_compression_time_seconds": 9.771652019117028,
+    "total_decompression_time_seconds": 0.48448552191257477,
+    "choices": {},
+    "compressed_mb": 117.31353282928467,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_gzip_9",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 123012215,
+    "overall_ratio": 0.43703975046726634,
+    "total_compression_time_seconds": 9.859971346333623,
+    "total_decompression_time_seconds": 0.5209861111361533,
+    "choices": {},
+    "compressed_mb": 117.31359004974365,
+    "original_mb": 268.427734375
+  },
+  {
+    "strategy": "always_store",
+    "category": "source_packages",
+    "files_used": 5,
+    "total_original_bytes": 281466880,
+    "total_compressed_bytes": 281466880,
+    "overall_ratio": 1.0,
+    "total_compression_time_seconds": 2.9797665774822235e-06,
+    "total_decompression_time_seconds": 1.4300458133220673e-06,
+    "choices": {},
+    "compressed_mb": 268.427734375,
+    "original_mb": 268.427734375
+  }
+]

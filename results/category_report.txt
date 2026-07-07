@@ -1,0 +1,166 @@
+Adaptive Compression Selector Report
+==========================================================================================
+
+Overall strategy comparison
+------------------------------------------------------------------------------------------
+Strategy                 Files      Ratio   Compressed MB    Comp Time s  Decomp Time s
+------------------------------------------------------------------------------------------
+oracle_best_size            19     0.2659          352.68         314.06          12.12
+selector_best_size          19     0.2659          352.68         314.06          12.12
+always_lzma_9               19     0.2669          354.04         334.40          11.29
+selector_balanced           19     0.2683          355.86         261.38           9.85
+selector_balanced_size      19     0.2683          355.86         261.38           9.85
+always_lzma_6               19     0.2762          366.37         255.39          10.91
+always_zstd_19              19     0.2888          383.01         253.99           1.16
+always_zstd_10              19     0.3127          414.77          13.33           1.05
+selector_balanced_fast      19     0.3128          414.86          13.27           1.06
+always_bz2_9                19     0.3296          437.17          51.38          25.24
+selector_fast               19     0.3393          450.07           3.19           1.23
+always_zstd_3               19     0.3393          450.08           2.79           1.08
+always_zlib_9               19     0.3598          477.22          86.63           3.02
+always_gzip_9               19     0.3598          477.22          86.97           3.18
+always_store                19     1.0000         1326.36           0.00           0.00
+
+==========================================================================================
+Category: docker_layers
+==========================================================================================
+Strategy                 Files      Ratio   Compressed MB    Comp Time s  Decomp Time s
+------------------------------------------------------------------------------------------
+always_lzma_9                7     0.2266          172.90         200.55           6.37
+oracle_best_size             7     0.2266          172.90         200.55           6.37
+selector_best_size           7     0.2266          172.90         200.55           6.37
+selector_balanced            7     0.2266          172.90         200.54           6.37
+selector_balanced_size       7     0.2266          172.90         200.54           6.37
+always_lzma_6                7     0.2364          180.38         146.68           6.31
+always_zstd_19               7     0.2560          195.28         135.74           0.80
+always_zstd_10               7     0.2884          220.02           9.32           0.69
+selector_balanced_fast       7     0.2884          220.02           9.32           0.69
+always_bz2_9                 7     0.3193          243.63          28.81          15.04
+always_zstd_3                7     0.3227          246.16           1.94           0.70
+selector_fast                7     0.3227          246.16           1.94           0.70
+always_zlib_9                7     0.3578          273.01          66.76           2.03
+always_gzip_9                7     0.3578          273.01          66.91           2.10
+always_store                 7     1.0000          762.92           0.00           0.00
+
+Balanced selector vs always_lzma_9:
+  compressed size change: +0.00%
+  compression time change: -0.00%
+
+Best-size selector vs oracle:
+  exact oracle match by compressed bytes: True
+  selector choices: {'lzma_9': 7}
+  oracle choices:   {'lzma_9': 7}
+
+==========================================================================================
+Category: logs_json
+==========================================================================================
+Strategy                 Files      Ratio   Compressed MB    Comp Time s  Decomp Time s
+------------------------------------------------------------------------------------------
+always_bz2_9                 3     0.0625            5.66           5.13           1.10
+oracle_best_size             3     0.0625            5.66           5.13           1.10
+selector_balanced            3     0.0625            5.66           5.13           1.10
+selector_balanced_size       3     0.0625            5.66           5.13           1.10
+selector_best_size           3     0.0625            5.66           5.13           1.10
+always_lzma_9                3     0.0775            7.02          23.22           0.34
+always_lzma_6                3     0.0782            7.08          20.04           0.28
+always_zstd_19               3     0.0795            7.19          35.07           0.05
+always_zstd_10               3     0.0931            8.43           0.85           0.05
+selector_balanced_fast       3     0.0931            8.43           0.85           0.05
+always_zlib_9                3     0.1055            9.55           2.20           0.11
+always_gzip_9                3     0.1055            9.55           2.20           0.12
+always_zstd_3                3     0.1211           10.97           0.11           0.06
+selector_fast                3     0.1211           10.97           0.11           0.06
+always_store                 3     1.0000           90.54           0.00           0.00
+
+Balanced selector vs always_lzma_9:
+  compressed size change: -19.33%
+  compression time change: -77.92%
+
+Best-size selector vs oracle:
+  exact oracle match by compressed bytes: True
+  selector choices: {'bz2_9': 3}
+  oracle choices:   {'bz2_9': 3}
+
+==========================================================================================
+Category: ml_data
+==========================================================================================
+Strategy                 Files      Ratio   Compressed MB    Comp Time s  Decomp Time s
+------------------------------------------------------------------------------------------
+oracle_best_size             4     0.3629           74.20          41.85           2.86
+selector_best_size           4     0.3629           74.20          41.85           2.86
+always_lzma_9                4     0.3629           74.21          44.00           2.79
+always_lzma_6                4     0.3667           74.98          36.10           2.63
+selector_balanced            4     0.3694           75.53           1.53           0.65
+selector_balanced_size       4     0.3694           75.53           1.53           0.65
+always_zstd_19               4     0.3711           75.89          36.47           0.12
+always_zstd_10               4     0.3777           77.24           0.92           0.13
+selector_balanced_fast       4     0.3782           77.33           0.86           0.14
+always_zlib_9                4     0.3783           77.35           7.90           0.40
+always_gzip_9                4     0.3783           77.35           8.00           0.43
+always_bz2_9                 4     0.3786           77.42           5.86           3.61
+selector_fast                4     0.3810           77.90           0.62           0.30
+always_zstd_3                4     0.3810           77.91           0.23           0.15
+always_store                 4     1.0000          204.48           0.00           0.00
+
+Balanced selector vs always_lzma_9:
+  compressed size change: +1.77%
+  compression time change: -96.53%
+
+Best-size selector vs oracle:
+  exact oracle match by compressed bytes: True
+  selector choices: {'bz2_9': 1, 'lzma_6': 1, 'lzma_9': 2}
+  oracle choices:   {'bz2_9': 1, 'lzma_6': 1, 'lzma_9': 2}
+
+==========================================================================================
+Category: source_packages
+==========================================================================================
+Strategy                 Files      Ratio   Compressed MB    Comp Time s  Decomp Time s
+------------------------------------------------------------------------------------------
+always_lzma_9                5     0.3722           99.91          66.63           1.78
+oracle_best_size             5     0.3722           99.91          66.53           1.78
+selector_best_size           5     0.3722           99.91          66.53           1.78
+selector_balanced            5     0.3791          101.77          54.19           1.73
+selector_balanced_size       5     0.3791          101.77          54.19           1.73
+always_lzma_6                5     0.3872          103.93          52.57           1.69
+always_zstd_19               5     0.3899          104.65          46.71           0.18
+always_zstd_10               5     0.4064          109.08           2.25           0.18
+selector_balanced_fast       5     0.4064          109.08           2.25           0.18
+always_bz2_9                 5     0.4115          110.46          11.58           5.49
+always_zstd_3                5     0.4286          115.04           0.52           0.17
+selector_fast                5     0.4286          115.04           0.52           0.17
+always_zlib_9                5     0.4370          117.31           9.77           0.48
+always_gzip_9                5     0.4370          117.31           9.86           0.52
+always_store                 5     1.0000          268.43           0.00           0.00
+
+Balanced selector vs always_lzma_9:
+  compressed size change: +1.86%
+  compression time change: -18.67%
+
+Best-size selector vs oracle:
+  exact oracle match by compressed bytes: True
+  selector choices: {'lzma_9': 3, 'lzma_6': 2}
+  oracle choices:   {'lzma_9': 3, 'lzma_6': 2}
+
+==========================================================================================
+Compact takeaways
+==========================================================================================
+
+docker_layers:
+  best ratio: always_lzma_9 (0.2266)
+  fastest non-store: always_zstd_3 (1.94s)
+  selector_balanced vs lzma_9: +0.00% size, -0.00% time
+
+logs_json:
+  best ratio: always_bz2_9 (0.0625)
+  fastest non-store: always_zstd_3 (0.11s)
+  selector_balanced vs lzma_9: -19.33% size, -77.92% time
+
+ml_data:
+  best ratio: oracle_best_size (0.3629)
+  fastest non-store: always_zstd_3 (0.23s)
+  selector_balanced vs lzma_9: +1.77% size, -96.53% time
+
+source_packages:
+  best ratio: always_lzma_9 (0.3722)
+  fastest non-store: always_zstd_3 (0.52s)
+  selector_balanced vs lzma_9: +1.86% size, -18.67% time
