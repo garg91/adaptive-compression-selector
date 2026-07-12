@@ -1,0 +1,219 @@
+{
+  "artifact": {
+    "name": "phase3_interleaved_ml_artifact_512mb.bin",
+    "original_bytes": 536870912,
+    "original_mb": 512.0
+  },
+  "whole_file_baselines": {
+    "zstd_3": {
+      "compressed_mb": 138.08,
+      "ratio": 0.269685,
+      "compression_time_seconds": 0.31
+    },
+    "zstd_10": {
+      "compressed_mb": 137.25,
+      "ratio": 0.26807,
+      "compression_time_seconds": 1.0
+    },
+    "zstd_19": {
+      "compressed_mb": 135.57,
+      "ratio": 0.264783,
+      "compression_time_seconds": 47.21
+    },
+    "lzma_6": {
+      "compressed_mb": 127.26,
+      "ratio": 0.248555,
+      "compression_time_seconds": 36.41
+    },
+    "lzma_9": {
+      "compressed_mb": 125.38,
+      "ratio": 0.244884,
+      "compression_time_seconds": 55.85
+    },
+    "bz2_9": {
+      "compressed_mb": 148.28,
+      "ratio": 0.289605,
+      "compression_time_seconds": 42.57
+    }
+  },
+  "adc_results": [
+    {
+      "file": "interleaved_1mb_balanced.adc",
+      "method": "adc_balanced",
+      "chunk_size": "1 MB",
+      "chunk_size_bytes": 1048576,
+      "chunks": 512,
+      "compressed_bytes": 140391871,
+      "compressed_mb": 133.88812160491943,
+      "ratio": 0.26150023750960827,
+      "compression_time_seconds": 49.85903374082409,
+      "choices": {
+        "lzma_6": 366,
+        "zstd_10": 146
+      },
+      "gap_vs_chunk_oracle_percent": 4.354144092458249,
+      "gap_vs_zstd19_percent": -1.2405977687398093,
+      "gap_vs_lzma6_percent": 5.208330665503244,
+      "gap_vs_lzma9_percent": 6.785868244472355
+    },
+    {
+      "file": "interleaved_1mb_learned.adc",
+      "method": "adc_learned",
+      "chunk_size": "1 MB",
+      "chunk_size_bytes": 1048576,
+      "chunks": 512,
+      "compressed_bytes": 134564023,
+      "compressed_mb": 128.3302526473999,
+      "ratio": 0.25064502470195293,
+      "compression_time_seconds": 64.66129392199218,
+      "choices": {
+        "lzma_6": 365,
+        "zstd_19": 147
+      },
+      "gap_vs_chunk_oracle_percent": 0.02226870958124033,
+      "gap_vs_zstd19_percent": -5.340228186619526,
+      "gap_vs_lzma6_percent": 0.840996894075041,
+      "gap_vs_lzma9_percent": 2.353048849417696
+    },
+    {
+      "file": "interleaved_1mb_oracle.adc",
+      "method": "adc_chunk_oracle",
+      "chunk_size": "1 MB",
+      "chunk_size_bytes": 1048576,
+      "chunks": 512,
+      "compressed_bytes": 134534064,
+      "compressed_mb": 128.3016815185547,
+      "ratio": 0.2505892217159271,
+      "compression_time_seconds": 195.2360240900889,
+      "choices": {
+        "lzma_6": 368,
+        "zstd_19": 143,
+        "zstd_10": 1
+      },
+      "gap_vs_chunk_oracle_percent": 0.0,
+      "gap_vs_zstd19_percent": -5.3613030032052125,
+      "gap_vs_lzma6_percent": 0.8185459048834531,
+      "gap_vs_lzma9_percent": 2.3302612207327265
+    },
+    {
+      "file": "interleaved_256kb_balanced.adc",
+      "method": "adc_balanced",
+      "chunk_size": "256 KB",
+      "chunk_size_bytes": 262144,
+      "chunks": 2048,
+      "compressed_bytes": 150836212,
+      "compressed_mb": 143.8486213684082,
+      "ratio": 0.28095433861017227,
+      "compression_time_seconds": 35.73668791493401,
+      "choices": {
+        "zstd_10": 878,
+        "lzma_6": 878,
+        "store": 292
+      },
+      "gap_vs_chunk_oracle_percent": 12.724153243531388,
+      "gap_vs_zstd19_percent": 6.106529002292698,
+      "gap_vs_lzma6_percent": 13.035220311494733,
+      "gap_vs_lzma9_percent": 14.730117537412832
+    },
+    {
+      "file": "interleaved_256kb_learned.adc",
+      "method": "adc_learned",
+      "chunk_size": "256 KB",
+      "chunk_size_bytes": 262144,
+      "chunks": 2048,
+      "compressed_bytes": 134106796,
+      "compressed_mb": 127.89420700073242,
+      "ratio": 0.2497933730483055,
+      "compression_time_seconds": 67.57923970813863,
+      "choices": {
+        "lzma_6": 578,
+        "zstd_19": 728,
+        "zstd_10": 369,
+        "store": 292,
+        "zstd_3": 81
+      },
+      "gap_vs_chunk_oracle_percent": 0.22178907080351679,
+      "gap_vs_zstd19_percent": -5.661866931671883,
+      "gap_vs_lzma6_percent": 0.49835533610908117,
+      "gap_vs_lzma9_percent": 2.0052695810595202
+    },
+    {
+      "file": "interleaved_256kb_oracle.adc",
+      "method": "adc_chunk_oracle",
+      "chunk_size": "256 KB",
+      "chunk_size_bytes": 262144,
+      "chunks": 2048,
+      "compressed_bytes": 133810020,
+      "compressed_mb": 127.61117935180664,
+      "ratio": 0.24924058467149734,
+      "compression_time_seconds": 225.3612042570021,
+      "choices": {
+        "lzma_6": 655,
+        "zstd_19": 627,
+        "zstd_10": 393,
+        "store": 292,
+        "zstd_3": 81
+      },
+      "gap_vs_chunk_oracle_percent": 0.0,
+      "gap_vs_zstd19_percent": -5.870635574384711,
+      "gap_vs_lzma6_percent": 0.27595422898525496,
+      "gap_vs_lzma9_percent": 1.779533699000355
+    },
+    {
+      "file": "interleaved_4mb_balanced.adc",
+      "method": "adc_balanced",
+      "chunk_size": "4 MB",
+      "chunk_size_bytes": 4194304,
+      "chunks": 128,
+      "compressed_bytes": 134717118,
+      "compressed_mb": 128.47625541687012,
+      "ratio": 0.25093018636107445,
+      "compression_time_seconds": 60.33451641490683,
+      "choices": {
+        "lzma_6": 128
+      },
+      "gap_vs_chunk_oracle_percent": 0.013951918110340272,
+      "gap_vs_zstd19_percent": -5.232532701283379,
+      "gap_vs_lzma6_percent": 0.9557248285950904,
+      "gap_vs_lzma9_percent": 2.4694970624263215
+    },
+    {
+      "file": "interleaved_4mb_learned.adc",
+      "method": "adc_learned",
+      "chunk_size": "4 MB",
+      "chunk_size_bytes": 4194304,
+      "chunks": 128,
+      "compressed_bytes": 134710978,
+      "compressed_mb": 128.47039985656738,
+      "ratio": 0.25091874971985817,
+      "compression_time_seconds": 68.01219348888844,
+      "choices": {
+        "lzma_6": 42,
+        "lzma_9": 86
+      },
+      "gap_vs_chunk_oracle_percent": 0.00939358377322064,
+      "gap_vs_zstd19_percent": -5.236851916672281,
+      "gap_vs_lzma6_percent": 0.9511235710886199,
+      "gap_vs_lzma9_percent": 2.4648268117462018
+    },
+    {
+      "file": "interleaved_4mb_oracle.adc",
+      "method": "adc_chunk_oracle",
+      "chunk_size": "4 MB",
+      "chunk_size_bytes": 4194304,
+      "chunks": 128,
+      "compressed_bytes": 134698325,
+      "compressed_mb": 128.4583330154419,
+      "ratio": 0.25089518167078495,
+      "compression_time_seconds": 191.12742100306787,
+      "choices": {
+        "lzma_6": 105,
+        "lzma_9": 23
+      },
+      "gap_vs_chunk_oracle_percent": 0.0,
+      "gap_vs_zstd19_percent": -5.245752736267684,
+      "gap_vs_lzma6_percent": 0.9416415334291132,
+      "gap_vs_lzma9_percent": 2.45520259646028
+    }
+  ]
+}

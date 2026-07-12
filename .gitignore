@@ -30,3 +30,11 @@ results/pareto_report_phase2.txt
 results/pareto_report_phase2.json
 results/pareto_selector_report_phase2.txt
 results/pareto_selector_evaluation_phase2.json
+
+# Phase 3 generated artifacts
+results/phase3_interleaved/*.adc
+results/phase3_interleaved/*.out
+data/ml_data/phase3_interleaved_ml_artifact_*.bin
+data/ml_data/phase3_interleaved_ml_artifact_*.bin.manifest.json
+results/phase3_test/*.adc
+results/phase3_test/*.out

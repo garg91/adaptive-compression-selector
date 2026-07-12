@@ -184,99 +184,171 @@ Because of this, headline comparisons should either:
 
 Phase 2 should therefore be described as a near-exhaustive benchmark with a small number of guarded skips, not as a perfectly complete full matrix.
 
-## Research Direction: Phase 3
+## Phase 3: Mixed-Compression ADC Container
 
-Phase 1 and Phase 2 evaluate file-level compressor selection:
+Phase 3 extends the project from file-level compressor selection to chunk-level mixed compression.
 
-```text
-one file -> one selected compressor
-```
-
-Phase 3 will move to chunk-level mixed compression:
+Instead of choosing one compressor for an entire file, Phase 3 splits an artifact into chunks, extracts chunk-level features, selects a compressor per chunk, and writes one self-describing `.adc` container that can be decompressed bit-exactly.
 
 ```text
-one file -> chunks -> per-chunk compressor selection -> one self-describing compressed container
+one file -> chunks -> per-chunk features -> per-chunk compressor -> one .adc container
 ```
 
-The target domain is machine-learning artifacts, where single files may contain multiple internal data types:
+The target domain is machine-learning artifacts, where single files may contain multiple internal data regimes:
 
-- dense float tensors
-- sparse tensors or zero-heavy chunks
-- integer labels
-- token vocabularies
-- JSON/YAML metadata
+- dense float tensor regions
+- sparse or zero-heavy tensor regions
+- integer label arrays
+- token/text regions
+- JSON/YAML-like metadata
 - optimizer state
 - embedding tables
-- already-compressed media or binary payloads
+- already-compressed or high-entropy payloads
 
-### Phase 3 Goals
+### ADC Container Design
 
-- Split large ML artifacts into chunks.
-- Extract chunk-level features such as entropy, text ratio, zero ratio, byte diversity, and local compressibility.
-- Select a compressor per chunk.
-- Store all compressed chunks in one self-describing container.
-- Include only metadata for compressors actually used in the file.
-- Compare chunk-level adaptive compression against whole-file fixed compressors, the Phase 2 file-level selector, and a chunk-level oracle.
+The `.adc` format uses:
 
-### Proposed Container Design
+```text
+magic bytes -> header length -> JSON header -> compressed payload bytes
+```
 
-The compressed output should use a local compressor table instead of storing metadata for every supported compressor.
+Each container stores a file-local compressor table. If a file uses only three compressor configurations, the header records only those three, and chunks reference them by compact local IDs.
 
-Example:
+Example header shape:
 
 ```json
 {
-  "format": "ADC1",
+  "format": "ADC",
   "version": 1,
-  "original_size": 987654321,
-  "chunk_size": 1048576,
+  "mode": "learned",
+  "original_size": 536870912,
+  "chunk_size": 262144,
   "compressor_table": [
-    {"id": 0, "codec": "zstd", "level": 10},
-    {"id": 1, "codec": "lzma", "preset": 6},
-    {"id": 2, "codec": "store"}
+    {"id": 0, "name": "lzma_6"},
+    {"id": 1, "name": "zstd_19"},
+    {"id": 2, "name": "zstd_10"},
+    {"id": 3, "name": "store"},
+    {"id": 4, "name": "zstd_3"}
   ],
   "chunks": [
     {
       "index": 0,
-      "offset": 0,
-      "original_size": 1048576,
-      "compressed_size": 310222,
+      "original_offset": 0,
+      "original_size": 262144,
+      "compressed_offset": 0,
+      "compressed_size": 1892,
       "compressor_id": 0,
-      "sha256": "..."
+      "sha256": "...",
+      "features": {
+        "entropy": 4.7464,
+        "text_ratio": 1.0,
+        "zero_ratio": 0.0,
+        "unique_byte_count": 46
+      }
     }
   ]
 }
 ```
 
-This keeps each compressed file self-describing but minimal: if a file uses only three compressor configurations, the header records only those three.
+The SHA-256 stored per chunk is used to verify exact decompression.
 
-### Phase 3 Evaluation Plan
+### Phase 3 Synthetic Interleaved ML Artifact
 
-For each ML artifact type, compare:
+A 512 MB synthetic interleaved ML artifact was generated to simulate frequent data-regime changes inside a single file. The artifact alternates between metadata-like text, sparse tensor-like bytes, dense float-like bytes, label-like integer bytes, high-entropy bytes, and already-compressed regions.
 
-- whole-file `store`
-- whole-file `zstd_3`
-- whole-file `zstd_10`
-- whole-file `zstd_19`
-- whole-file `lzma_6`
-- whole-file `lzma_9`
-- Phase 2 file-level selector
-- Phase 3 chunk-level selector
-- Phase 3 chunk-level oracle
+This artifact is intentionally harder than the earlier contiguous mixed artifact because the data regimes switch frequently.
 
-Primary metrics:
+### Phase 3 Whole-File Baselines
 
-- compressed size
-- compression time
-- decompression time
-- metadata overhead
-- random-access potential
-- selector regret versus chunk oracle
+| Method | Compressed MB | Ratio | Compression Time |
+|---|---:|---:|---:|
+| `zstd_3` | 138.08 | 0.269685 | 0.31s |
+| `zstd_10` | 137.25 | 0.268070 | 1.00s |
+| `zstd_19` | 135.57 | 0.264783 | 47.21s |
+| `lzma_6` | 127.26 | 0.248555 | 36.41s |
+| `lzma_9` | 125.38 | 0.244884 | 55.85s |
+| `bz2_9` | 148.28 | 0.289605 | 42.57s |
+
+### Phase 3 ADC Results
+
+| Method | Chunk Size | Compressed MB | Ratio | Compression Time | Gap vs Chunk Oracle | Codec Choices |
+|---|---:|---:|---:|---:|---:|---|
+| ADC balanced | 256 KB | 143.85 | 0.280954 | 35.74s | +12.72% | `zstd_10`, `lzma_6`, `store` |
+| ADC learned | 256 KB | 127.89 | 0.249793 | 67.58s | +0.22% | `lzma_6`, `zstd_19`, `zstd_10`, `store`, `zstd_3` |
+| ADC chunk oracle | 256 KB | 127.61 | 0.249241 | 225.36s | 0.00% | `lzma_6`, `zstd_19`, `zstd_10`, `store`, `zstd_3` |
+| ADC balanced | 1 MB | 133.89 | 0.261500 | 49.86s | +4.35% | `lzma_6`, `zstd_10` |
+| ADC learned | 1 MB | 128.33 | 0.250645 | 64.66s | +0.02% | `lzma_6`, `zstd_19` |
+| ADC chunk oracle | 1 MB | 128.30 | 0.250589 | 195.24s | 0.00% | `lzma_6`, `zstd_19`, `zstd_10` |
+| ADC balanced | 4 MB | 128.48 | 0.250930 | 60.33s | +0.01% | `lzma_6` |
+| ADC learned | 4 MB | 128.47 | 0.250919 | 68.01s | +0.01% | `lzma_6`, `lzma_9` |
+| ADC chunk oracle | 4 MB | 128.46 | 0.250895 | 191.13s | 0.00% | `lzma_6`, `lzma_9` |
+
+### Phase 3 Learned Selector
+
+A chunk-oracle dataset was extracted from the oracle ADC containers. Each row maps chunk-level features to the best compressor found by trying all candidate compressors on that chunk.
+
+Dataset location:
+
+```text
+datasets/phase3/chunk_oracle_dataset.csv
+```
+
+Dataset size:
+
+| Metric | Value |
+|---|---:|
+| Rows | 2,688 |
+| CSV size | 665 KB |
+| Chunk sizes | 256 KB, 1 MB, 4 MB |
+
+Oracle labels by compressor:
+
+| Compressor | Rows |
+|---|---:|
+| `lzma_6` | 1,128 |
+| `zstd_19` | 770 |
+| `zstd_10` | 394 |
+| `store` | 292 |
+| `zstd_3` | 81 |
+| `lzma_9` | 23 |
+
+A decision-tree selector was trained on entropy, text ratio, zero ratio, byte diversity, chunk size, and original chunk size.
+
+Training summary:
+
+| Metric | Value |
+|---|---:|
+| Rows | 2,688 |
+| Accuracy | 0.92 |
+| Weighted F1 | 0.93 |
+| Macro F1 | 0.84 |
+
+The learned selector found a clean top-level rule for incompressible chunks:
+
+```text
+if entropy > 7.70:
+    store
+```
+
+### Phase 3 Findings
+
+1. The `.adc` container successfully supports chunk-level mixed compression and bit-exact decompression.
+2. The learned selector nearly matched the chunk oracle. At 256 KB chunks, learned ADC came within 0.22% of the oracle.
+3. At 256 KB chunks, learned ADC reduced compressed size by about 11.1% compared with the hand-written balanced selector.
+4. Learned ADC beat whole-file `zstd_3`, `zstd_10`, and `zstd_19` in compressed size on the interleaved ML artifact.
+5. Learned ADC did not beat whole-file `lzma_6` or `lzma_9`, but the best learned result was within roughly 0.5% of whole-file `lzma_6`.
+6. Smaller chunks improved routing diversity, while larger chunks preserved more compression context. This exposes a core tradeoff in chunk-level adaptive compression.
+
+The strongest current Phase 3 result is:
+
+> On a 512 MB interleaved synthetic ML artifact, a learned chunk-level selector used five compressors inside one `.adc` container, reduced compressed size by approximately 11.1% compared with the hand-written balanced selector, came within 0.22% of the chunk oracle, and beat whole-file `zstd_3`, `zstd_10`, and `zstd_19` by compressed size while preserving exact decompression.
 
 ## Project Structure
 
 ```text
 src/
+  # Phase 1 / Phase 2 file-level benchmarking
   benchmark.py
   benchmark_phase2.py
   selector.py
@@ -294,17 +366,34 @@ src/
   final_summary_report_phase2.py
   compact_phase2_summary.py
 
+  # Phase 3 ADC container and chunk-level selection
+  adc_container.py
+  chunk_features.py
+  chunk_selector.py
+  chunk_selector_learned.py
+  compress_adc.py
+  decompress_adc.py
+  compress_adc_oracle.py
+  generate_phase3_interleaved_ml_artifact.py
+  extract_adc_oracle_dataset.py
+  analyze_chunk_oracle_dataset.py
+  train_chunk_selector.py
+  phase3_summary_report.py
+
+datasets/
+  phase3/
+    chunk_oracle_dataset.csv
+
 results/
-  benchmark_results.json
-  benchmark_results_phase2.json
   final_summary_report.txt
   final_summary_report_phase2.txt
   compact_phase2_summary.txt
-  selector_evaluation.json
-  selector_evaluation_phase2.json
-  pareto_selector_evaluation.json
-  pareto_selector_evaluation_phase2.json
+  phase3_interleaved/
+    phase3_summary_report.txt
+    phase3_summary_report.json
 ```
+
+Large generated artifacts such as raw benchmark JSON files, `.adc` containers, decompressed `.out` files, per-file reports, and full Pareto reports should generally stay out of GitHub.
 
 ## Setup
 
@@ -382,6 +471,84 @@ results/compact_phase2_summary.txt
 
 The full per-file and Pareto reports may be hundreds of MB for the 120k-file benchmark.
 
+## Run Phase 3
+
+Generate the 512 MB interleaved ML artifact:
+
+```bash
+python3 src/generate_phase3_interleaved_ml_artifact.py \
+  --output data/ml_data/phase3_interleaved_ml_artifact_512mb.bin \
+  --target-mb 512 \
+  --regime-block-kb 256
+```
+
+Compress using the hand-written balanced ADC selector:
+
+```bash
+mkdir -p results/phase3_interleaved
+
+python3 src/compress_adc.py \
+  data/ml_data/phase3_interleaved_ml_artifact_512mb.bin \
+  results/phase3_interleaved/interleaved_256kb_balanced.adc \
+  --chunk-size 256KB \
+  --mode balanced
+```
+
+Compress using the chunk oracle:
+
+```bash
+python3 src/compress_adc_oracle.py \
+  data/ml_data/phase3_interleaved_ml_artifact_512mb.bin \
+  results/phase3_interleaved/interleaved_256kb_oracle.adc \
+  --chunk-size 256KB
+```
+
+Extract the chunk-oracle dataset:
+
+```bash
+python3 src/extract_adc_oracle_dataset.py \
+  results/phase3_interleaved/interleaved_256kb_oracle.adc \
+  results/phase3_interleaved/interleaved_1mb_oracle.adc \
+  results/phase3_interleaved/interleaved_4mb_oracle.adc
+```
+
+Train the learned chunk selector:
+
+```bash
+python3 src/train_chunk_selector.py
+```
+
+Compress using the learned ADC selector:
+
+```bash
+python3 src/compress_adc.py \
+  data/ml_data/phase3_interleaved_ml_artifact_512mb.bin \
+  results/phase3_interleaved/interleaved_256kb_learned.adc \
+  --chunk-size 256KB \
+  --mode learned
+```
+
+Verify exact decompression:
+
+```bash
+python3 src/decompress_adc.py \
+  results/phase3_interleaved/interleaved_256kb_learned.adc \
+  results/phase3_interleaved/interleaved_256kb_learned.out
+
+cmp \
+  data/ml_data/phase3_interleaved_ml_artifact_512mb.bin \
+  results/phase3_interleaved/interleaved_256kb_learned.out
+```
+
+If `cmp` prints nothing, decompression is bit-exact.
+
+Generate the compact Phase 3 summary report:
+
+```bash
+python3 src/phase3_summary_report.py
+cat results/phase3_interleaved/phase3_summary_report.txt
+```
+
 ## Notes
 
 The `data/` directory is intentionally excluded from GitHub because it contains large benchmark input files.
@@ -403,6 +570,8 @@ data/
 
 ## Current Conclusion
 
-Phase 1 showed that a simple file-level rule-based selector can match or approach an oracle on a small heterogeneous corpus. Phase 2 showed that, at larger scale, Zstandard variants dominate many small/source/container-style workloads, while ML data exhibits more diverse compressor behavior.
+Phase 1 showed that a simple file-level rule-based selector can match an oracle on a small heterogeneous corpus. Phase 2 showed that, at larger scale, Zstandard variants dominate many small/source/container-style workloads, while ML data exhibits more diverse compressor behavior.
 
-The main research direction is therefore shifting from general file-level selection to adaptive mixed compression for ML artifacts, where different chunks inside a single file may benefit from different compressors.
+Phase 3 moved the project from file-level selection to chunk-level mixed compression. The current `.adc` prototype supports per-chunk compressor selection, self-describing containers, exact decompression, chunk-oracle evaluation, and a learned decision-tree selector trained from oracle labels.
+
+The strongest current result is that learned ADC nearly matched the chunk oracle on a 512 MB interleaved ML artifact and beat whole-file `zstd_3`, `zstd_10`, and `zstd_19` by compressed size. Whole-file `lzma_6` and `lzma_9` remain stronger size-only baselines on this artifact, so the next research target is improving learned selection, testing real ML artifacts, and evaluating size-time tradeoffs rather than only compressed size.

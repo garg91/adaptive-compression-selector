@@ -1,0 +1,96 @@
+Chunk Selector Training Report
+================================================================================
+
+Rows: 2688
+Labels: {'lzma_6': 1128, 'zstd_19': 770, 'zstd_10': 394, 'store': 292, 'zstd_3': 81, 'lzma_9': 23}
+
+Classification Report
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+      lzma_6       0.99      0.84      0.91       282
+      lzma_9       0.15      0.67      0.25         6
+       store       1.00      1.00      1.00        73
+     zstd_10       1.00      0.90      0.95        99
+     zstd_19       0.86      0.99      0.92       192
+      zstd_3       1.00      1.00      1.00        20
+
+    accuracy                           0.92       672
+   macro avg       0.83      0.90      0.84       672
+weighted avg       0.95      0.92      0.93       672
+
+
+Confusion Matrix
+--------------------------------------------------------------------------------
+labels: lzma_6, lzma_9, store, zstd_10, zstd_19, zstd_3
+238 22 0 0 22 0
+2 4 0 0 0 0
+0 0 73 0 0 0
+0 0 0 89 10 0
+1 0 0 0 191 0
+0 0 0 0 0 20
+
+
+Decision Tree
+--------------------------------------------------------------------------------
+|--- entropy <= 7.70
+|   |--- chunk_size <= 2621440.00
+|   |   |--- text_ratio <= 0.36
+|   |   |   |--- entropy <= 4.15
+|   |   |   |   |--- zero_ratio <= 0.88
+|   |   |   |   |   |--- class: zstd_10
+|   |   |   |   |--- zero_ratio >  0.88
+|   |   |   |   |   |--- class: zstd_19
+|   |   |   |--- entropy >  4.15
+|   |   |   |   |--- text_ratio <= 0.31
+|   |   |   |   |   |--- class: zstd_3
+|   |   |   |   |--- text_ratio >  0.31
+|   |   |   |   |   |--- text_ratio <= 0.35
+|   |   |   |   |   |   |--- class: zstd_19
+|   |   |   |   |   |--- text_ratio >  0.35
+|   |   |   |   |   |   |--- class: zstd_19
+|   |   |--- text_ratio >  0.36
+|   |   |   |--- unique_byte_count <= 40.00
+|   |   |   |   |--- entropy <= 4.48
+|   |   |   |   |   |--- entropy <= 4.47
+|   |   |   |   |   |   |--- class: zstd_19
+|   |   |   |   |   |--- entropy >  4.47
+|   |   |   |   |   |   |--- class: zstd_19
+|   |   |   |   |--- entropy >  4.48
+|   |   |   |   |   |--- entropy <= 4.48
+|   |   |   |   |   |   |--- class: zstd_10
+|   |   |   |   |   |--- entropy >  4.48
+|   |   |   |   |   |   |--- class: zstd_19
+|   |   |   |--- unique_byte_count >  40.00
+|   |   |   |   |--- text_ratio <= 0.41
+|   |   |   |   |   |--- text_ratio <= 0.41
+|   |   |   |   |   |   |--- class: lzma_6
+|   |   |   |   |   |--- text_ratio >  0.41
+|   |   |   |   |   |   |--- class: zstd_19
+|   |   |   |   |--- text_ratio >  0.41
+|   |   |   |   |   |--- entropy <= 3.39
+|   |   |   |   |   |   |--- class: lzma_6
+|   |   |   |   |   |--- entropy >  3.39
+|   |   |   |   |   |   |--- class: lzma_6
+|   |--- chunk_size >  2621440.00
+|   |   |--- text_ratio <= 0.46
+|   |   |   |--- entropy <= 5.67
+|   |   |   |   |--- text_ratio <= 0.40
+|   |   |   |   |   |--- zero_ratio <= 0.37
+|   |   |   |   |   |   |--- class: lzma_9
+|   |   |   |   |   |--- zero_ratio >  0.37
+|   |   |   |   |   |   |--- class: lzma_9
+|   |   |   |   |--- text_ratio >  0.40
+|   |   |   |   |   |--- text_ratio <= 0.44
+|   |   |   |   |   |   |--- class: lzma_6
+|   |   |   |   |   |--- text_ratio >  0.44
+|   |   |   |   |   |   |--- class: lzma_9
+|   |   |   |--- entropy >  5.67
+|   |   |   |   |--- class: lzma_6
+|   |   |--- text_ratio >  0.46
+|   |   |   |--- zero_ratio <= 0.30
+|   |   |   |   |--- class: lzma_9
+|   |   |   |--- zero_ratio >  0.30
+|   |   |   |   |--- class: lzma_9
+|--- entropy >  7.70
+|   |--- class: store

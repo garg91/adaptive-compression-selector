@@ -1,0 +1,37 @@
+Phase 3 Interleaved ML Artifact Summary
+==============================================================================================================
+
+Original size: 512.00 MB
+
+Whole-file baselines
+--------------------------------------------------------------------------------------------------------------
+Method          Compressed MB      Ratio    Comp Time s
+--------------------------------------------------------------------------------------------------------------
+zstd_3                 138.08   0.269685           0.31
+zstd_10                137.25   0.268070           1.00
+zstd_19                135.57   0.264783          47.21
+lzma_6                 127.26   0.248555          36.41
+lzma_9                 125.38   0.244884          55.85
+bz2_9                  148.28   0.289605          42.57
+
+ADC results
+--------------------------------------------------------------------------------------------------------------
+Method             Chunk     Compressed MB      Ratio    Comp Time s   Gap vs Oracle   Gap vs zstd19 Choices
+--------------------------------------------------------------------------------------------------------------
+adc_balanced       256 KB           143.85   0.280954          35.74          12.72%           6.11% {'zstd_10': 878, 'lzma_6': 878, 'store': 292}
+adc_learned        256 KB           127.89   0.249793          67.58           0.22%          -5.66% {'lzma_6': 578, 'zstd_19': 728, 'zstd_10': 369, 'store': 292, 'zstd_3': 81}
+adc_chunk_oracle   256 KB           127.61   0.249241         225.36           0.00%          -5.87% {'lzma_6': 655, 'zstd_19': 627, 'zstd_10': 393, 'store': 292, 'zstd_3': 81}
+adc_balanced       1 MB             133.89   0.261500          49.86           4.35%          -1.24% {'lzma_6': 366, 'zstd_10': 146}
+adc_learned        1 MB             128.33   0.250645          64.66           0.02%          -5.34% {'lzma_6': 365, 'zstd_19': 147}
+adc_chunk_oracle   1 MB             128.30   0.250589         195.24           0.00%          -5.36% {'lzma_6': 368, 'zstd_19': 143, 'zstd_10': 1}
+adc_balanced       4 MB             128.48   0.250930          60.33           0.01%          -5.23% {'lzma_6': 128}
+adc_learned        4 MB             128.47   0.250919          68.01           0.01%          -5.24% {'lzma_6': 42, 'lzma_9': 86}
+adc_chunk_oracle   4 MB             128.46   0.250895         191.13           0.00%          -5.25% {'lzma_6': 105, 'lzma_9': 23}
+
+Key findings
+--------------------------------------------------------------------------------------------------------------
+1. The learned selector nearly matches the chunk oracle, especially at 1 MB chunks.
+2. At 256 KB chunks, learned ADC uses five compressors and is far smaller than the hand-written balanced selector.
+3. Learned ADC beats whole-file zstd_3, zstd_10, and zstd_19 by compressed size on this artifact.
+4. Whole-file lzma_6 and lzma_9 still produce smaller outputs than learned ADC on this artifact.
+5. Smaller chunks improve routing diversity, while larger chunks preserve more compression context.

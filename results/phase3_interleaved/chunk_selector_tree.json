@@ -1,0 +1,241 @@
+{
+  "features": [
+    "chunk_size",
+    "original_size",
+    "entropy",
+    "text_ratio",
+    "zero_ratio",
+    "unique_byte_count"
+  ],
+  "classes": [
+    "lzma_6",
+    "lzma_9",
+    "store",
+    "zstd_10",
+    "zstd_19",
+    "zstd_3"
+  ],
+  "tree": {
+    "type": "decision",
+    "feature": "entropy",
+    "threshold": 7.697114944458008,
+    "left_if_leq": {
+      "type": "decision",
+      "feature": "chunk_size",
+      "threshold": 2621440.0,
+      "left_if_leq": {
+        "type": "decision",
+        "feature": "text_ratio",
+        "threshold": 0.35904788970947266,
+        "left_if_leq": {
+          "type": "decision",
+          "feature": "entropy",
+          "threshold": 4.149606943130493,
+          "left_if_leq": {
+            "type": "decision",
+            "feature": "zero_ratio",
+            "threshold": 0.88214111328125,
+            "left_if_leq": {
+              "type": "leaf",
+              "class": "zstd_10",
+              "counts": {
+                "zstd_10": 1
+              }
+            },
+            "right_if_gt": {
+              "type": "leaf",
+              "class": "zstd_19",
+              "counts": {
+                "zstd_19": 1
+              }
+            }
+          },
+          "right_if_gt": {
+            "type": "decision",
+            "feature": "text_ratio",
+            "threshold": 0.31203556060791016,
+            "left_if_leq": {
+              "type": "leaf",
+              "class": "zstd_3",
+              "counts": {
+                "zstd_3": 1
+              }
+            },
+            "right_if_gt": {
+              "type": "decision",
+              "feature": "text_ratio",
+              "threshold": 0.35337305068969727,
+              "left_if_leq": {
+                "type": "leaf",
+                "class": "zstd_19",
+                "counts": {}
+              },
+              "right_if_gt": {
+                "type": "leaf",
+                "class": "zstd_19",
+                "counts": {
+                  "zstd_19": 1
+                }
+              }
+            }
+          }
+        },
+        "right_if_gt": {
+          "type": "decision",
+          "feature": "unique_byte_count",
+          "threshold": 40.0,
+          "left_if_leq": {
+            "type": "decision",
+            "feature": "entropy",
+            "threshold": 4.482656240463257,
+            "left_if_leq": {
+              "type": "decision",
+              "feature": "entropy",
+              "threshold": 4.473519325256348,
+              "left_if_leq": {
+                "type": "leaf",
+                "class": "zstd_19",
+                "counts": {}
+              },
+              "right_if_gt": {
+                "type": "leaf",
+                "class": "zstd_19",
+                "counts": {}
+              }
+            },
+            "right_if_gt": {
+              "type": "decision",
+              "feature": "entropy",
+              "threshold": 4.482680082321167,
+              "left_if_leq": {
+                "type": "leaf",
+                "class": "zstd_10",
+                "counts": {}
+              },
+              "right_if_gt": {
+                "type": "leaf",
+                "class": "zstd_19",
+                "counts": {}
+              }
+            }
+          },
+          "right_if_gt": {
+            "type": "decision",
+            "feature": "text_ratio",
+            "threshold": 0.4140501022338867,
+            "left_if_leq": {
+              "type": "decision",
+              "feature": "text_ratio",
+              "threshold": 0.40830469131469727,
+              "left_if_leq": {
+                "type": "leaf",
+                "class": "lzma_6",
+                "counts": {
+                  "lzma_6": 1
+                }
+              },
+              "right_if_gt": {
+                "type": "leaf",
+                "class": "zstd_19",
+                "counts": {}
+              }
+            },
+            "right_if_gt": {
+              "type": "decision",
+              "feature": "entropy",
+              "threshold": 3.3910752534866333,
+              "left_if_leq": {
+                "type": "leaf",
+                "class": "lzma_6",
+                "counts": {}
+              },
+              "right_if_gt": {
+                "type": "leaf",
+                "class": "lzma_6",
+                "counts": {
+                  "lzma_6": 1
+                }
+              }
+            }
+          }
+        }
+      },
+      "right_if_gt": {
+        "type": "decision",
+        "feature": "text_ratio",
+        "threshold": 0.4597371816635132,
+        "left_if_leq": {
+          "type": "decision",
+          "feature": "entropy",
+          "threshold": 5.665965557098389,
+          "left_if_leq": {
+            "type": "decision",
+            "feature": "text_ratio",
+            "threshold": 0.403192400932312,
+            "left_if_leq": {
+              "type": "decision",
+              "feature": "zero_ratio",
+              "threshold": 0.3743401765823364,
+              "left_if_leq": {
+                "type": "leaf",
+                "class": "lzma_9",
+                "counts": {}
+              },
+              "right_if_gt": {
+                "type": "leaf",
+                "class": "lzma_9",
+                "counts": {}
+              }
+            },
+            "right_if_gt": {
+              "type": "decision",
+              "feature": "text_ratio",
+              "threshold": 0.43516814708709717,
+              "left_if_leq": {
+                "type": "leaf",
+                "class": "lzma_6",
+                "counts": {
+                  "lzma_6": 1
+                }
+              },
+              "right_if_gt": {
+                "type": "leaf",
+                "class": "lzma_9",
+                "counts": {}
+              }
+            }
+          },
+          "right_if_gt": {
+            "type": "leaf",
+            "class": "lzma_6",
+            "counts": {
+              "lzma_6": 1
+            }
+          }
+        },
+        "right_if_gt": {
+          "type": "decision",
+          "feature": "zero_ratio",
+          "threshold": 0.2980306148529053,
+          "left_if_leq": {
+            "type": "leaf",
+            "class": "lzma_9",
+            "counts": {}
+          },
+          "right_if_gt": {
+            "type": "leaf",
+            "class": "lzma_9",
+            "counts": {}
+          }
+        }
+      }
+    },
+    "right_if_gt": {
+      "type": "leaf",
+      "class": "store",
+      "counts": {
+        "store": 1
+      }
+    }
+  }
+}
