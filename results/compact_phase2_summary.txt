@@ -1,0 +1,159 @@
+Compact Phase 2 Summary
+====================================================================================================
+
+Input row integrity
+----------------------------------------------------------------------------------------------------
+Loaded rows:      1080477
+Valid rows:       1080385
+Skipped rows:     92
+Error rows:       0
+Malformed rows:   0
+
+Corpus
+----------------------------------------------------------------------------------------------------
+Files:            120053
+Original MB:      39874.81
+
+Category                  Files     Original MB
+--------------------------------------------------
+already_compressed            7         4377.74
+databases                     2         1183.67
+docker_layers             40010         3830.19
+logs_json                     7         6234.54
+mixed_binary                  4         5120.00
+ml_data                      11        11468.48
+small_files               50001         1274.04
+source_packages           30008         4338.16
+web_assets                    3         2048.00
+
+Fixed compressor coverage
+----------------------------------------------------------------------------------------------------
+Strategy              Files   Coverage      Ratio   Compressed MB       Comp s     Decomp s
+----------------------------------------------------------------------------------------------------
+always_zstd_10       120053  100.0000%     0.3239        12914.03       141.23        19.95
+always_zstd_3        120053  100.0000%     0.3295        13140.31        32.33        22.05
+always_store         120053  100.0000%     1.0000        39874.81         0.06         0.02
+always_lzma_9        120045   99.9933%     0.0248          682.86      6865.01        55.93
+always_zstd_19       120039   99.9883%     0.0412          713.88      5402.28         8.76
+always_bz2_9         120045   99.9933%     0.0518         1429.99      1312.60       216.99
+always_zlib_9        120023   99.9750%     0.1734          544.70        93.02         4.31
+always_gzip_9        120023   99.9750%     0.1739          546.08        95.66         6.08
+always_lzma_6        120051   99.9983%     0.1891         6960.02      6077.74       112.22
+
+Oracle best-size summary
+----------------------------------------------------------------------------------------------------
+Files:            120053
+Ratio:            0.2474
+Compressed MB:    9866.16
+Comp time s:      5195.42
+Decomp time s:    110.46
+Wins:             {zstd_19: 118599, zstd_10: 1311, zstd_3: 93, lzma_9: 32, bz2_9: 7, lzma_6: 6, store: 5}
+
+Oracle wins by category
+----------------------------------------------------------------------------------------------------
+
+already_compressed:
+  files:          7
+  original MB:    4377.74
+  compressed MB:  3103.93
+  ratio:          0.7090
+  wins:           {lzma_9: 4, store: 2, zstd_19: 1}
+
+databases:
+  files:          2
+  original MB:    1183.67
+  compressed MB:  38.19
+  ratio:          0.0323
+  wins:           {lzma_9: 2}
+
+docker_layers:
+  files:          40010
+  original MB:    3830.19
+  compressed MB:  1202.14
+  ratio:          0.3139
+  wins:           {zstd_19: 39535, zstd_10: 465, lzma_9: 8, bz2_9: 1, store: 1}
+
+logs_json:
+  files:          7
+  original MB:    6234.54
+  compressed MB:  124.53
+  ratio:          0.0200
+  wins:           {lzma_9: 4, bz2_9: 3}
+
+mixed_binary:
+  files:          4
+  original MB:    5120.00
+  compressed MB:  2299.51
+  ratio:          0.4491
+  wins:           {bz2_9: 1, lzma_6: 1, store: 1, zstd_19: 1}
+
+ml_data:
+  files:          11
+  original MB:    11468.48
+  compressed MB:  2946.18
+  ratio:          0.2569
+  wins:           {lzma_9: 4, lzma_6: 3, bz2_9: 2, store: 1, zstd_19: 1}
+
+small_files:
+  files:          50001
+  original MB:    1274.04
+  compressed MB:  6.42
+  ratio:          0.0050
+  wins:           {zstd_19: 49437, zstd_10: 563, lzma_9: 1}
+
+source_packages:
+  files:          30008
+  original MB:    4338.16
+  compressed MB:  118.66
+  ratio:          0.0274
+  wins:           {zstd_19: 29624, zstd_10: 283, zstd_3: 93, lzma_9: 6, lzma_6: 2}
+
+web_assets:
+  files:          3
+  original MB:    2048.00
+  compressed MB:  26.60
+  ratio:          0.0130
+  wins:           {lzma_9: 3}
+
+Global Pareto counts
+----------------------------------------------------------------------------------------------------
+Frontier counts:
+  {store: 120049, zstd_10: 119971, zstd_19: 118616, zstd_3: 2646, zlib_9: 68, lzma_6: 34, lzma_9: 32, bz2_9: 15}
+
+Dominated counts:
+  {bz2_9: 120030, gzip_9: 120023, lzma_6: 120017, lzma_9: 120013, zlib_9: 119955, zstd_3: 117407, zstd_19: 1423, zstd_10: 82, store: 4}
+
+Largest compressor gaps vs oracle
+----------------------------------------------------------------------------------------------------
+Label                  Category         Oracle     Candidate     Orig MB       Gap MB      Gap %
+----------------------------------------------------------------------------------------------------
+zstd_10_vs_oracle      ml_data          lzma_6     zstd_10       2048.00      1298.88    258.38%
+zstd_3_vs_oracle       ml_data          lzma_6     zstd_3        2048.00      1297.84    258.17%
+zstd_10_vs_oracle      ml_data          lzma_6     zstd_10       1024.00       649.43    258.39%
+zstd_10_vs_oracle      mixed_binary     lzma_6     zstd_10       1024.00       649.43    258.39%
+zstd_3_vs_oracle       ml_data          lzma_6     zstd_3        1024.00       648.94    258.20%
+zstd_3_vs_oracle       mixed_binary     lzma_6     zstd_3        1024.00       648.94    258.20%
+zstd_3_vs_oracle       ml_data          lzma_9     zstd_3        2048.00       145.88    315.55%
+zstd_10_vs_oracle      ml_data          lzma_9     zstd_10       2048.00        82.67    178.81%
+zstd_3_vs_oracle       logs_json        lzma_9     zstd_3        2048.00        78.23    144.97%
+zstd_3_vs_oracle       logs_json        lzma_9     zstd_3        2048.00        78.23    144.97%
+zstd_3_vs_oracle       ml_data          lzma_9     zstd_3        1024.00        73.35    312.88%
+zstd_3_vs_oracle       databases        lzma_9     zstd_3         792.06        41.36    156.52%
+zstd_10_vs_oracle      logs_json        lzma_9     zstd_10       2048.00        40.38     74.83%
+zstd_10_vs_oracle      logs_json        lzma_9     zstd_10       2048.00        40.38     74.83%
+zstd_10_vs_oracle      ml_data          lzma_9     zstd_10       1024.00        35.89    153.12%
+lzma_6_vs_oracle       ml_data          lzma_9     lzma_6        2048.00        35.59     76.99%
+zstd_19_vs_oracle      ml_data          lzma_9     zstd_19       2048.00        33.50     72.47%
+zstd_10_vs_oracle      databases        lzma_9     zstd_10        792.06        27.13    102.67%
+zstd_10_vs_oracle      source_packages  lzma_9     zstd_10       2048.00        24.45    258.61%
+zstd_10_vs_oracle      already_compressed lzma_9     zstd_10       1024.00        23.16    725.97%
+zstd_3_vs_oracle       databases        lzma_9     zstd_3         391.61        21.59    183.53%
+zstd_19_vs_oracle      logs_json        lzma_9     zstd_19       1024.00        20.58    372.37%
+zstd_10_vs_oracle      logs_json        lzma_9     zstd_10       1024.00        20.36    368.41%
+zstd_3_vs_oracle       web_assets       lzma_9     zstd_3         512.00        19.56    144.86%
+zstd_10_vs_oracle      logs_json        lzma_9     zstd_10       1024.00        19.16    354.30%
+
+Notes
+----------------------------------------------------------------------------------------------------
+Ratios for partial-coverage compressors are computed only over files where that compressor actually ran. Use the coverage column before comparing fixed baselines directly.
+For headline comparisons, prefer full-coverage strategies or restrict all strategies to a common file subset.

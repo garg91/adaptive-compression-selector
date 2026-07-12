@@ -22,3 +22,11 @@ data/
 *.egg-info/
 build/
 dist/
+# Large Phase 2 generated artifacts
+results/benchmark_results_phase2.json
+results/benchmark_results_phase2_backup.json
+results/per_file_report_phase2.txt
+results/pareto_report_phase2.txt
+results/pareto_report_phase2.json
+results/pareto_selector_report_phase2.txt
+results/pareto_selector_evaluation_phase2.json

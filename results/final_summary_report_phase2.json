@@ -1,0 +1,293 @@
+{
+  "strategies": [
+    {
+      "name": "always_zlib_9",
+      "ratio": 0.17343630824390527,
+      "compressed_mb": 544.7016267776489,
+      "compression_time_seconds": 93.02256034500897,
+      "decompression_time_seconds": 4.307708550011739,
+      "choices": {}
+    },
+    {
+      "name": "always_gzip_9",
+      "ratio": 0.1738736562580604,
+      "compressed_mb": 546.0751810073853,
+      "compression_time_seconds": 95.65820557717234,
+      "decompression_time_seconds": 6.0795344731304795,
+      "choices": {}
+    },
+    {
+      "name": "always_lzma_9",
+      "ratio": 0.024752999491692178,
+      "compressed_mb": 682.8563537597656,
+      "compression_time_seconds": 6865.0096782546025,
+      "decompression_time_seconds": 55.92911443859339,
+      "choices": {}
+    },
+    {
+      "name": "always_zstd_19",
+      "ratio": 0.04115355870923775,
+      "compressed_mb": 713.8830556869507,
+      "compression_time_seconds": 5402.276554090437,
+      "decompression_time_seconds": 8.756507353624329,
+      "choices": {}
+    },
+    {
+      "name": "always_bz2_9",
+      "ratio": 0.051836049291491985,
+      "compressed_mb": 1429.9913682937622,
+      "compression_time_seconds": 1312.5977742632385,
+      "decompression_time_seconds": 216.99008498550393,
+      "choices": {}
+    },
+    {
+      "name": "always_lzma_6",
+      "ratio": 0.18911665586160312,
+      "compressed_mb": 6960.024810791016,
+      "compression_time_seconds": 6077.739188326988,
+      "decompression_time_seconds": 112.22387389093637,
+      "choices": {}
+    },
+    {
+      "name": "pareto_lambda_0.0",
+      "lambda": 0.0,
+      "ratio": 0.24742831102004592,
+      "compressed_mb": 9866.157488822937,
+      "compression_time_seconds": 5195.418786047958,
+      "decompression_time_seconds": 110.45539087592624,
+      "choices": {
+        "store": 5,
+        "lzma_9": 32,
+        "zstd_19": 118599,
+        "bz2_9": 7,
+        "zstd_10": 1311,
+        "lzma_6": 6,
+        "zstd_3": 93
+      }
+    },
+    {
+      "name": "pareto_lambda_0.05",
+      "lambda": 0.05,
+      "ratio": 0.24776605485530825,
+      "compressed_mb": 9879.624960899353,
+      "compression_time_seconds": 4601.369376445422,
+      "decompression_time_seconds": 104.09291342203505,
+      "choices": {
+        "store": 5,
+        "lzma_9": 22,
+        "zstd_19": 113696,
+        "lzma_6": 9,
+        "bz2_9": 8,
+        "zstd_10": 6248,
+        "zstd_3": 65
+      }
+    },
+    {
+      "name": "pareto_lambda_0.1",
+      "lambda": 0.1,
+      "ratio": 0.2508453401612987,
+      "compressed_mb": 10002.410884857178,
+      "compression_time_seconds": 2972.917738493532,
+      "decompression_time_seconds": 137.72637213533744,
+      "choices": {
+        "store": 5,
+        "zstd_3": 17,
+        "lzma_9": 14,
+        "lzma_6": 8,
+        "bz2_9": 11,
+        "zstd_10": 32358,
+        "zstd_19": 87640
+      }
+    },
+    {
+      "name": "pareto_lambda_1.0",
+      "lambda": 1.0,
+      "ratio": 0.25795241065169333,
+      "compressed_mb": 10285.803987503052,
+      "compression_time_seconds": 1388.2019500525203,
+      "decompression_time_seconds": 69.91264399699867,
+      "choices": {
+        "store": 5,
+        "zstd_3": 23,
+        "zstd_10": 119962,
+        "zstd_19": 57,
+        "bz2_9": 3,
+        "lzma_6": 3
+      }
+    },
+    {
+      "name": "selector_best_size",
+      "ratio": 0.2601811290745033,
+      "compressed_mb": 10374.673716545105,
+      "compression_time_seconds": 6980.182638417697,
+      "decompression_time_seconds": 173.65798149001785,
+      "choices": {
+        "lzma_6": 20012,
+        "bz2_9": 40011,
+        "lzma_9": 60024,
+        "zstd_10": 2,
+        "store": 4
+      }
+    },
+    {
+      "name": "always_zstd_10",
+      "ratio": 0.3238643697703573,
+      "compressed_mb": 12914.030993461609,
+      "compression_time_seconds": 141.23091745818965,
+      "decompression_time_seconds": 19.950822154292837,
+      "choices": {}
+    },
+    {
+      "name": "pareto_lambda_5.0",
+      "lambda": 5.0,
+      "ratio": 0.3280853720261186,
+      "compressed_mb": 13082.342666625977,
+      "compression_time_seconds": 34.43130916147493,
+      "decompression_time_seconds": 17.91357288043946,
+      "choices": {
+        "store": 5,
+        "zstd_3": 50,
+        "zstd_10": 119945,
+        "zstd_19": 52,
+        "zlib_9": 1
+      }
+    },
+    {
+      "name": "always_zstd_3",
+      "ratio": 0.3295390692052017,
+      "compressed_mb": 13140.308568954468,
+      "compression_time_seconds": 32.33397108572535,
+      "decompression_time_seconds": 22.052587806480005,
+      "choices": {}
+    },
+    {
+      "name": "selector_balanced_size",
+      "ratio": 0.3298950631881178,
+      "compressed_mb": 13154.503762245178,
+      "compression_time_seconds": 1962.1622038446367,
+      "decompression_time_seconds": 146.01440516626462,
+      "choices": {
+        "bz2_9": 40013,
+        "zstd_3": 2,
+        "zstd_10": 9,
+        "lzma_6": 80011,
+        "store": 4,
+        "lzma_9": 14
+      }
+    },
+    {
+      "name": "selector_balanced_fast",
+      "ratio": 0.329991955495558,
+      "compressed_mb": 13158.367324829102,
+      "compression_time_seconds": 120.67629038100131,
+      "decompression_time_seconds": 20.25714862230234,
+      "choices": {
+        "zstd_10": 120038,
+        "zstd_3": 11,
+        "store": 4
+      }
+    },
+    {
+      "name": "selector_fast",
+      "ratio": 0.3355708047696744,
+      "compressed_mb": 13380.8228931427,
+      "compression_time_seconds": 43.09694794425741,
+      "decompression_time_seconds": 25.97103477991186,
+      "choices": {
+        "zstd_3": 120047,
+        "bz2_9": 2,
+        "store": 4
+      }
+    },
+    {
+      "name": "always_store",
+      "ratio": 1.0,
+      "compressed_mb": 39874.81241798401,
+      "compression_time_seconds": 0.055530687561258674,
+      "decompression_time_seconds": 0.02230287529528141,
+      "choices": {}
+    }
+  ],
+  "comparisons": {
+    "balanced_size_vs_lzma_9": {
+      "strategy": "selector_balanced_size",
+      "baseline": "always_lzma_9",
+      "compressed_mb_change": 12471.647408485413,
+      "compressed_size_change_percent": 1826.3939904516196,
+      "compression_time_saved_seconds": 4902.847474409966,
+      "compression_time_change_percent": -71.41792516243754,
+      "decompression_time_change_seconds": 90.08529072767124
+    },
+    "balanced_size_vs_lzma_6": {
+      "strategy": "selector_balanced_size",
+      "baseline": "always_lzma_6",
+      "compressed_mb_change": 6194.478951454163,
+      "compressed_size_change_percent": 89.00081709263551,
+      "compression_time_saved_seconds": 4115.576984482352,
+      "compression_time_change_percent": -67.7155905667489,
+      "decompression_time_change_seconds": 33.79053127532825
+    },
+    "balanced_fast_vs_zstd_10": {
+      "strategy": "selector_balanced_fast",
+      "baseline": "always_zstd_10",
+      "compressed_mb_change": 244.33633136749268,
+      "compressed_size_change_percent": 1.892022184949072,
+      "compression_time_saved_seconds": 20.554627077188343,
+      "compression_time_change_percent": -14.553914572758748,
+      "decompression_time_change_seconds": 0.3063264680095017
+    },
+    "fast_vs_zstd_3": {
+      "strategy": "selector_fast",
+      "baseline": "always_zstd_3",
+      "compressed_mb_change": 240.51432418823242,
+      "compressed_size_change_percent": 1.8303552228330158,
+      "compression_time_saved_seconds": -10.762976858532056,
+      "compression_time_change_percent": 33.2869007335868,
+      "decompression_time_change_seconds": 3.9184469734318554
+    }
+  },
+  "category_stats": {
+    "ml_data": {
+      "files": 11,
+      "original_bytes": 12025573588
+    },
+    "already_compressed": {
+      "files": 7,
+      "original_bytes": 4590388325
+    },
+    "small_files": {
+      "files": 50001,
+      "original_bytes": 1335931976
+    },
+    "mixed_binary": {
+      "files": 4,
+      "original_bytes": 5368709120
+    },
+    "logs_json": {
+      "files": 7,
+      "original_bytes": 6537385535
+    },
+    "docker_layers": {
+      "files": 40010,
+      "original_bytes": 4016242255
+    },
+    "source_packages": {
+      "files": 30008,
+      "original_bytes": 4548886539
+    },
+    "databases": {
+      "files": 2,
+      "original_bytes": 1241169920
+    },
+    "web_assets": {
+      "files": 3,
+      "original_bytes": 2147484048
+    }
+  },
+  "takeaways": [
+    "2. Balanced-size mode stayed very close to fixed lzma_9 size (+1826.39%) while reducing compression time (-71.42%).",
+    "3. Balanced-fast mode behaved like a smart zstd_10 profile (+1.89% size, -14.55% time).",
+    "4. Fast mode behaved like a smart zstd_3 profile (+1.83% size, +33.29% time).",
+    "5. gzip_9 and zlib_9 should remain as baselines unless compatibility is required; the Pareto/category reports should be used to confirm where they are dominated."
+  ]
+}

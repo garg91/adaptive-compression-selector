@@ -1,0 +1,1448 @@
+{
+  "row_stats": {
+    "loaded_rows": 1080477,
+    "valid_rows": 1080385,
+    "skipped_rows": 92,
+    "error_rows": 0,
+    "malformed_rows": 0
+  },
+  "corpus": {
+    "files": 120053,
+    "original_bytes": 41811771306,
+    "original_mb": 39874.81241798401,
+    "by_category": {
+      "ml_data": {
+        "files": 11,
+        "original_bytes": 12025573588
+      },
+      "already_compressed": {
+        "files": 7,
+        "original_bytes": 4590388325
+      },
+      "small_files": {
+        "files": 50001,
+        "original_bytes": 1335931976
+      },
+      "mixed_binary": {
+        "files": 4,
+        "original_bytes": 5368709120
+      },
+      "logs_json": {
+        "files": 7,
+        "original_bytes": 6537385535
+      },
+      "docker_layers": {
+        "files": 40010,
+        "original_bytes": 4016242255
+      },
+      "source_packages": {
+        "files": 30008,
+        "original_bytes": 4548886539
+      },
+      "databases": {
+        "files": 2,
+        "original_bytes": 1241169920
+      },
+      "web_assets": {
+        "files": 3,
+        "original_bytes": 2147484048
+      }
+    }
+  },
+  "fixed_compressors": [
+    {
+      "strategy": "always_store",
+      "compressor": "store",
+      "files_used": 120053,
+      "total_files": 120053,
+      "coverage": 1.0,
+      "full_coverage": true,
+      "original_bytes": 41811771306,
+      "compressed_bytes": 41811771306,
+      "compressed_mb": 39874.81241798401,
+      "ratio": 1.0,
+      "compression_time_seconds": 0.055530687561258674,
+      "decompression_time_seconds": 0.02230287529528141,
+      "by_category": {
+        "ml_data": {
+          "files_used": 11,
+          "original_bytes": 12025573588,
+          "compressed_bytes": 12025573588,
+          "compression_time_seconds": 4.400033503770828e-06,
+          "decompression_time_seconds": 2.520158886909485e-06
+        },
+        "already_compressed": {
+          "files_used": 7,
+          "original_bytes": 4590388325,
+          "compressed_bytes": 4590388325,
+          "compression_time_seconds": 2.5797635316848755e-06,
+          "decompression_time_seconds": 1.6100239008665085e-06
+        },
+        "small_files": {
+          "files_used": 50001,
+          "original_bytes": 1335931976,
+          "compressed_bytes": 1335931976,
+          "compression_time_seconds": 0.022978518856689334,
+          "decompression_time_seconds": 0.009350842097774148
+        },
+        "mixed_binary": {
+          "files_used": 4,
+          "original_bytes": 5368709120,
+          "compressed_bytes": 5368709120,
+          "compression_time_seconds": 1.3799872249364853e-06,
+          "decompression_time_seconds": 8.300412446260452e-07
+        },
+        "logs_json": {
+          "files_used": 7,
+          "original_bytes": 6537385535,
+          "compressed_bytes": 6537385535,
+          "compression_time_seconds": 2.9096845537424088e-06,
+          "decompression_time_seconds": 1.2998934835195541e-06
+        },
+        "docker_layers": {
+          "files_used": 40010,
+          "original_bytes": 4016242255,
+          "compressed_bytes": 4016242255,
+          "compression_time_seconds": 0.018439661478623748,
+          "decompression_time_seconds": 0.007523811189457774
+        },
+        "source_packages": {
+          "files_used": 30008,
+          "original_bytes": 4548886539,
+          "compressed_bytes": 4548886539,
+          "compression_time_seconds": 0.01409905799664557,
+          "decompression_time_seconds": 0.0054209118243306875
+        },
+        "databases": {
+          "files_used": 2,
+          "original_bytes": 1241169920,
+          "compressed_bytes": 1241169920,
+          "compression_time_seconds": 1.250067725777626e-06,
+          "decompression_time_seconds": 4.100147634744644e-07
+        },
+        "web_assets": {
+          "files_used": 3,
+          "original_bytes": 2147484048,
+          "compressed_bytes": 2147484048,
+          "compression_time_seconds": 9.296927601099014e-07,
+          "decompression_time_seconds": 6.400514394044876e-07
+        }
+      }
+    },
+    {
+      "strategy": "always_gzip_9",
+      "compressor": "gzip_9",
+      "files_used": 120023,
+      "total_files": 120053,
+      "coverage": 0.9997501103679208,
+      "full_coverage": false,
+      "original_bytes": 3293203475,
+      "compressed_bytes": 572601329,
+      "compressed_mb": 546.0751810073853,
+      "ratio": 0.1738736562580604,
+      "compression_time_seconds": 95.65820557717234,
+      "decompression_time_seconds": 6.0795344731304795,
+      "by_category": {
+        "ml_data": {
+          "files_used": 4,
+          "original_bytes": 214413394,
+          "compressed_bytes": 81109382,
+          "compression_time_seconds": 8.073897337075323,
+          "decompression_time_seconds": 0.4289376139640808
+        },
+        "already_compressed": {
+          "files_used": 4,
+          "original_bytes": 295420943,
+          "compressed_bytes": 50378640,
+          "compression_time_seconds": 3.54764954210259,
+          "decompression_time_seconds": 0.39140526088885963
+        },
+        "logs_json": {
+          "files_used": 3,
+          "original_bytes": 94934391,
+          "compressed_bytes": 10014248,
+          "compression_time_seconds": 2.179795556003228,
+          "decompression_time_seconds": 0.11757893371395767
+        },
+        "docker_layers": {
+          "files_used": 40007,
+          "original_bytes": 1295113807,
+          "compressed_bytes": 293377580,
+          "compression_time_seconds": 68.3401537083555,
+          "decompression_time_seconds": 2.9028180218301713
+        },
+        "source_packages": {
+          "files_used": 30005,
+          "original_bytes": 774383524,
+          "compressed_bytes": 128830255,
+          "compression_time_seconds": 11.277671376941726,
+          "decompression_time_seconds": 1.2071707239374518
+        },
+        "small_files": {
+          "files_used": 50000,
+          "original_bytes": 618937416,
+          "compressed_bytes": 8891224,
+          "compression_time_seconds": 2.239038056693971,
+          "decompression_time_seconds": 1.0316239187959582
+        }
+      }
+    },
+    {
+      "strategy": "always_zlib_9",
+      "compressor": "zlib_9",
+      "files_used": 120023,
+      "total_files": 120053,
+      "coverage": 0.9997501103679208,
+      "full_coverage": false,
+      "original_bytes": 3293203475,
+      "compressed_bytes": 571161053,
+      "compressed_mb": 544.7016267776489,
+      "ratio": 0.17343630824390527,
+      "compression_time_seconds": 93.02256034500897,
+      "decompression_time_seconds": 4.307708550011739,
+      "by_category": {
+        "ml_data": {
+          "files_used": 4,
+          "original_bytes": 214413394,
+          "compressed_bytes": 81109334,
+          "compression_time_seconds": 7.988082665717229,
+          "decompression_time_seconds": 0.38840050995349884
+        },
+        "already_compressed": {
+          "files_used": 4,
+          "original_bytes": 295420943,
+          "compressed_bytes": 50378592,
+          "compression_time_seconds": 3.5340979169122875,
+          "decompression_time_seconds": 0.3714749729260802
+        },
+        "logs_json": {
+          "files_used": 3,
+          "original_bytes": 94934391,
+          "compressed_bytes": 10014212,
+          "compression_time_seconds": 2.180087734013796,
+          "decompression_time_seconds": 0.10347299999557436
+        },
+        "docker_layers": {
+          "files_used": 40007,
+          "original_bytes": 1295113807,
+          "compressed_bytes": 292897496,
+          "compression_time_seconds": 67.41804567771032,
+          "decompression_time_seconds": 2.319254865171388
+        },
+        "source_packages": {
+          "files_used": 30005,
+          "original_bytes": 774383524,
+          "compressed_bytes": 128470195,
+          "compression_time_seconds": 10.606181239010766,
+          "decompression_time_seconds": 0.7542577197309583
+        },
+        "small_files": {
+          "files_used": 50000,
+          "original_bytes": 618937416,
+          "compressed_bytes": 8291224,
+          "compression_time_seconds": 1.296065111644566,
+          "decompression_time_seconds": 0.3708474822342396
+        }
+      }
+    },
+    {
+      "strategy": "always_bz2_9",
+      "compressor": "bz2_9",
+      "files_used": 120045,
+      "total_files": 120053,
+      "coverage": 0.9999333627647788,
+      "full_coverage": false,
+      "original_bytes": 28926869418,
+      "compressed_bytes": 1499454629,
+      "compressed_mb": 1429.9913682937622,
+      "ratio": 0.051836049291491985,
+      "compression_time_seconds": 1312.5977742632385,
+      "decompression_time_seconds": 216.99008498550393,
+      "by_category": {
+        "ml_data": {
+          "files_used": 8,
+          "original_bytes": 6656864468,
+          "compressed_bytes": 383979437,
+          "compression_time_seconds": 272.3460775569547,
+          "decompression_time_seconds": 54.53508151252754
+        },
+        "already_compressed": {
+          "files_used": 5,
+          "original_bytes": 1369162853,
+          "compressed_bytes": 106786100,
+          "compression_time_seconds": 62.197835439117625,
+          "decompression_time_seconds": 10.126183604588732
+        },
+        "small_files": {
+          "files_used": 50001,
+          "original_bytes": 1335931976,
+          "compressed_bytes": 16211254,
+          "compression_time_seconds": 103.9935699349735,
+          "decompression_time_seconds": 6.423389423405752
+        },
+        "mixed_binary": {
+          "files_used": 2,
+          "original_bytes": 2147483648,
+          "compressed_bytes": 4503538,
+          "compression_time_seconds": 98.95769890397787,
+          "decompression_time_seconds": 6.882775404723361
+        },
+        "logs_json": {
+          "files_used": 7,
+          "original_bytes": 6537385535,
+          "compressed_bytes": 269977934,
+          "compression_time_seconds": 318.46976139675826,
+          "decompression_time_seconds": 59.39976382185705
+        },
+        "docker_layers": {
+          "files_used": 40009,
+          "original_bytes": 2942500431,
+          "compressed_bytes": 268534725,
+          "compression_time_seconds": 116.44454852561466,
+          "decompression_time_seconds": 22.37203745660372
+        },
+        "source_packages": {
+          "files_used": 30008,
+          "original_bytes": 4548886539,
+          "compressed_bytes": 267345883,
+          "compression_time_seconds": 198.07611033902504,
+          "decompression_time_seconds": 30.059583564521745
+        },
+        "databases": {
+          "files_used": 2,
+          "original_bytes": 1241169920,
+          "compressed_bytes": 63689627,
+          "compression_time_seconds": 75.17065398790874,
+          "decompression_time_seconds": 11.838074106024578
+        },
+        "web_assets": {
+          "files_used": 3,
+          "original_bytes": 2147484048,
+          "compressed_bytes": 118426131,
+          "compression_time_seconds": 66.94151817890815,
+          "decompression_time_seconds": 15.353196091251448
+        }
+      }
+    },
+    {
+      "strategy": "always_lzma_6",
+      "compressor": "lzma_6",
+      "files_used": 120051,
+      "total_files": 120053,
+      "coverage": 0.9999833406911948,
+      "full_coverage": false,
+      "original_bytes": 38590545834,
+      "compressed_bytes": 7298114976,
+      "compressed_mb": 6960.024810791016,
+      "ratio": 0.18911665586160312,
+      "compression_time_seconds": 6077.739188326988,
+      "decompression_time_seconds": 112.22387389093637,
+      "by_category": {
+        "ml_data": {
+          "files_used": 11,
+          "original_bytes": 12025573588,
+          "compressed_bytes": 3146263224,
+          "compression_time_seconds": 2511.1297275081743,
+          "decompression_time_seconds": 56.39658361533657
+        },
+        "already_compressed": {
+          "files_used": 5,
+          "original_bytes": 1369162853,
+          "compressed_bytes": 52503328,
+          "compression_time_seconds": 163.93710754532367,
+          "decompression_time_seconds": 2.651642819866538
+        },
+        "small_files": {
+          "files_used": 50001,
+          "original_bytes": 1335931976,
+          "compressed_bytes": 12049316,
+          "compression_time_seconds": 43.61434923787601,
+          "decompression_time_seconds": 2.058843908831477
+        },
+        "mixed_binary": {
+          "files_used": 4,
+          "original_bytes": 5368709120,
+          "compressed_bytes": 2411451104,
+          "compression_time_seconds": 1017.5987547573168,
+          "decompression_time_seconds": 17.54342331783846
+        },
+        "logs_json": {
+          "files_used": 7,
+          "original_bytes": 6537385535,
+          "compressed_bytes": 166483508,
+          "compression_time_seconds": 909.3082237290218,
+          "decompression_time_seconds": 10.428235873114318
+        },
+        "docker_layers": {
+          "files_used": 40010,
+          "original_bytes": 4016242255,
+          "compressed_bytes": 1272758036,
+          "compression_time_seconds": 461.10310095199384,
+          "decompression_time_seconds": 9.618130277376622
+        },
+        "source_packages": {
+          "files_used": 30008,
+          "original_bytes": 4548886539,
+          "compressed_bytes": 151858708,
+          "compression_time_seconds": 461.7851467241999,
+          "decompression_time_seconds": 7.584102950524539
+        },
+        "databases": {
+          "files_used": 2,
+          "original_bytes": 1241169920,
+          "compressed_bytes": 46606424,
+          "compression_time_seconds": 149.24661693209782,
+          "decompression_time_seconds": 2.344253429910168
+        },
+        "web_assets": {
+          "files_used": 3,
+          "original_bytes": 2147484048,
+          "compressed_bytes": 38141328,
+          "compression_time_seconds": 360.01616094098426,
+          "decompression_time_seconds": 3.5986576981376857
+        }
+      }
+    },
+    {
+      "strategy": "always_lzma_9",
+      "compressor": "lzma_9",
+      "files_used": 120045,
+      "total_files": 120053,
+      "coverage": 0.9999333627647788,
+      "full_coverage": false,
+      "original_bytes": 28926869418,
+      "compressed_bytes": 716026784,
+      "compressed_mb": 682.8563537597656,
+      "ratio": 0.024752999491692178,
+      "compression_time_seconds": 6865.0096782546025,
+      "decompression_time_seconds": 55.92911443859339,
+      "by_category": {
+        "ml_data": {
+          "files_used": 8,
+          "original_bytes": 6656864468,
+          "compressed_bytes": 151345904,
+          "compression_time_seconds": 1077.3136150408536,
+          "decompression_time_seconds": 12.862296741222963
+        },
+        "already_compressed": {
+          "files_used": 5,
+          "original_bytes": 1369162853,
+          "compressed_bytes": 33561024,
+          "compression_time_seconds": 261.21931317984127,
+          "decompression_time_seconds": 2.47837498690933
+        },
+        "small_files": {
+          "files_used": 50001,
+          "original_bytes": 1335931976,
+          "compressed_bytes": 12018560,
+          "compression_time_seconds": 1195.4128276985139,
+          "decompression_time_seconds": 3.0656507508829236
+        },
+        "mixed_binary": {
+          "files_used": 2,
+          "original_bytes": 2147483648,
+          "compressed_bytes": 315348,
+          "compression_time_seconds": 69.51688413997181,
+          "decompression_time_seconds": 2.561382315820083
+        },
+        "logs_json": {
+          "files_used": 7,
+          "original_bytes": 6537385535,
+          "compressed_bytes": 132000668,
+          "compression_time_seconds": 1284.5772495213896,
+          "decompression_time_seconds": 10.831423031399027
+        },
+        "docker_layers": {
+          "files_used": 40009,
+          "original_bytes": 2942500431,
+          "compressed_bytes": 191095792,
+          "compression_time_seconds": 1147.7643575572874,
+          "decompression_time_seconds": 9.959542851429433
+        },
+        "source_packages": {
+          "files_used": 30008,
+          "original_bytes": 4548886539,
+          "compressed_bytes": 127757652,
+          "compression_time_seconds": 1170.7156828874722,
+          "decompression_time_seconds": 8.166852218098938
+        },
+        "databases": {
+          "files_used": 2,
+          "original_bytes": 1241169920,
+          "compressed_bytes": 40040776,
+          "compression_time_seconds": 167.37208494520746,
+          "decompression_time_seconds": 2.442697642138228
+        },
+        "web_assets": {
+          "files_used": 3,
+          "original_bytes": 2147484048,
+          "compressed_bytes": 27891060,
+          "compression_time_seconds": 491.1176632840652,
+          "decompression_time_seconds": 3.560893900692463
+        }
+      }
+    },
+    {
+      "strategy": "always_zstd_3",
+      "compressor": "zstd_3",
+      "files_used": 120053,
+      "total_files": 120053,
+      "coverage": 1.0,
+      "full_coverage": true,
+      "original_bytes": 41811771306,
+      "compressed_bytes": 13778612198,
+      "compressed_mb": 13140.308568954468,
+      "ratio": 0.3295390692052017,
+      "compression_time_seconds": 32.33397108572535,
+      "decompression_time_seconds": 22.052587806480005,
+      "by_category": {
+        "ml_data": {
+          "files_used": 11,
+          "original_bytes": 12025573588,
+          "compressed_bytes": 5366087846,
+          "compression_time_seconds": 11.960150385973975,
+          "decompression_time_seconds": 7.572639255784452
+        },
+        "already_compressed": {
+          "files_used": 7,
+          "original_bytes": 4590388325,
+          "compressed_bytes": 3286324946,
+          "compression_time_seconds": 2.216815425315872,
+          "decompression_time_seconds": 1.7256672270596027
+        },
+        "small_files": {
+          "files_used": 50001,
+          "original_bytes": 1335931976,
+          "compressed_bytes": 10635626,
+          "compression_time_seconds": 1.6687816828489304,
+          "decompression_time_seconds": 0.7926367004401982
+        },
+        "mixed_binary": {
+          "files_used": 4,
+          "original_bytes": 5368709120,
+          "compressed_bytes": 3092542851,
+          "compression_time_seconds": 3.417407783912495,
+          "decompression_time_seconds": 2.6913082231767476
+        },
+        "logs_json": {
+          "files_used": 7,
+          "original_bytes": 6537385535,
+          "compressed_bytes": 334272254,
+          "compression_time_seconds": 3.9457739400677383,
+          "decompression_time_seconds": 3.293467307696119
+        },
+        "docker_layers": {
+          "files_used": 40010,
+          "original_bytes": 4016242255,
+          "compressed_bytes": 1341409541,
+          "compression_time_seconds": 3.9018306229263544,
+          "decompression_time_seconds": 2.083588346140459
+        },
+        "source_packages": {
+          "files_used": 30008,
+          "original_bytes": 4548886539,
+          "compressed_bytes": 174645066,
+          "compression_time_seconds": 3.014146433910355,
+          "decompression_time_seconds": 2.112667336128652
+        },
+        "databases": {
+          "files_used": 2,
+          "original_bytes": 1241169920,
+          "compressed_bytes": 106043973,
+          "compression_time_seconds": 0.9332240368239582,
+          "decompression_time_seconds": 0.668642811011523
+        },
+        "web_assets": {
+          "files_used": 3,
+          "original_bytes": 2147484048,
+          "compressed_bytes": 66650095,
+          "compression_time_seconds": 1.2758407739456743,
+          "decompression_time_seconds": 1.1119705990422517
+        }
+      }
+    },
+    {
+      "strategy": "always_zstd_10",
+      "compressor": "zstd_10",
+      "files_used": 120053,
+      "total_files": 120053,
+      "coverage": 1.0,
+      "full_coverage": true,
+      "original_bytes": 41811771306,
+      "compressed_bytes": 13541342963,
+      "compressed_mb": 12914.030993461609,
+      "ratio": 0.3238643697703573,
+      "compression_time_seconds": 141.23091745818965,
+      "decompression_time_seconds": 19.950822154292837,
+      "by_category": {
+        "ml_data": {
+          "files_used": 11,
+          "original_bytes": 12025573588,
+          "compressed_bytes": 5261570346,
+          "compression_time_seconds": 46.73172657028772,
+          "decompression_time_seconds": 6.660219583893195
+        },
+        "already_compressed": {
+          "files_used": 7,
+          "original_bytes": 4590388325,
+          "compressed_bytes": 3285974290,
+          "compression_time_seconds": 8.070839412976056,
+          "decompression_time_seconds": 1.969699556240812
+        },
+        "small_files": {
+          "files_used": 50001,
+          "original_bytes": 1335931976,
+          "compressed_bytes": 7172910,
+          "compression_time_seconds": 0.9713533902540803,
+          "decompression_time_seconds": 0.41785200615413487
+        },
+        "mixed_binary": {
+          "files_used": 4,
+          "original_bytes": 5368709120,
+          "compressed_bytes": 3093128299,
+          "compression_time_seconds": 8.748620393685997,
+          "decompression_time_seconds": 2.5010354320984334
+        },
+        "logs_json": {
+          "files_used": 7,
+          "original_bytes": 6537385535,
+          "compressed_bytes": 259610171,
+          "compression_time_seconds": 32.183955636108294,
+          "decompression_time_seconds": 2.9987350462470204
+        },
+        "docker_layers": {
+          "files_used": 40010,
+          "original_bytes": 4016242255,
+          "compressed_bytes": 1311154338,
+          "compression_time_seconds": 10.861482654465362,
+          "decompression_time_seconds": 1.7923539830371737
+        },
+        "source_packages": {
+          "files_used": 30008,
+          "original_bytes": 4548886539,
+          "compressed_bytes": 175281484,
+          "compression_time_seconds": 16.261499741114676,
+          "decompression_time_seconds": 1.8978570234030485
+        },
+        "databases": {
+          "files_used": 2,
+          "original_bytes": 1241169920,
+          "compressed_bytes": 83717400,
+          "compression_time_seconds": 7.835494356229901,
+          "decompression_time_seconds": 0.6089296909049153
+        },
+        "web_assets": {
+          "files_used": 3,
+          "original_bytes": 2147484048,
+          "compressed_bytes": 63733725,
+          "compression_time_seconds": 9.565945303067565,
+          "decompression_time_seconds": 1.1041398323141038
+        }
+      }
+    },
+    {
+      "strategy": "always_zstd_19",
+      "compressor": "zstd_19",
+      "files_used": 120039,
+      "total_files": 120053,
+      "coverage": 0.999883384838363,
+      "full_coverage": false,
+      "original_bytes": 18189450985,
+      "compressed_bytes": 748560639,
+      "compressed_mb": 713.8830556869507,
+      "ratio": 0.04115355870923775,
+      "compression_time_seconds": 5402.276554090437,
+      "decompression_time_seconds": 8.756507353624329,
+      "by_category": {
+        "ml_data": {
+          "files_used": 7,
+          "original_bytes": 4509380820,
+          "compressed_bytes": 205351674,
+          "compression_time_seconds": 1995.387099354295,
+          "decompression_time_seconds": 2.1433856177609414
+        },
+        "already_compressed": {
+          "files_used": 5,
+          "original_bytes": 1369162853,
+          "compressed_bytes": 51793856,
+          "compression_time_seconds": 430.5138023449108,
+          "decompression_time_seconds": 0.7637023811694235
+        },
+        "small_files": {
+          "files_used": 50001,
+          "original_bytes": 1335931976,
+          "compressed_bytes": 6935470,
+          "compression_time_seconds": 6.866110128350556,
+          "decompression_time_seconds": 0.41252406244166195
+        },
+        "mixed_binary": {
+          "files_used": 1,
+          "original_bytes": 1073741824,
+          "compressed_bytes": 92513,
+          "compression_time_seconds": 1.164773611817509,
+          "decompression_time_seconds": 0.3606077160220593
+        },
+        "logs_json": {
+          "files_used": 5,
+          "original_bytes": 2242418135,
+          "compressed_bytes": 58302751,
+          "compression_time_seconds": 1137.8598543077242,
+          "decompression_time_seconds": 1.2271475612651557
+        },
+        "docker_layers": {
+          "files_used": 40008,
+          "original_bytes": 1868758607,
+          "compressed_bytes": 210309084,
+          "compression_time_seconds": 129.88239446561784,
+          "decompression_time_seconds": 1.1423737816512585
+        },
+        "source_packages": {
+          "files_used": 30007,
+          "original_bytes": 2401402802,
+          "compressed_bytes": 129324390,
+          "compression_time_seconds": 376.2190562689211,
+          "decompression_time_seconds": 0.9565521662589163
+        },
+        "databases": {
+          "files_used": 2,
+          "original_bytes": 1241169920,
+          "compressed_bytes": 46951128,
+          "compression_time_seconds": 699.1564152371138,
+          "decompression_time_seconds": 0.6855964770074934
+        },
+        "web_assets": {
+          "files_used": 3,
+          "original_bytes": 2147484048,
+          "compressed_bytes": 39499773,
+          "compression_time_seconds": 625.2270483716857,
+          "decompression_time_seconds": 1.064617590047419
+        }
+      }
+    }
+  ],
+  "oracle": {
+    "strategy": "oracle_best_size",
+    "files_used": 120053,
+    "original_bytes": 41811771306,
+    "compressed_bytes": 10345415955,
+    "compressed_mb": 9866.157488822937,
+    "ratio": 0.24742831102004592,
+    "compression_time_seconds": 5195.418786047958,
+    "decompression_time_seconds": 110.45539087592624,
+    "wins": {
+      "lzma_9": 32,
+      "bz2_9": 7,
+      "lzma_6": 6,
+      "zstd_19": 118599,
+      "store": 5,
+      "zstd_10": 1311,
+      "zstd_3": 93
+    },
+    "wins_by_category": {
+      "ml_data": {
+        "lzma_9": 4,
+        "bz2_9": 2,
+        "lzma_6": 3,
+        "zstd_19": 1,
+        "store": 1
+      },
+      "already_compressed": {
+        "store": 2,
+        "lzma_9": 4,
+        "zstd_19": 1
+      },
+      "small_files": {
+        "lzma_9": 1,
+        "zstd_19": 49437,
+        "zstd_10": 563
+      },
+      "mixed_binary": {
+        "zstd_19": 1,
+        "bz2_9": 1,
+        "store": 1,
+        "lzma_6": 1
+      },
+      "logs_json": {
+        "bz2_9": 3,
+        "lzma_9": 4
+      },
+      "docker_layers": {
+        "lzma_9": 8,
+        "store": 1,
+        "bz2_9": 1,
+        "zstd_19": 39535,
+        "zstd_10": 465
+      },
+      "source_packages": {
+        "lzma_9": 6,
+        "lzma_6": 2,
+        "zstd_19": 29624,
+        "zstd_3": 93,
+        "zstd_10": 283
+      },
+      "databases": {
+        "lzma_9": 2
+      },
+      "web_assets": {
+        "lzma_9": 3
+      }
+    }
+  },
+  "category_oracle": {
+    "ml_data": {
+      "files": 11,
+      "original_mb": 11468.480670928955,
+      "compressed_mb": 2946.1791048049927,
+      "ratio": 0.2568935841931667,
+      "compression_time_seconds": 1997.525555158034,
+      "decompression_time_seconds": 56.21455114404671,
+      "wins": {
+        "lzma_9": 4,
+        "bz2_9": 2,
+        "lzma_6": 3,
+        "zstd_19": 1,
+        "store": 1
+      }
+    },
+    "already_compressed": {
+      "files": 7,
+      "original_mb": 4377.735447883606,
+      "compressed_mb": 3103.932041168213,
+      "ratio": 0.7090268651726758,
+      "compression_time_seconds": 259.8345186437946,
+      "decompression_time_seconds": 2.1903944390360266,
+      "wins": {
+        "store": 2,
+        "lzma_9": 4,
+        "zstd_19": 1
+      }
+    },
+    "small_files": {
+      "files": 50001,
+      "original_mb": 1274.0440139770508,
+      "compressed_mb": 6.420975685119629,
+      "ratio": 0.005039838196072941,
+      "compression_time_seconds": 12.305110880639404,
+      "decompression_time_seconds": 1.2181315768975765,
+      "wins": {
+        "lzma_9": 1,
+        "zstd_19": 49437,
+        "zstd_10": 563
+      }
+    },
+    "mixed_binary": {
+      "files": 4,
+      "original_mb": 5120.0,
+      "compressed_mb": 2299.5119943618774,
+      "ratio": 0.4491234363988042,
+      "compression_time_seconds": 326.32116164593026,
+      "decompression_time_seconds": 16.696109741926193,
+      "wins": {
+        "zstd_19": 1,
+        "bz2_9": 1,
+        "store": 1,
+        "lzma_6": 1
+      }
+    },
+    "logs_json": {
+      "files": 7,
+      "original_mb": 6234.536681175232,
+      "compressed_mb": 124.52864933013916,
+      "ratio": 0.019974002191076222,
+      "compression_time_seconds": 1267.226355638355,
+      "decompression_time_seconds": 11.602556600468233,
+      "wins": {
+        "bz2_9": 3,
+        "lzma_9": 4
+      }
+    },
+    "docker_layers": {
+      "files": 40010,
+      "original_mb": 3830.187087059021,
+      "compressed_mb": 1202.1447486877441,
+      "ratio": 0.31386058209777984,
+      "compression_time_seconds": 203.7975960073527,
+      "decompression_time_seconds": 9.55697989789769,
+      "wins": {
+        "lzma_9": 8,
+        "store": 1,
+        "bz2_9": 1,
+        "zstd_19": 39535,
+        "zstd_10": 465
+      }
+    },
+    "source_packages": {
+      "files": 30008,
+      "original_mb": 4338.1562604904175,
+      "compressed_mb": 118.65512752532959,
+      "ratio": 0.027351510734174415,
+      "compression_time_seconds": 469.91873984457925,
+      "decompression_time_seconds": 6.9730759328231215,
+      "wins": {
+        "lzma_9": 6,
+        "lzma_6": 2,
+        "zstd_19": 29624,
+        "zstd_3": 93,
+        "zstd_10": 283
+      }
+    },
+    "databases": {
+      "files": 2,
+      "original_mb": 1183.671875,
+      "compressed_mb": 38.18585968017578,
+      "ratio": 0.03226051111519042,
+      "compression_time_seconds": 167.37208494520746,
+      "decompression_time_seconds": 2.442697642138228,
+      "wins": {
+        "lzma_9": 2
+      }
+    },
+    "web_assets": {
+      "files": 3,
+      "original_mb": 2048.0003814697266,
+      "compressed_mb": 26.598987579345703,
+      "ratio": 0.012987784484814018,
+      "compression_time_seconds": 491.1176632840652,
+      "decompression_time_seconds": 3.560893900692463,
+      "wins": {
+        "lzma_9": 3
+      }
+    }
+  },
+  "pareto": {
+    "frontier_counts": {
+      "store": 120049,
+      "lzma_6": 34,
+      "lzma_9": 32,
+      "zstd_3": 2646,
+      "zstd_10": 119971,
+      "bz2_9": 15,
+      "zstd_19": 118616,
+      "zlib_9": 68
+    },
+    "dominated_counts": {
+      "bz2_9": 120030,
+      "zstd_19": 1423,
+      "gzip_9": 120023,
+      "zlib_9": 119955,
+      "lzma_6": 120017,
+      "lzma_9": 120013,
+      "zstd_10": 82,
+      "zstd_3": 117407,
+      "store": 4
+    },
+    "frontier_counts_by_category": {
+      "ml_data": {
+        "store": 11,
+        "lzma_6": 6,
+        "lzma_9": 4,
+        "zstd_3": 10,
+        "zstd_10": 5,
+        "bz2_9": 4,
+        "zstd_19": 2
+      },
+      "already_compressed": {
+        "store": 7,
+        "lzma_6": 4,
+        "lzma_9": 4,
+        "zstd_3": 5,
+        "zstd_19": 3,
+        "zstd_10": 3
+      },
+      "small_files": {
+        "store": 50000,
+        "lzma_6": 1,
+        "lzma_9": 1,
+        "zstd_3": 4,
+        "zstd_10": 49983,
+        "zstd_19": 49438,
+        "zlib_9": 19
+      },
+      "mixed_binary": {
+        "store": 4,
+        "zstd_3": 3,
+        "zstd_10": 1,
+        "zstd_19": 1,
+        "bz2_9": 1,
+        "lzma_6": 1
+      },
+      "logs_json": {
+        "store": 7,
+        "bz2_9": 5,
+        "zstd_3": 7,
+        "zstd_10": 5,
+        "lzma_6": 3,
+        "lzma_9": 4
+      },
+      "docker_layers": {
+        "store": 40009,
+        "lzma_6": 8,
+        "lzma_9": 8,
+        "zstd_3": 10,
+        "zstd_10": 39991,
+        "zstd_19": 39543,
+        "bz2_9": 1,
+        "zlib_9": 19
+      },
+      "source_packages": {
+        "store": 30006,
+        "lzma_9": 6,
+        "zstd_3": 2602,
+        "bz2_9": 1,
+        "lzma_6": 7,
+        "zstd_10": 29980,
+        "zstd_19": 29628,
+        "zlib_9": 30
+      },
+      "databases": {
+        "store": 2,
+        "bz2_9": 2,
+        "lzma_6": 2,
+        "lzma_9": 2,
+        "zstd_3": 2,
+        "zstd_10": 2
+      },
+      "web_assets": {
+        "store": 3,
+        "lzma_9": 3,
+        "zstd_3": 3,
+        "bz2_9": 1,
+        "lzma_6": 2,
+        "zstd_10": 1,
+        "zstd_19": 1
+      }
+    },
+    "dominated_counts_by_category": {
+      "ml_data": {
+        "bz2_9": 4,
+        "zstd_19": 5,
+        "gzip_9": 4,
+        "zlib_9": 4,
+        "lzma_6": 5,
+        "lzma_9": 4,
+        "zstd_10": 6,
+        "zstd_3": 1
+      },
+      "already_compressed": {
+        "zstd_3": 2,
+        "zstd_10": 4,
+        "bz2_9": 5,
+        "zstd_19": 2,
+        "gzip_9": 4,
+        "zlib_9": 4,
+        "lzma_6": 1,
+        "lzma_9": 1
+      },
+      "small_files": {
+        "bz2_9": 50001,
+        "gzip_9": 50000,
+        "zlib_9": 49981,
+        "lzma_6": 50000,
+        "lzma_9": 50000,
+        "zstd_3": 49997,
+        "zstd_19": 563,
+        "zstd_10": 18,
+        "store": 1
+      },
+      "mixed_binary": {
+        "bz2_9": 1,
+        "lzma_6": 3,
+        "lzma_9": 2,
+        "zstd_10": 3,
+        "zstd_3": 1
+      },
+      "logs_json": {
+        "gzip_9": 3,
+        "zlib_9": 3,
+        "lzma_6": 4,
+        "lzma_9": 3,
+        "zstd_19": 5,
+        "bz2_9": 2,
+        "zstd_10": 2
+      },
+      "docker_layers": {
+        "bz2_9": 40008,
+        "gzip_9": 40007,
+        "zlib_9": 39988,
+        "lzma_6": 40002,
+        "zstd_3": 40000,
+        "zstd_10": 19,
+        "lzma_9": 40001,
+        "zstd_19": 465,
+        "store": 1
+      },
+      "source_packages": {
+        "bz2_9": 30007,
+        "lzma_6": 30001,
+        "zstd_10": 28,
+        "zstd_19": 379,
+        "gzip_9": 30005,
+        "zlib_9": 29975,
+        "lzma_9": 30002,
+        "zstd_3": 27406,
+        "store": 2
+      },
+      "databases": {
+        "zstd_19": 2
+      },
+      "web_assets": {
+        "bz2_9": 2,
+        "lzma_6": 1,
+        "zstd_10": 2,
+        "zstd_19": 2
+      }
+    }
+  },
+  "largest_gaps_vs_oracle": [
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/ml_data/phase2_float_tensor_01.bin",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_6",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 2048.0,
+      "oracle_compressed_mb": 502.7077941894531,
+      "candidate_compressed_mb": 1801.5870904922485,
+      "size_gap_mb": 1298.8792963027954,
+      "size_gap_percent": 258.37659795926953,
+      "oracle_comp_time": 658.2093498841859,
+      "candidate_comp_time": 11.857528486987576
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/ml_data/phase2_float_tensor_01.bin",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_6",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 2048.0,
+      "oracle_compressed_mb": 502.7077941894531,
+      "candidate_compressed_mb": 1800.5476570129395,
+      "size_gap_mb": 1297.8398628234863,
+      "size_gap_percent": 258.1698310279978,
+      "oracle_comp_time": 658.2093498841859,
+      "candidate_comp_time": 4.458195894025266
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/ml_data/phase2_float_tensor_02.bin",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_6",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 1024.0,
+      "oracle_compressed_mb": 251.33678817749023,
+      "candidate_compressed_mb": 900.7689685821533,
+      "size_gap_mb": 649.4321804046631,
+      "size_gap_percent": 258.39121487700555,
+      "oracle_comp_time": 333.6317837270908,
+      "candidate_comp_time": 6.4114815418142825
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/mixed_binary/phase2_float_blob_01.bin",
+      "category": "mixed_binary",
+      "oracle_compressor": "lzma_6",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 1024.0,
+      "oracle_compressed_mb": 251.33678817749023,
+      "candidate_compressed_mb": 900.7689685821533,
+      "size_gap_mb": 649.4321804046631,
+      "size_gap_percent": 258.39121487700555,
+      "oracle_comp_time": 319.71932932711206,
+      "candidate_comp_time": 5.911463820841163
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/ml_data/phase2_float_tensor_02.bin",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_6",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 1024.0,
+      "oracle_compressed_mb": 251.33678817749023,
+      "candidate_compressed_mb": 900.2767639160156,
+      "size_gap_mb": 648.9399757385254,
+      "size_gap_percent": 258.195380168642,
+      "oracle_comp_time": 333.6317837270908,
+      "candidate_comp_time": 2.2158357319422066
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/mixed_binary/phase2_float_blob_01.bin",
+      "category": "mixed_binary",
+      "oracle_compressor": "lzma_6",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 1024.0,
+      "oracle_compressed_mb": 251.33678817749023,
+      "candidate_compressed_mb": 900.2767639160156,
+      "size_gap_mb": 648.9399757385254,
+      "size_gap_percent": 258.195380168642,
+      "oracle_comp_time": 319.71932932711206,
+      "candidate_comp_time": 2.2143870119471103
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/ml_data/phase2_tabular_01.csv",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 2048.0,
+      "oracle_compressed_mb": 46.23167419433594,
+      "candidate_compressed_mb": 192.11464500427246,
+      "size_gap_mb": 145.88297080993652,
+      "size_gap_percent": 315.54767018973615,
+      "oracle_comp_time": 629.8091383529827,
+      "candidate_comp_time": 2.476788971107453
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/ml_data/phase2_tabular_01.csv",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 2048.0,
+      "oracle_compressed_mb": 46.23167419433594,
+      "candidate_compressed_mb": 128.89856815338135,
+      "size_gap_mb": 82.66689395904541,
+      "size_gap_percent": 178.81008075016527,
+      "oracle_comp_time": 629.8091383529827,
+      "candidate_comp_time": 16.58372037205845
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/logs_json/phase2_events_02.ndjson",
+      "category": "logs_json",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 2048.0000495910645,
+      "oracle_compressed_mb": 53.96592712402344,
+      "candidate_compressed_mb": 132.20015811920166,
+      "size_gap_mb": 78.23423099517822,
+      "size_gap_percent": 144.96967839611438,
+      "oracle_comp_time": 390.3385198919568,
+      "candidate_comp_time": 1.3514635050669312
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/logs_json/phase2_events_01.ndjson",
+      "category": "logs_json",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 2048.0000495910645,
+      "oracle_compressed_mb": 53.96592712402344,
+      "candidate_compressed_mb": 132.20015811920166,
+      "size_gap_mb": 78.23423099517822,
+      "size_gap_percent": 144.96967839611438,
+      "oracle_comp_time": 367.02431982778944,
+      "candidate_comp_time": 1.3454269298817962
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/ml_data/phase2_tabular_02.csv",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 1024.0001239776611,
+      "oracle_compressed_mb": 23.442134857177734,
+      "candidate_compressed_mb": 96.78816795349121,
+      "size_gap_mb": 73.34603309631348,
+      "size_gap_percent": 312.88120106456813,
+      "oracle_comp_time": 321.3061075101141,
+      "candidate_comp_time": 1.1953766020014882
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/databases/phase2_events_01.sqlite",
+      "category": "databases",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 792.05859375,
+      "oracle_compressed_mb": 26.424362182617188,
+      "candidate_compressed_mb": 67.78398609161377,
+      "size_gap_mb": 41.35962390899658,
+      "size_gap_percent": 156.5208031253988,
+      "oracle_comp_time": 111.14670568215661,
+      "candidate_comp_time": 0.6329346699640155
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/logs_json/phase2_events_02.ndjson",
+      "category": "logs_json",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 2048.0000495910645,
+      "oracle_compressed_mb": 53.96592712402344,
+      "candidate_compressed_mb": 94.34860706329346,
+      "size_gap_mb": 40.38267993927002,
+      "size_gap_percent": 74.82995677339765,
+      "oracle_comp_time": 390.3385198919568,
+      "candidate_comp_time": 10.251075549982488
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/logs_json/phase2_events_01.ndjson",
+      "category": "logs_json",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 2048.0000495910645,
+      "oracle_compressed_mb": 53.96592712402344,
+      "candidate_compressed_mb": 94.34860706329346,
+      "size_gap_mb": 40.38267993927002,
+      "size_gap_percent": 74.82995677339765,
+      "oracle_comp_time": 367.02431982778944,
+      "candidate_comp_time": 9.947565058944747
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/ml_data/phase2_tabular_02.csv",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 1024.0001239776611,
+      "oracle_compressed_mb": 23.442134857177734,
+      "candidate_compressed_mb": 59.336228370666504,
+      "size_gap_mb": 35.89409351348877,
+      "size_gap_percent": 153.1178526707365,
+      "oracle_comp_time": 321.3061075101141,
+      "candidate_comp_time": 6.892151082167402
+    },
+    {
+      "label": "lzma_6_vs_oracle",
+      "file": "data/ml_data/phase2_tabular_01.csv",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "lzma_6",
+      "original_mb": 2048.0,
+      "oracle_compressed_mb": 46.23167419433594,
+      "candidate_compressed_mb": 81.82589340209961,
+      "size_gap_mb": 35.59421920776367,
+      "size_gap_percent": 76.99098037882541,
+      "oracle_comp_time": 629.8091383529827,
+      "candidate_comp_time": 510.68594952090643
+    },
+    {
+      "label": "zstd_19_vs_oracle",
+      "file": "data/ml_data/phase2_tabular_01.csv",
+      "category": "ml_data",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_19",
+      "original_mb": 2048.0,
+      "oracle_compressed_mb": 46.23167419433594,
+      "candidate_compressed_mb": 79.73654651641846,
+      "size_gap_mb": 33.50487232208252,
+      "size_gap_percent": 72.47168290130269,
+      "oracle_comp_time": 629.8091383529827,
+      "candidate_comp_time": 1310.208988293074
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/databases/phase2_events_01.sqlite",
+      "category": "databases",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 792.05859375,
+      "oracle_compressed_mb": 26.424362182617188,
+      "candidate_compressed_mb": 53.555259704589844,
+      "size_gap_mb": 27.130897521972656,
+      "size_gap_percent": 102.67380281299752,
+      "oracle_comp_time": 111.14670568215661,
+      "candidate_comp_time": 5.2089669881388545
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/source_packages/phase2_large_source_text_01.txt",
+      "category": "source_packages",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 2048.000084877014,
+      "oracle_compressed_mb": 9.455974578857422,
+      "candidate_compressed_mb": 33.90971088409424,
+      "size_gap_mb": 24.453736305236816,
+      "size_gap_percent": 258.6061976087883,
+      "oracle_comp_time": 184.1064770631492,
+      "candidate_comp_time": 8.664827235974371
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/already_compressed/phase2_precompress_source.log",
+      "category": "already_compressed",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 1024.0000820159912,
+      "oracle_compressed_mb": 3.1901702880859375,
+      "candidate_compressed_mb": 26.349828720092773,
+      "size_gap_mb": 23.159658432006836,
+      "size_gap_percent": 725.9693477335451,
+      "oracle_comp_time": 242.8221221268177,
+      "candidate_comp_time": 4.614836408989504
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/databases/phase2_events_02.sqlite",
+      "category": "databases",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 391.61328125,
+      "oracle_compressed_mb": 11.761497497558594,
+      "candidate_compressed_mb": 33.34742736816406,
+      "size_gap_mb": 21.58592987060547,
+      "size_gap_percent": 183.53045498743842,
+      "oracle_comp_time": 56.225379263050854,
+      "candidate_comp_time": 0.3002893668599427
+    },
+    {
+      "label": "zstd_19_vs_oracle",
+      "file": "data/logs_json/phase2_trace_02.log",
+      "category": "logs_json",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_19",
+      "original_mb": 1024.0000658035278,
+      "oracle_compressed_mb": 5.526741027832031,
+      "candidate_compressed_mb": 26.106769561767578,
+      "size_gap_mb": 20.580028533935547,
+      "size_gap_percent": 372.37186309792503,
+      "oracle_comp_time": 262.9158825268969,
+      "candidate_comp_time": 566.6438792948611
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/logs_json/phase2_trace_02.log",
+      "category": "logs_json",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 1024.0000658035278,
+      "oracle_compressed_mb": 5.526741027832031,
+      "candidate_compressed_mb": 25.887819290161133,
+      "size_gap_mb": 20.3610782623291,
+      "size_gap_percent": 368.41021064300026,
+      "oracle_comp_time": 262.9158825268969,
+      "candidate_comp_time": 5.706150857033208
+    },
+    {
+      "label": "zstd_3_vs_oracle",
+      "file": "data/web_assets/phase2_manifest_01.jsonl",
+      "category": "web_assets",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_3",
+      "original_mb": 512.0002584457397,
+      "oracle_compressed_mb": 13.49993896484375,
+      "candidate_compressed_mb": 33.055487632751465,
+      "size_gap_mb": 19.555548667907715,
+      "size_gap_percent": 144.8565709729048,
+      "oracle_comp_time": 91.33857720904052,
+      "candidate_comp_time": 0.3420804860070348
+    },
+    {
+      "label": "zstd_10_vs_oracle",
+      "file": "data/logs_json/phase2_trace_01.log",
+      "category": "logs_json",
+      "oracle_compressor": "lzma_9",
+      "candidate_compressor": "zstd_10",
+      "original_mb": 1024.0000257492065,
+      "oracle_compressed_mb": 5.408622741699219,
+      "candidate_compressed_mb": 24.571410179138184,
+      "size_gap_mb": 19.162787437438965,
+      "size_gap_percent": 354.30068526869786,
+      "oracle_comp_time": 241.8665842548944,
+      "candidate_comp_time": 5.459191302070394
+    }
+  ]
+}

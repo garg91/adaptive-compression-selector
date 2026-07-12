@@ -1,0 +1,247 @@
+[
+  {
+    "strategy": "always_store",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 41811771306,
+    "overall_ratio": 1.0,
+    "total_compression_time_seconds": 0.055530687561258674,
+    "total_decompression_time_seconds": 0.02230287529528141,
+    "missing_files": 0
+  },
+  {
+    "strategy": "always_gzip_9",
+    "files_used": 120023,
+    "total_original_bytes": 3293203475,
+    "total_compressed_bytes": 572601329,
+    "overall_ratio": 0.1738736562580604,
+    "total_compression_time_seconds": 95.65820557717234,
+    "total_decompression_time_seconds": 6.0795344731304795,
+    "missing_files": 30
+  },
+  {
+    "strategy": "always_zlib_9",
+    "files_used": 120023,
+    "total_original_bytes": 3293203475,
+    "total_compressed_bytes": 571161053,
+    "overall_ratio": 0.17343630824390527,
+    "total_compression_time_seconds": 93.02256034500897,
+    "total_decompression_time_seconds": 4.307708550011739,
+    "missing_files": 30
+  },
+  {
+    "strategy": "always_bz2_9",
+    "files_used": 120045,
+    "total_original_bytes": 28926869418,
+    "total_compressed_bytes": 1499454629,
+    "overall_ratio": 0.051836049291491985,
+    "total_compression_time_seconds": 1312.5977742632385,
+    "total_decompression_time_seconds": 216.99008498550393,
+    "missing_files": 8
+  },
+  {
+    "strategy": "always_lzma_6",
+    "files_used": 120051,
+    "total_original_bytes": 38590545834,
+    "total_compressed_bytes": 7298114976,
+    "overall_ratio": 0.18911665586160312,
+    "total_compression_time_seconds": 6077.739188326988,
+    "total_decompression_time_seconds": 112.22387389093637,
+    "missing_files": 2
+  },
+  {
+    "strategy": "always_lzma_9",
+    "files_used": 120045,
+    "total_original_bytes": 28926869418,
+    "total_compressed_bytes": 716026784,
+    "overall_ratio": 0.024752999491692178,
+    "total_compression_time_seconds": 6865.0096782546025,
+    "total_decompression_time_seconds": 55.92911443859339,
+    "missing_files": 8
+  },
+  {
+    "strategy": "always_zstd_3",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 13778612198,
+    "overall_ratio": 0.3295390692052017,
+    "total_compression_time_seconds": 32.33397108572535,
+    "total_decompression_time_seconds": 22.052587806480005,
+    "missing_files": 0
+  },
+  {
+    "strategy": "always_zstd_10",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 13541342963,
+    "overall_ratio": 0.3238643697703573,
+    "total_compression_time_seconds": 141.23091745818965,
+    "total_decompression_time_seconds": 19.950822154292837,
+    "missing_files": 0
+  },
+  {
+    "strategy": "always_zstd_19",
+    "files_used": 120039,
+    "total_original_bytes": 18189450985,
+    "total_compressed_bytes": 748560639,
+    "overall_ratio": 0.04115355870923775,
+    "total_compression_time_seconds": 5402.276554090437,
+    "total_decompression_time_seconds": 8.756507353624329,
+    "missing_files": 14
+  },
+  {
+    "strategy": "selector_fast",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 14030809746,
+    "overall_ratio": 0.3355708047696744,
+    "total_compression_time_seconds": 43.09694794425741,
+    "total_decompression_time_seconds": 25.97103477991186,
+    "choices": {
+      "zstd_3": 120047,
+      "bz2_9": 2,
+      "store": 4
+    },
+    "fallback_choices": {},
+    "missing_choices": [],
+    "missing_choice_count": 0
+  },
+  {
+    "strategy": "selector_balanced_fast",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 13797548176,
+    "overall_ratio": 0.329991955495558,
+    "total_compression_time_seconds": 120.67629038100131,
+    "total_decompression_time_seconds": 20.25714862230234,
+    "choices": {
+      "zstd_10": 120038,
+      "zstd_3": 11,
+      "store": 4
+    },
+    "fallback_choices": {},
+    "missing_choices": [],
+    "missing_choice_count": 0
+  },
+  {
+    "strategy": "selector_balanced_size",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 13793496937,
+    "overall_ratio": 0.3298950631881178,
+    "total_compression_time_seconds": 1962.1622038446367,
+    "total_decompression_time_seconds": 146.01440516626462,
+    "choices": {
+      "bz2_9": 40013,
+      "zstd_3": 2,
+      "zstd_10": 9,
+      "lzma_6": 80011,
+      "store": 4,
+      "lzma_9": 14
+    },
+    "fallback_choices": {},
+    "missing_choices": [],
+    "missing_choice_count": 0
+  },
+  {
+    "strategy": "selector_balanced",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 13793496937,
+    "overall_ratio": 0.3298950631881178,
+    "total_compression_time_seconds": 1962.1622038446367,
+    "total_decompression_time_seconds": 146.01440516626462,
+    "choices": {
+      "bz2_9": 40013,
+      "zstd_3": 2,
+      "zstd_10": 9,
+      "lzma_6": 80011,
+      "store": 4,
+      "lzma_9": 14
+    },
+    "fallback_choices": {},
+    "missing_choices": [],
+    "missing_choice_count": 0
+  },
+  {
+    "strategy": "selector_best_size",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 10878633867,
+    "overall_ratio": 0.2601811290745033,
+    "total_compression_time_seconds": 6980.182638417697,
+    "total_decompression_time_seconds": 173.65798149001785,
+    "choices": {
+      "lzma_6": 20012,
+      "bz2_9": 40011,
+      "lzma_9": 60024,
+      "zstd_10": 2,
+      "store": 4
+    },
+    "fallback_choices": {
+      "lzma_9->lzma_6": 6,
+      "lzma_9->zstd_10": 2
+    },
+    "missing_choices": [
+      {
+        "file": "data/ml_data/phase2_float_tensor_02.bin",
+        "chosen": "lzma_9",
+        "fallback": "lzma_6"
+      },
+      {
+        "file": "data/ml_data/phase2_random_tensor_01.bin",
+        "chosen": "lzma_9",
+        "fallback": "lzma_6"
+      },
+      {
+        "file": "data/ml_data/phase2_float_tensor_01.bin",
+        "chosen": "lzma_9",
+        "fallback": "lzma_6"
+      },
+      {
+        "file": "data/already_compressed/phase2_media_like_random_02.bin",
+        "chosen": "lzma_9",
+        "fallback": "zstd_10"
+      },
+      {
+        "file": "data/already_compressed/phase2_media_like_random_01.bin",
+        "chosen": "lzma_9",
+        "fallback": "zstd_10"
+      },
+      {
+        "file": "data/mixed_binary/phase2_random_blob_01.bin",
+        "chosen": "lzma_9",
+        "fallback": "lzma_6"
+      },
+      {
+        "file": "data/mixed_binary/phase2_float_blob_01.bin",
+        "chosen": "lzma_9",
+        "fallback": "lzma_6"
+      },
+      {
+        "file": "data/docker_layers/phase2_layer_random_blob.bin",
+        "chosen": "lzma_9",
+        "fallback": "lzma_6"
+      }
+    ],
+    "missing_choice_count": 8
+  },
+  {
+    "strategy": "oracle_best_size_phase2_valid_rows",
+    "files_used": 120053,
+    "total_original_bytes": 41811771306,
+    "total_compressed_bytes": 10345415955,
+    "overall_ratio": 0.24742831102004592,
+    "total_compression_time_seconds": 5195.447194789769,
+    "total_decompression_time_seconds": 110.4670198308304,
+    "wins": {
+      "lzma_9": 32,
+      "bz2_9": 7,
+      "lzma_6": 6,
+      "zstd_19": 118299,
+      "store": 5,
+      "zstd_3": 1691,
+      "zstd_10": 13
+    }
+  }
+]
